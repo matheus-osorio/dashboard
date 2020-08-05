@@ -1,28 +1,75 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <nav class="vertical-bar">
+      <img src="./img/logo.svg" class="logo" alt="">
+      <hr class="line">
+      <router-link :to="{name:'medicao',params:$route.params}" :class="{'selected':$route.name == 'medicao'}" @click="selected = 'MED'" class="waves-effect waves-teal btn-flat btn-custom">MED</router-link>
+      <router-link :to="{name:'escala',params:$route.params}" :class="{'selected':$route.name == 'escala'}" @click="selected = 'ESC'" class="waves-effect waves-teal btn-flat btn-custom">ESC</router-link>
+    </nav>
+    <router-view/>
   </div>
+  
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
+  name: "App",
+  components: {},
+  data(){
+    return {
+      selected:"MED"
+    }
   }
-}
+};
 </script>
 
 <style>
+body{
+  height:100vh;
+}
+
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  height: 100%;
+  display: grid;
+  grid-template-rows: 100%;
+  grid-template-columns: 50px 1fr;
+  grid-template-areas: "navbar data";
+
+}
+
+.vertical-bar {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  grid-area: navbar;
+  height: 100%;
+  background: rgb(6,183,227);
+  background: linear-gradient(180deg, rgba(6,183,227,1) 9%, rgba(11,221,157,1) 73%);
+}
+
+.logo{
+  height: 35px;
+  margin-top: 5px;
+}
+
+.line{
+  width: 90%;
+  border: 1px;
+  color: rgba(133, 131, 131, 0.548);
+  border-style: solid;
+  margin-bottom: 0px;
+}
+
+.btn-custom{
+  padding-left: 0px;
+  padding-right: 0px;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  color: white;
+}
+
+.selected{
+  background: rgba(128, 128, 128, 0.5);
 }
 </style>
+
+
