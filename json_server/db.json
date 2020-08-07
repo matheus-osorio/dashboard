@@ -154,6 +154,16 @@
             [{"setor":"setor 1", "valor":650, "funcionarios": 10},{"setor":"setor 2","valor":90, "funcionarios": 10}],
             [{"setor":"setor 1", "valor":90, "funcionarios": 10},{"setor":"setor 2","valor":100, "funcionarios": 10}],
             [{"setor":"setor 1", "valor":42, "funcionarios": 10},{"setor":"setor 2","valor":732, "funcionarios": 10}],
+            [{"setor":"setor 1", "valor":55, "funcionarios": 10},{"setor":"setor 2","valor":123, "funcionarios": 10}],
+            [{"setor":"setor 1", "valor":300, "funcionarios": 10},{"setor":"setor 2","valor":400, "funcionarios": 10}],
+            [{"setor":"setor 1", "valor":200, "funcionarios": 10},{"setor":"setor 2","valor":350, "funcionarios": 10}],
+            [{"setor":"setor 1", "valor":450, "funcionarios": 10},{"setor":"setor 2","valor":200, "funcionarios": 10}],
+            [{"setor":"setor 1", "valor":130, "funcionarios": 10},{"setor":"setor 2","valor":420, "funcionarios": 10}],
+            [{"setor":"setor 1", "valor":321, "funcionarios": 10},{"setor":"setor 2","valor":2100, "funcionarios": 10}],
+            [{"setor":"setor 1", "valor":20, "funcionarios": 10},{"setor":"setor 2","valor":900, "funcionarios": 10}],
+            [{"setor":"setor 1", "valor":650, "funcionarios": 10},{"setor":"setor 2","valor":90, "funcionarios": 10}],
+            [{"setor":"setor 1", "valor":90, "funcionarios": 10},{"setor":"setor 2","valor":100, "funcionarios": 10}],
+            [{"setor":"setor 1", "valor":42, "funcionarios": 10},{"setor":"setor 2","valor":732, "funcionarios": 10}],
             [{"setor":"setor 1", "valor":55, "funcionarios": 10},{"setor":"setor 2","valor":123, "funcionarios": 10}]
         ]
     }

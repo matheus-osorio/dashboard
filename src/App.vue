@@ -47,6 +47,20 @@ body{
   background: linear-gradient(180deg, rgba(6,183,227,1) 9%, rgba(11,221,157,1) 73%);
 }
 
+body{
+  padding: 0px;
+  margin: 0px;
+}
+
+@media(max-width: 600px){
+  .vertical-bar{
+    height: 100%;
+  }
+
+  #app{
+    height: 1775px;
+  }
+}
 .logo{
   height: 35px;
   margin-top: 5px;

@@ -1,9 +1,6 @@
 <template>
   <div>
-      Total do Contrato:
-      <div>
-          $ {{valor}}
-      </div>
+      Total do Contrato:   $ {{valor}}   
   </div>
 </template>
 

@@ -3,8 +3,12 @@
       <graficoDiario id="diario"/>
       <graficoAcumulado id="acumulado"/>
       <graficoHistorico id="historico"/>
-      <totalContrato id="total"/>
+      <div id="total">
+          <totalContrato/>
+          <totalFuncionarios/>
+      </div>
       <tabelaArea id="tabela"/>
+      <graficoAnual id="anual"/>
   </div>
 </template>
 
@@ -15,13 +19,18 @@ import graficoAcumulado from './grafico_acumulado'
 import graficoHistorico from './grafico_historico'
 import totalContrato from './total_contrato'
 import tabelaArea from './tabela_area'
+import graficoAnual from './grafico_anual'
+import totalFuncionarios from './total_funcionarios'
+
 export default {
     components:{
         graficoDiario,
         graficoAcumulado,
         graficoHistorico,
         totalContrato,
-        tabelaArea
+        tabelaArea,
+        graficoAnual,
+        totalFuncionarios
     }
 }
 </script>
@@ -30,12 +39,32 @@ export default {
 #MED{
     display: grid;
     height: 100%;
-    grid-template-rows: 30px 380px 1fr;
+    grid-template-rows: 15px 340px 1fr;
     grid-template-columns:30px 490px 15px 490px 1fr;
     grid-template-areas: 
     "nada nada nada nada nada"
     "espaco diario barra1 acumulado historico"
-    "espaco numsei barra2 tabela total";
+    "espaco anual barra2 tabela total";
+}
+
+@media(max-width: 600px){
+ #MED{
+    display: grid;
+    height: 100%;
+    grid-template-rows: 15px 340px 15px 340px 15px 340px 15px 340px 15px 340px;
+    grid-template-columns:10px 1fr;
+    grid-template-areas: 
+    "espaco nada1"
+    "espaco diario"
+    "espaco nada2"
+    "espaco acumulado"
+    "espaco nada3"
+    "espaco historico"
+    "espaco nada4"
+    "espaco anual"
+    "espaco nada5"
+    "espaco tabela";
+}   
 }
 
 #diario{
@@ -56,6 +85,10 @@ export default {
 
 #tabela{
     grid-area:tabela
+}
+
+#anual{
+    grid-area:anual;
 }
 .outer-ring{
     border-style: solid;
