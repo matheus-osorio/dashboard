@@ -1,5 +1,6 @@
 <template>
-   <div class="grafico grafico1">
+<div class="area-total" :class="{'background':zoomBtn}">
+  <div class="grafico grafico1">
     <div class="center-align container loader" v-if="loading">
       <h5>Carregando dados</h5>
       <div class="preloader-wrapper big active">
@@ -16,19 +17,42 @@
         </div>
       </div>
     </div>
-     <e-chart :options="grafico"></e-chart>
+     <div class="area">
+       <div class="cabecalho">
+        {{titulo}}
+        <btn classes="btn-zoom blue lighten-2" frase="" evento="zoom" modo="icone" icone="fas fa-search-plus" @zoom="zoom()" :show="zoomBtn" />
+      </div>
+     <e-chart :options="grafico" autoresize></e-chart>
+     </div>
   </div>
+</div>
 </template>
 
 <script>
+import btn from './botao.vue'
+
 export default {
   data() {
     return {
       grafico: {},
-      lading: true,
+      loading: true,
+      titulo: "Histórico",
+      zoomBtn: true
     };
   },
+  components:{
+    btn
+  },
   methods: {
+     onZoom(){
+      this.zoomBtn = false
+    },
+    onUnzoom(){
+      this.zoomBtn = true
+    },
+    zoom(){
+      this.$emit('zoom',this.onZoom,this.onUnzoom)
+    },
     arrayData(obj) {
       const ordem = [
         "Jan",
@@ -61,8 +85,7 @@ export default {
     criarArray(data){
       const arr = data.map((linha) => {
         return linha.reduce((soma,valor) => {
-          console.log(valor)
-          return parseFloat(soma + valor.valor)
+          return parseFloat(soma + valor.valor.reduce((soma,atual) => {return soma + atual}))
         },0)
       })
       console.log("arr:", arr)
@@ -122,13 +145,42 @@ export default {
 </script>
 
 <style scoped>
-.grafico{
+.grafico {
+  width: 100%;
+  height: 100%;
+  background: white;
+}
+
+.area-total{
   width: 100%;
   height: 100%;
 }
 
+.background{
+    background: linear-gradient(
+    180deg,
+    rgba(6, 183, 227, 1) 9%,
+    rgba(11, 221, 157, 1) 73%
+  );
+  padding: 2px;
+}
+.area{
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-rows: 30px 1fr;
+}
+
 .echarts {
   width: 95%;
-  height: 95%;
+  height: 100%;
+}
+
+.cabecalho{
+  display: flex;
+  justify-content: space-between;
+  padding-right: 5px;
+  padding-top: 2px;
+  padding-left: 5px;
 }
 </style>

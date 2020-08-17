@@ -84,6 +84,26 @@ body{
 .selected{
   background: rgba(128, 128, 128, 0.5);
 }
+
+::-webkit-scrollbar {
+  width: 3px;
+  border-radius: 30px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
 </style>
 
 

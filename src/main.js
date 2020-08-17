@@ -3,6 +3,9 @@ import App from './App.vue'
 import router from './router.js'
 import "@/plugins/echarts"
 
+
+import './css/all.min.css'
+
 Vue.config.productionTip = false
 
 new Vue({

@@ -1,98 +1,271 @@
 <template>
-  <div id="MED">
-      <graficoDiario id="diario"/>
-      <graficoAcumulado id="acumulado"/>
-      <graficoHistorico id="historico"/>
-      <div id="total">
-          <totalContrato/>
-          <totalFuncionarios/>
+  <div id="MED" class="zoom-background">
+    <graficoDiario @zoom="(zoom,unzoom) => {zoomActivator('diario',zoom,unzoom)}" id="diario" />
+    <pizzaFuncionarios @zoom="(zoom,unzoom) => {zoomActivator('pizza-funcionarios',zoom,unzoom)}" id="pizza-funcionarios"/>
+    <graficoAcumulado
+      @zoom="(zoom,unzoom) => {zoomActivator('acumulado',zoom,unzoom)}"
+      id="acumulado"
+    />
+    <graficoHistorico
+      @zoom="(zoom,unzoom) => {zoomActivator('historico',zoom,unzoom)}"
+      id="historico"
+    />
+    <graficoSetor @zoom="(zoom,unzoom) => {zoomActivator('setor',zoom,unzoom)}" id="setor" />
+    <div id="total">
+      <totalContrato/>
+      <div></div>
+      <totalFuncionarios/>
+    </div>
+    <tabelaArea id="tabela"/>
+    <graficoAnual id="anual" @zoom="(zoom,unzoom) => {zoomActivator('anual',zoom,unzoom)}" />
+    <div class="zoom-full" v-show="zoom">
+      <div id="cima" class="blur"></div>
+      <div id="esquerda" class="blur"></div>
+      <div id="direita" class="blur"></div>
+      <div id="baixo" class="blur"></div>
+      <div class="background">
+        <div class="zoom">
+          <div class="box" id="zoom-box">
+            <div class="botoes">
+              <a href="#" @click="undoZoom">X</a>
+            </div>
+            <div id="zoom-area"></div>
+          </div>
+        </div>
       </div>
-      <tabelaArea id="tabela"/>
-      <graficoAnual id="anual"/>
+    </div>
   </div>
 </template>
 
 <script>
-
-import graficoDiario from './grafico_diario'
-import graficoAcumulado from './grafico_acumulado'
-import graficoHistorico from './grafico_historico'
-import totalContrato from './total_contrato'
-import tabelaArea from './tabela_area'
-import graficoAnual from './grafico_anual'
-import totalFuncionarios from './total_funcionarios'
+import graficoDiario from "./grafico_diario";
+import graficoAcumulado from "./grafico_acumulado";
+import graficoHistorico from "./grafico_historico";
+import totalContrato from "./total_contrato";
+import tabelaArea from "./tabela_area";
+import graficoAnual from "./grafico_anual";
+import totalFuncionarios from "./total_funcionarios";
+import graficoSetor from "./grafico_setor";
+import pizzaFuncionarios from './pizza_funcionarios';
 
 export default {
-    components:{
-        graficoDiario,
-        graficoAcumulado,
-        graficoHistorico,
-        totalContrato,
-        tabelaArea,
-        graficoAnual,
-        totalFuncionarios
+  components: {
+    graficoDiario,
+    graficoAcumulado,
+    graficoHistorico,
+    totalContrato,
+    tabelaArea,
+    graficoAnual,
+    totalFuncionarios,
+    graficoSetor,
+    pizzaFuncionarios
+  },
+  methods: {
+    zoomActivator(id, zoom, unzoom) {
+      if (this.zoom) {
+        return;
+      }
+      this.zoom = true;
+      const area = document.querySelector("#" + id)
+      document.querySelector("#zoom-area").appendChild(area)
+      this.saveMethod = unzoom
+      console.log(zoom)
+      zoom()
+    },
+    undoZoom() {
+      const node = document.querySelector("#zoom-area").firstElementChild
+      document.querySelector("#MED").appendChild(node)
+      this.zoom = false
+      this.saveMethod()
+    },
+  },
+  data() {
+    return {
+      zoom: false,
+      saveMethod: {},
     }
-}
+  },
+};
+
+//   #MED {
+//     display: grid;
+//     height: 100%;
+//     grid-template-rows: 10px 200px 10px 460px 10px 460px 10px;
+//     grid-template-columns: 10px 200px 10px 200px 10px 200px 10px 200px 10px;
+//     grid-template-areas: 
+//     "linha linha linha linha linha linha linha linha linha"
+//     "nd1 totalContrato nd2 qtdeFuncionarios nd3 valorArea nd4 valorRetencao nd5"
+//     "linha2 linha2 linha2 linha2 linha2 linha2 linha2 linha2 linha2"
+//     "nd6 diario diario diario nd7 acumulado acumulado acumulado nd8"
+//     "linha3 linha3 linha3 linha3 linha3 linha3 linha3 linha3 linha3"
+//     "nd9 acumulado acumulado acumulado nd10 tabela tabela tabela nd11"
+//     "linha4 linha4 linha4 linha4 linha4 linha4 linha4 linha4 linha4";
+//     overflow: auto;
+//   }
+
+
+// #MED {
+//   display: grid;
+//   height: 100vh;
+//   grid-template-rows: 2px 300px 10px 410px 10px 400px 10px;
+//   grid-template-columns: 30px 200px 10px 200px 10px 200px 10px 200px 10px 1fr 10px;
+//   grid-template-areas:
+//     "nada nada nada nada nada nada nada nada nada nada nada"
+//     "nd1 total nd2 pizzaFuncionarios nd5 historico historico historico nf tabela nf2"
+//     "nada2 nada2 nada2 nada2 nada2 nada2 nada2 nada2 nada2 nada2 nada2"
+//     "espaco diario diario diario diario diario barra4 acumulado acumulado acumulado barra5"
+//     "nd3 nd3 nd3 nd3 nd3 nd3 nd3 nd3 nd3 nd3 nd3"
+//     "espaco2 anual anual anual barra2 setor setor setor setor setor barra6"
+//     "nd4 nd4 nd4 nd4 nd4 nd4 nd4 nd4 nd4 nd4 nd4";
+//   overflow: auto;
+// }
 </script>
 
 <style>
-#MED{
-    display: grid;
+
+#MED {
+  display: grid;
+  height: 100vh;
+  grid-template-rows: 10px 200px 10px 340px 10px 400px 10px;
+  grid-template-columns: 30px 200px 10px 200px 10px 200px 10px 200px 10px 1fr 10px;
+  grid-template-areas:
+    "nada nada nada nada nada nada nada nada nada nada nada"
+    "nd1 total nd2 pizzaFuncionarios nf nf nf nf nf tabela nf2"
+    "nada2 nada2 nada2 nada2 nada2 nada2 nada2 nada2 nada2 nada2 nada2"
+    "espaco diario diario diario barra1 acumulado acumulado acumulado barra3 historico barra5"
+    "nd3 nd3 nd3 nd3 nd3 nd3 nd3 nd3 nd3 nd3 nd3"
+    "espaco2 anual anual anual barra2 setor setor setor setor setor barra6"
+    "nd4 nd4 nd4 nd4 nd4 nd4 nd4 nd4 nd4 nd4 nd4";
+  overflow: auto;
+}
+
+@media (max-width: 600px) {
+
+}
+.blur {
+  background-color: rgba(121, 120, 120, 0.8);
+  filter: blur(90%);
+}
+
+#cima {
+  grid-area: cima;
+}
+
+#pizza-funcionarios{
+  grid-area:pizzaFuncionarios
+}
+
+#esquerda {
+  grid-area: esquerda;
+}
+
+#setor{
+  grid-area:setor;
+}
+
+#direita {
+  grid-area: direita;
+}
+
+#baixo {
+  grid-area: baixo;
+}
+
+#zoom-box {
+  grid-area: zoomBox;
+}
+
+#diario {
+  grid-area: diario;
+}
+
+#acumulado {
+  grid-area: acumulado;
+}
+
+#historico {
+  grid-area: historico;
+}
+
+#total {
+  grid-area: total;
+  display: grid;
+  grid-template-rows:49% 5px 1fr;
+  grid-template-columns:100%;
+}
+
+#tabela {
+  grid-area: tabela;
+}
+
+#total-contrato{
+    grid-area: totalContrato;
+}
+
+#total-funcionario{
+    grid-area: totalFuncionario;
+}
+#anual {
+  grid-area: anual;
+}
+
+#zoom-area {
+  height: 100%;
+  width: 100%;
+}
+
+.outer-ring {
+  border-style: solid;
+  border-radius: 10px;
+  border-color: linear-gradient(
+    180deg,
+    rgba(6, 183, 227, 1) 9%,
+    rgba(11, 221, 157, 1) 73%
+  );
+}
+
+.background{
+    width: 100%;
     height: 100%;
-    grid-template-rows: 15px 340px 1fr;
-    grid-template-columns:30px 490px 15px 490px 1fr;
-    grid-template-areas: 
-    "nada nada nada nada nada"
-    "espaco diario barra1 acumulado historico"
-    "espaco anual barra2 tabela total";
+    background: linear-gradient(
+    180deg,
+    rgba(6, 183, 227, 1) 9%,
+    rgba(11, 221, 157, 1) 73%
+  );
+  padding: 2px;
+  margin: 0px;
 }
 
-@media(max-width: 600px){
- #MED{
-    display: grid;
-    height: 100%;
-    grid-template-rows: 15px 340px 15px 340px 15px 340px 15px 340px 15px 340px;
-    grid-template-columns:10px 1fr;
-    grid-template-areas: 
-    "espaco nada1"
-    "espaco diario"
-    "espaco nada2"
-    "espaco acumulado"
-    "espaco nada3"
-    "espaco historico"
-    "espaco nada4"
-    "espaco anual"
-    "espaco nada5"
-    "espaco tabela";
-}   
+.zoom-full {
+  position: absolute;
+  z-index: 2;
+  display: grid;
+  width: calc(100% - 50px);
+  height: 100vh;
+  grid-template-rows: 5vh 90vh 5vh;
+  grid-template-columns: calc(5% - 20px) 90% 1fr;
+  grid-template-areas:
+    "cima cima cima"
+    "esquerda zoomBox direita"
+    "baixo baixo baixo";
 }
 
-#diario{
-    grid-area: diario;
+.box {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-rows: 22px 1fr;
 }
 
-#acumulado{
-    grid-area: acumulado;
+.zoom {
+  height: 100%;
+  width: 100%;
+  background: whitesmoke;
 }
 
-#historico{
-    grid-area: historico;
-}
-
-#total{
-    grid-area: total
-}
-
-#tabela{
-    grid-area:tabela
-}
-
-#anual{
-    grid-area:anual;
-}
-.outer-ring{
-    border-style: solid;
-    border-radius: 10px;
-    border-color: linear-gradient(180deg, rgba(6,183,227,1) 9%, rgba(11,221,157,1) 73%);
+.botoes {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
 }
 </style>

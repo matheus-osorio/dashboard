@@ -1,9 +1,11 @@
 <template>
+<div class="area-total background">
   <div class="fixo">
-    <div class="botoes"><button @click="anterior">esquerda</button> <button @click="proximo">direita</button></div>
     <table>
       <thead>
         <th class="centralizado">{{tabela.mes}}</th>
+        <th><btn classes="teal darken-2 btn-arrow" frase="" evento="anterior" modo="icone" icone="fas fa-arrow-left" :show="true" @anterior="anterior"/></th>
+        <th><btn classes="teal darken-2 btn-arrow" frase="" evento="proximo" modo="icone" icone="fas fa-arrow-right" :show="true" @proximo="proximo"/></th>
       </thead>
       <thead>
         <th v-for="valor in tabela.header" :key="valor.id">{{valor}}</th>
@@ -26,9 +28,13 @@
       </tbody>
     </table>
   </div>
+</div>
 </template>
 
 <script>
+
+import btn from './botao.vue'
+
 export default {
   data(){
     return {
@@ -37,6 +43,9 @@ export default {
       tabela: {},
       index: 0
     }
+  },
+   components:{
+    btn
   },
   methods:{
     proximo(){
@@ -86,7 +95,9 @@ export default {
         const data = obj.data.map(linha => {
          return linha.map(valor => {
           const novo = {...valor}
-          novo.media = valor.valor/valor.funcionarios
+          novo.valor = novo.valor.reduce((soma,valor) => {return soma + valor})
+          novo.funcionarios = novo.funcionarios.total
+          novo.media = (novo.valor/novo.funcionarios).toFixed(2)
           return novo
         })
         })
@@ -103,12 +114,46 @@ export default {
 </script>
 
 <style>
+.area-total{
+  width: 100%;
+  height: 100%;
+}
+
+.background{
+    background: linear-gradient(
+    180deg,
+    rgba(6, 183, 227, 1) 9%,
+    rgba(11, 221, 157, 1) 73%
+  );
+  padding: 2px;
+}
 
 .centralizado{
   text-align: center;
 }
 
 .fixo{
-  overflow: hidden;
+  overflow: auto;
+  height: 100%;
+  background: whitesmoke;
+}
+::-webkit-scrollbar {
+  width: 3px;
+  border-radius: 30px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
 }
 </style>
