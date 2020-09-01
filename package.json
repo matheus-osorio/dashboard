@@ -16,7 +16,8 @@
     "mathjs": "^7.1.0",
     "vue": "^2.6.11",
     "vue-echarts": "^5.0.0-beta.0",
-    "vue-router": "^3.3.4"
+    "vue-router": "^3.3.4",
+    "vuex": "^3.5.1"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.4.0",

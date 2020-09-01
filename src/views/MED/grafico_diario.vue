@@ -60,11 +60,11 @@ export default {
   },
 
   mounted() {
-    fetch("http://localhost:3000/grafico_medicao")
+    fetch(this.$store.getters.link('grafico',this.$route.params))
       .then((resposta) => resposta.json())
       .then((obj) => {
         valores = aplicaReajuste(obj);
-        fetch("http://localhost:3000/periodo")
+        fetch(this.$store.getters.link('periodo',this.$route.params))
           .then((retorno) => retorno.json())
           .then((valor) => {
             periodo = valor;

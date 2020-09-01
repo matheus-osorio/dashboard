@@ -49,13 +49,13 @@ export default {
     btn
   },
   mounted() {
-    console.log('testando')
-    fetch('http://localhost:3000/grafico_medicao')
+    console.log("acumulado OK!")
+    fetch(this.$store.getters.link('grafico',this.$route.params))
       .then((resposta) => resposta.json())
       .then((obj) => {
         console.log('testando')
         valores = aplicaReajuste(obj);
-        fetch('http://localhost:3000/periodo')
+        fetch(this.$store.getters.link('periodo',this.$route.params))
           .then((retorno) => retorno.json())
           .then((valor) => {
             periodo = valor;

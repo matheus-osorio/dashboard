@@ -117,11 +117,11 @@ export default {
       }
   },
   mounted() {
-    fetch("http://localhost:3000/hoje")
+    fetch(this.$store.getters.link('hoje',this.$route.params))
       .then((response) => response.json())
       .then((obj) => {
         const dados = this.pegarStatus(obj)
-        fetch('http://localhost:3000/color')
+        fetch(this.$store.getters.link('cor',this.$route.params))
         .then(response => {return response.json()})
         .then(cores => {
             const objCores = this.pegarCores(cores)

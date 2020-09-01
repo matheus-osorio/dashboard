@@ -1,5 +1,5 @@
 <template>
-  <div id="MED" class="zoom-background">
+  <div id="MED" class="zoom-background" v-if="isLoaded">
     <graficoDiario @zoom="(zoom,unzoom) => {zoomActivator('diario',zoom,unzoom)}" id="diario" />
     <pizzaFuncionarios @zoom="(zoom,unzoom) => {zoomActivator('pizza-funcionarios',zoom,unzoom)}" id="pizza-funcionarios"/>
     <graficoAcumulado
@@ -7,17 +7,18 @@
       id="acumulado"
     />
     <graficoHistorico
+    :obj="obj"
       @zoom="(zoom,unzoom) => {zoomActivator('historico',zoom,unzoom)}"
       id="historico"
     />
-    <graficoSetor @zoom="(zoom,unzoom) => {zoomActivator('setor',zoom,unzoom)}" id="setor" />
+    <graficoSetor :obj="obj" @zoom="(zoom,unzoom) => {zoomActivator('setor',zoom,unzoom)}" id="setor" />
     <div id="total">
-      <totalContrato/>
+      <totalContrato :obj="obj"/>
       <div></div>
-      <totalFuncionarios/>
+      <totalFuncionarios :obj="obj"/>
     </div>
-    <tabelaArea id="tabela"/>
-    <graficoAnual id="anual" @zoom="(zoom,unzoom) => {zoomActivator('anual',zoom,unzoom)}" />
+    <tabelaArea :obj="obj" id="tabela"/>
+    <graficoAnual id="anual" :obj="obj" @zoom="(zoom,unzoom) => {zoomActivator('anual',zoom,unzoom)}" />
     <div class="zoom-full" v-show="zoom">
       <div id="cima" class="blur"></div>
       <div id="esquerda" class="blur"></div>
@@ -27,7 +28,7 @@
         <div class="zoom">
           <div class="box" id="zoom-box">
             <div class="botoes">
-              <a href="#" @click="undoZoom">X</a>
+              <a href="#" @click="undoZoom"><i class="fas fa-times pad-custom"></i></a>
             </div>
             <div id="zoom-area"></div>
           </div>
@@ -49,6 +50,14 @@ import graficoSetor from "./grafico_setor";
 import pizzaFuncionarios from './pizza_funcionarios';
 
 export default {
+  data() {
+    return {
+      zoom: false,
+      saveMethod: {},
+      obj: {},
+      isLoaded: false
+    }
+  },
   components: {
     graficoDiario,
     graficoAcumulado,
@@ -61,6 +70,7 @@ export default {
     pizzaFuncionarios
   },
   methods: {
+    
     zoomActivator(id, zoom, unzoom) {
       if (this.zoom) {
         return;
@@ -79,12 +89,16 @@ export default {
       this.saveMethod()
     },
   },
-  data() {
-    return {
-      zoom: false,
-      saveMethod: {},
-    }
-  },
+  mounted(){
+      //this.$store.getters.link('grafico',this.$route.params)
+      //const obj = this.obj
+    fetch(this.$store.getters.link('historico',this.$route.params))
+      .then((response) => response.json())
+      .then((obj) => {
+        this.obj = obj
+        this.isLoaded = true
+      });
+  }
 };
 
 //   #MED {
@@ -126,6 +140,7 @@ export default {
 #MED {
   display: grid;
   height: 100vh;
+  background: #e4e4e4;
   grid-template-rows: 10px 200px 10px 340px 10px 400px 10px;
   grid-template-columns: 30px 200px 10px 200px 10px 200px 10px 200px 10px 1fr 10px;
   grid-template-areas:
@@ -138,6 +153,11 @@ export default {
     "nd4 nd4 nd4 nd4 nd4 nd4 nd4 nd4 nd4 nd4 nd4";
   overflow: auto;
 }
+
+.background{
+  background: white !important;
+}
+
 
 @media (max-width: 600px) {
 
@@ -234,6 +254,10 @@ export default {
   );
   padding: 2px;
   margin: 0px;
+}
+
+.pad-custom{
+  padding-right:3px;
 }
 
 .zoom-full {
