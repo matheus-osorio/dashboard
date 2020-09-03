@@ -118,21 +118,7 @@ export default {
 //   }
 
 
-// #MED {
-//   display: grid;
-//   height: 100vh;
-//   grid-template-rows: 2px 300px 10px 410px 10px 400px 10px;
-//   grid-template-columns: 30px 200px 10px 200px 10px 200px 10px 200px 10px 1fr 10px;
-//   grid-template-areas:
-//     "nada nada nada nada nada nada nada nada nada nada nada"
-//     "nd1 total nd2 pizzaFuncionarios nd5 historico historico historico nf tabela nf2"
-//     "nada2 nada2 nada2 nada2 nada2 nada2 nada2 nada2 nada2 nada2 nada2"
-//     "espaco diario diario diario diario diario barra4 acumulado acumulado acumulado barra5"
-//     "nd3 nd3 nd3 nd3 nd3 nd3 nd3 nd3 nd3 nd3 nd3"
-//     "espaco2 anual anual anual barra2 setor setor setor setor setor barra6"
-//     "nd4 nd4 nd4 nd4 nd4 nd4 nd4 nd4 nd4 nd4 nd4";
-//   overflow: auto;
-// }
+
 </script>
 
 <style>
@@ -140,20 +126,18 @@ export default {
 #MED {
   display: grid;
   height: 100vh;
-  background: #e4e4e4;
-  grid-template-rows: 10px 200px 10px 340px 10px 400px 10px;
-  grid-template-columns: 30px 200px 10px 200px 10px 200px 10px 200px 10px 1fr 10px;
+  grid-template-rows: 2px 300px 10px 410px 10px 400px 10px;
+  grid-template-columns: 30px 200px 10px 200px 10px 220px 10px 220px 10px 1fr 10px;
   grid-template-areas:
     "nada nada nada nada nada nada nada nada nada nada nada"
-    "nd1 total nd2 pizzaFuncionarios nf nf nf nf nf tabela nf2"
+    "nd1 total nd2 pizzaFuncionarios nd5 historico historico historico nf tabela nf2"
     "nada2 nada2 nada2 nada2 nada2 nada2 nada2 nada2 nada2 nada2 nada2"
-    "espaco diario diario diario barra1 acumulado acumulado acumulado barra3 historico barra5"
+    "espaco diario diario diario diario diario barra4 acumulado acumulado acumulado barra5"
     "nd3 nd3 nd3 nd3 nd3 nd3 nd3 nd3 nd3 nd3 nd3"
     "espaco2 anual anual anual barra2 setor setor setor setor setor barra6"
     "nd4 nd4 nd4 nd4 nd4 nd4 nd4 nd4 nd4 nd4 nd4";
   overflow: auto;
 }
-
 .background{
   background: white !important;
 }

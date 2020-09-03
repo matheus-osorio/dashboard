@@ -39,7 +39,7 @@ export default {
     } else if (this.valor.match(/.+,\d$/)) {
       this.valor += "0";
     }
-    this.valor = this.valor.replace(/(\d)(?=(?:\d{3})+,)/, "$1.");
+    this.valor = this.valor.replace(/(\d)(?=(\d{3})+,)/g, "$1.");
     this.loading = false;
   },
 };

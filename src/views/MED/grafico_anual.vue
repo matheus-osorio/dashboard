@@ -156,11 +156,13 @@ export default {
     const obj = this.obj;
     const length = obj.data.length;
     const month = obj.inicio.mes;
-    let lastYear = 12 - month;
-    if (length <= 12) {
-      lastYear = 0;
-    } else {
-      lastYear = length - (length % 12);
+    const restOfYear = 13 - month;
+    let lastYear = 0
+    if(restOfYear < length){
+      lastYear = restOfYear 
+      while(length > lastYear + 12){
+        lastYear += 12
+      }
     }
     const calculate = obj.data.slice(lastYear);
     const xAxis = this.arrayData(obj).slice(lastYear);
