@@ -3,8 +3,8 @@
     <nav class="vertical-bar">
       <img src="./img/logo.svg" class="logo" alt="">
       <hr class="line">
-      <router-link :to="{name:'medicao',params:$route.params}" :class="{'selected':$route.name == 'medicao'}" @click="selected = 'MED'" class="waves-effect waves-teal btn-flat btn-custom">MED</router-link>
-      <router-link :to="{name:'escala',params:$route.params}" :class="{'selected':$route.name == 'escala'}" @click="selected = 'ESC'" class="waves-effect waves-teal btn-flat btn-custom">ESC</router-link>
+      <router-link :to="{name:'medicao',params:$route.params}" :class="{'selected':$route.name == 'medicao'}" @click="selected = 'MED'" class="waves-effect waves-teal btn-flat btn-custom"><i class="fas fa-pencil-ruler"></i></router-link>
+      <router-link :to="{name:'escala',params:$route.params}" :class="{'selected':$route.name == 'escala'}" @click="selected = 'ESC'" class="waves-effect waves-teal btn-flat btn-custom"><i class="fas fa-table"></i></router-link>
     </nav>
     <router-view/>
   </div>

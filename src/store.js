@@ -11,14 +11,16 @@ export default new Vuex.Store({
       hoje: "/medicao/statusHojeAPI.rule?sys=MDC&estab={{estab}}", //validado
       cor: "/medicao/colorAPI.rule?sys=MDC&estab={{estab}}", //validado
       //historico: "/medicao/historicoAPI.rule?sys=MDC&contrato={{contrato}}" //validado
-      historico: "/medicao/historicoCacheAPI.rule?sys=MDC&contrato={{contrato}}"
+      historico: "/medicao/historicoCacheAPI.rule?sys=MDC&contrato={{contrato}}",
+      grupo: "/medicao/gruposAPI.rule?sys=MDC&contrato={{contrato}}"
     }
     /*urls: {
       grafico: "http://localhost:3000/grafico_medicao",
       periodo: "http://localhost:3000/periodo",
       hoje: "http://localhost:3000/hoje",
       cor: "http://localhost:3000/color",
-      historico: "http://localhost:3000/historico"
+      historico: "http://localhost:3000/historico",
+      grupo: "http://localhost:3000/grupos"
     }*/
   },
   mutations: {

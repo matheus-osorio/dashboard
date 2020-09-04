@@ -70,7 +70,38 @@ export default {
     pizzaFuncionarios
   },
   methods: {
-    
+    objDoMes(mes){
+      let obj = {}
+      for(let setor of mes){
+        obj[setor.setor] = setor
+      }
+
+      return obj
+    },
+    somaArrays(arr1,arr2){
+      return arr1.map((valor,index) => {
+        return valor + arr2[index]
+      })
+    },
+    somaGrupos(mes,grupo,nome){
+      console.log('mes:', mes)
+      let filtrado = mes.filter((obj) => {return grupo.includes(obj.setor)})
+      //filtrado = Object.values(filtrado)
+      const somado = {}
+      somado.setor = nome
+      somado.valor = filtrado.reduce((soma,setor) => {
+        return this.somaArrays(soma,setor.valor)
+      },filtrado[0].valor.map(() => { return 0}))
+      somado.funcionarios = {}
+      somado.funcionarios.total = filtrado.reduce((soma,setor) => {
+        return soma + setor.funcionarios.total
+      },0)
+
+      somado.funcionarios.diario = filtrado.reduce((soma,setor) =>{
+        return this.somaArrays(soma,setor.funcionarios.diario)
+      },filtrado[0].funcionarios.diario.map(() => {return 0}))
+      return somado
+    },
     zoomActivator(id, zoom, unzoom) {
       if (this.zoom) {
         return;
@@ -95,8 +126,26 @@ export default {
     fetch(this.$store.getters.link('historico',this.$route.params))
       .then((response) => response.json())
       .then((obj) => {
-        this.obj = obj
-        this.isLoaded = true
+        fetch(this.$store.getters.link('grupo',this.$route.params))
+          .then((response) => response.json())
+          .then(grupos => {
+            const historico = obj.data
+            const total = []
+            for(let mes of historico){
+              let mesGrupo = []
+              for(let grupo of Object.keys(grupos)){
+                let agrupado = this.somaGrupos(mes,grupos[grupo],grupo)
+                mesGrupo.push(agrupado)
+              }
+              total.push(mesGrupo)
+            }
+
+            obj.data = total
+            this.obj = obj
+            this.isLoaded = true
+          })
+        // this.obj = obj
+        // this.isLoaded = true
       });
   }
 };

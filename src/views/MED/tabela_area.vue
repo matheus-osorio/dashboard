@@ -1,7 +1,13 @@
 <template>
   <div class="area-total background">
     <div class="fixo">
-      <table>
+      <table class="tabela">
+        <colgroup>
+        <col class="column1">
+        <col class="column2">
+        <col class="column3">
+        <col class="column2">
+        </colgroup>
         <thead>
           <th class="centralizado">{{tabela.mes}}</th>
           <th>
@@ -33,9 +39,9 @@
         <tbody>
           <tr v-for="valor in tabela.data" :key="valor.id">
             <th>{{valor.setor}}</th>
-            <td>{{valor.valor}}</td>
+            <td><money :raw="valor.valor" invalid="Inválido"/></td>
             <td>{{valor.funcionarios}}</td>
-            <td>{{valor.media}}</td>
+            <td><money :raw="valor.media" invalid="Inválido"/></td>
           </tr>
         </tbody>
       </table>
@@ -45,6 +51,7 @@
 
 <script>
 import btn from "./botao.vue";
+import money from './money.vue';
 
 export default {
   props:['obj'],
@@ -58,6 +65,7 @@ export default {
   },
   components: {
     btn,
+    money
   },
   methods: {
     proximo() {
@@ -67,7 +75,7 @@ export default {
     },
     anterior() {
       this.index = (this.index - 1) % this.info.length;
-      this.index = this.index >= 0 ? this.index : -this.index;
+      this.index = this.index >= 0 ? this.index : this.info.length - 1;
       this.tabela = this.info[this.index];
     },
     arrayData(obj) {
@@ -117,7 +125,7 @@ export default {
     const header = ["Setor", "Valor", "Funcionários", "Funcionarios x Valor"];
     const meses = this.arrayData(obj);
     this.info = data.map((linha, index) => {
-      return { data: linha, header, mes: meses[index] };
+      return { data: linha, header, mes: meses[index]};
     });
     this.index = this.info.length - 1;
     this.tabela = this.info[this.index];
@@ -127,6 +135,22 @@ export default {
 </script>
 
 <style>
+th,tr{
+  overflow: hidden;
+}
+
+.column1{
+    width:28% !important;
+}
+
+.column2{
+  width:25% !important;
+}
+
+.column3{
+  width: 22% !important;
+}
+
 .area-total {
   width: 100%;
   height: 100%;
@@ -143,6 +167,12 @@ export default {
 
 .centralizado {
   text-align: center;
+}
+
+.tabela{
+  table-layout: fixed;
+  width: 100%;
+  background: rgb(255, 255, 255);
 }
 
 .fixo {
