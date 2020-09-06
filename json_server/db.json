@@ -248,5 +248,8 @@
 "grupos":{
 "OFICINA":["COLUNA","AL-24","ARAME","IMBETIBA","PESCARIA","ADMINISTRATIVO"],
 "TRIAGEM":["TRIAGEM"]
- }
+ },
+ "PPU":{
+    "Montagem Conexão de modulados": 1136,"Desmontagem Desconexão de modulados":550,"Manutenção  - TSR":4,"Manutenção - Sub de pressurização (shear-out; hidro trip).":2,"Condicionamento de Materiais":659,"Teste hidrostático":382,"Manutenção em tampão de coluna de 2 3/8 a 3 1/2":94,"Manutenção em tampão de coluna de 4 1/2 a 5 1/2, ANM e TH":262,"Manutenção em Válvula de Retenção para Coluna  de 2 3/8 a 3":147,"Manutenção em Válvula de Retenção para Coluna  de 4 1/2 a 5":106,"Manutenção em BPV (IS-A Convencional 3 ou 4 e H 3)":11,"Manutenção em Insert Nipple para coluna de 4 1/2 ou 5 1/2":30,"Preparação em Mandril de Injeção Química Bolsa Lateral de 3 ":17,"Preparação de Linha de Controle Simples, Dupla ou Tripla de ":21,"Preenchimento com fluido de LC com MEG e outros fluidos por ":45,"Manutenção em Válvula de Injeção BRV, Insertável":12,"Manutenção em DHSV sem Câmara de Nitrogênio":4,"Manutenção em Ferramentas diversas: Adaptador, Barra de Carg":225,"Manutenção em Ferramentas diversas - Aplicador, Desviador, E":426,"Manutenção em Ferramentas diversas - Alojador de Corpo de Pr":19,"Atendimento aos PVMs de Ferramentas":3,"Atendimento aos PVMs de Equipamentos":191,"PVM ? Pedido de Verificação de Materiais":46,"VCMF ? Verificação Concomitante de Material no Fornecedor":0,"VIMES ? Verificação e Inspeção de Materiais Egressos de Sond":3194,"VCMUE ? Verificação de Conformidade de Materiais Usados para":227,"Serviços de preservação, limpeza, manutenção, desmontagem e ":25,"Recebimento e identificação":21755,"Expedição de elementos tubulares":24526,"Movimentação de tubos, acessórios e afins entre estaleiros":1495,"Manutenção":2,"Preservação":7,"Solda Elétrica ou Oxiacetileno":74.64
+    }
 }
