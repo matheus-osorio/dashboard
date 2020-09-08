@@ -1,8 +1,8 @@
 <template>
   <div class="background">
     <div class="area-definida">
-      <div class="title">Total do Contrato</div>
-      <div class="number">$ {{valor}}</div>
+      <div class="title">Valor Relativo ao Contrato</div>
+      <div class="number">{{valor}}%</div>
     </div>
   </div>
 </template>
@@ -18,7 +18,7 @@ export default {
   },
   mounted() {
     const obj = this.obj
-    this.valor = obj.data
+    const valor = obj.data
       .reduce((soma, linha) => {
         return parseFloat(
           soma +
@@ -33,14 +33,12 @@ export default {
         );
       }, 0)
       .toFixed(2);
-    this.valor = ("" + this.valor).replace(".", ",");
-    if (!this.valor.match(",")) {
-      this.valor += ",00";
-    } else if (this.valor.match(/.+,\d$/)) {
-      this.valor += "0";
-    }
-    this.valor = this.valor.replace(/(\d)(?=(\d{3})+,)/g, "$1.");
-    this.loading = false;
+    console.log(valor)
+    fetch(this.$store.getters.link('contrato',this.$route.params))
+    .then(response => response.json())
+    .then(total => {
+      this.valor = (valor*100/total.total).toFixed(2)
+    })
   },
 };
 </script>

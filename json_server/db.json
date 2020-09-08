@@ -251,5 +251,247 @@
  },
  "PPU":{
     "Montagem Conexão de modulados": 1136,"Desmontagem Desconexão de modulados":550,"Manutenção  - TSR":4,"Manutenção - Sub de pressurização (shear-out; hidro trip).":2,"Condicionamento de Materiais":659,"Teste hidrostático":382,"Manutenção em tampão de coluna de 2 3/8 a 3 1/2":94,"Manutenção em tampão de coluna de 4 1/2 a 5 1/2, ANM e TH":262,"Manutenção em Válvula de Retenção para Coluna  de 2 3/8 a 3":147,"Manutenção em Válvula de Retenção para Coluna  de 4 1/2 a 5":106,"Manutenção em BPV (IS-A Convencional 3 ou 4 e H 3)":11,"Manutenção em Insert Nipple para coluna de 4 1/2 ou 5 1/2":30,"Preparação em Mandril de Injeção Química Bolsa Lateral de 3 ":17,"Preparação de Linha de Controle Simples, Dupla ou Tripla de ":21,"Preenchimento com fluido de LC com MEG e outros fluidos por ":45,"Manutenção em Válvula de Injeção BRV, Insertável":12,"Manutenção em DHSV sem Câmara de Nitrogênio":4,"Manutenção em Ferramentas diversas: Adaptador, Barra de Carg":225,"Manutenção em Ferramentas diversas - Aplicador, Desviador, E":426,"Manutenção em Ferramentas diversas - Alojador de Corpo de Pr":19,"Atendimento aos PVMs de Ferramentas":3,"Atendimento aos PVMs de Equipamentos":191,"PVM ? Pedido de Verificação de Materiais":46,"VCMF ? Verificação Concomitante de Material no Fornecedor":0,"VIMES ? Verificação e Inspeção de Materiais Egressos de Sond":3194,"VCMUE ? Verificação de Conformidade de Materiais Usados para":227,"Serviços de preservação, limpeza, manutenção, desmontagem e ":25,"Recebimento e identificação":21755,"Expedição de elementos tubulares":24526,"Movimentação de tubos, acessórios e afins entre estaleiros":1495,"Manutenção":2,"Preservação":7,"Solda Elétrica ou Oxiacetileno":74.64
-    }
+    },
+    "contrato": {
+        "contratante": "1",
+        "nome": "OS OFICINA MACAE ii",
+        "objetivo": "SERVIÇOS DE APOIO ÀS OFICINAS DO SCA, SP E MOVIMENTAÇÃO DE MATERIAIS NA ÁREA DE TRIAGEM",
+        "inicio":"21/08/2018 00:00:00",
+        "fim":"20/08/2022 00:00:00",
+        "total":45845855.44
+        },
+    "retencao":{
+        "dados":[{
+        "mes":{
+        "nome": "Set/2018",
+        "reajuste": 1,
+        "link":"http://webrun.perbras.com.br/medicao/RM_ArquivoAPI.rule?sys=MDC&id=2",
+        "RM": 5,
+        "NF": 1723
+        },
+        "valor":{
+        "NF": 987935.78,
+        "base":987935.78
+        },
+        "retencao":{
+        "base": 47420.91744,
+        "mes": 47420.91744,
+        "corrigido": 51755.189294015996,
+        "status": "RETIDO"
+        },
+        "reajuste": {
+        "ultimo": 1.0914
+        }
+        },{
+        "mes":{
+        "nome": "Set/2018",
+        "reajuste": 1,
+        "link":"http://webrun.perbras.com.br/medicao/RM_ArquivoAPI.rule?sys=MDC&id=3",
+        "RM": 6,
+        "NF": 1724
+        },
+        "valor":{
+        "NF": 84025.87,
+        "base":84025.87
+        },
+        "retencao":{
+        "base": 4033.24176,
+        "mes": 4033.24176,
+        "corrigido": 4401.880056863999,
+        "status": "RETIDO"
+        },
+        "reajuste": {
+        "ultimo": 1.0914
+        }
+        },{
+        "mes":{
+        "nome": "Set/2018",
+        "reajuste": 1,
+        "link":"http://webrun.perbras.com.br/medicao/RM_ArquivoAPI.rule?sys=MDC&id=4",
+        "RM": 7,
+        "NF": 1725
+        },
+        "valor":{
+        "NF": 947.12,
+        "base":947.12
+        },
+        "retencao":{
+        "base": 45.46176,
+        "mes": 45.46176,
+        "corrigido": 49.616964864,
+        "status": "RETIDO"
+        },
+        "reajuste": {
+        "ultimo": 1.0914
+        }
+        },{
+        "mes":{
+        "nome": "Out/2018",
+        "reajuste": 1,
+        "link":"http://webrun.perbras.com.br/medicao/RM_ArquivoAPI.rule?sys=MDC&id=5",
+        "RM": 14,
+        "NF": 1730
+        },
+        "valor":{
+        "NF": 689827.53,
+        "base":689827.53
+        },
+        "retencao":{
+        "base": 33111.72144,
+        "mes": 33111.72144,
+        "corrigido": 36138.132779616,
+        "status": "RETIDO"
+        },
+        "reajuste": {
+        "ultimo": 1.0914
+        }
+        },{
+        "mes":{
+        "nome": "Out/2018",
+        "reajuste": 1,
+        "link":"http://webrun.perbras.com.br/medicao/RM_ArquivoAPI.rule?sys=MDC&id=6",
+        "RM": 9,
+        "NF": 1729
+        },
+        "valor":{
+        "NF": 37793.8,
+        "base":37793.8
+        },
+        "retencao":{
+        "base": 1814.1024000000002,
+        "mes": 1814.1024000000002,
+        "corrigido": 1979.9113593599998,
+        "status": "RETIDO"
+        },
+        "reajuste": {
+        "ultimo": 1.0914
+        }
+        },{
+        "mes":{
+        "nome": "Nov/2018",
+        "reajuste": 1,
+        "link":"http://webrun.perbras.com.br/medicao/RM_ArquivoAPI.rule?sys=MDC&id=7",
+        "RM": 15,
+        "NF": 1731
+        },
+        "valor":{
+        "NF": 707700,
+        "base":707700
+        },
+        "retencao":{
+        "base": 33969.6,
+        "mes": 33969.6,
+        "corrigido": 37074.42143999999,
+        "status": "RETIDO"
+        },
+        "reajuste": {
+        "ultimo": 1.0914
+        }
+        },{
+        "mes":{
+        "nome": "Nov/2018",
+        "reajuste": 1,
+        "link":"http://webrun.perbras.com.br/medicao/RM_ArquivoAPI.rule?sys=MDC&id=8",
+        "RM": 16,
+        "NF": 1732
+        },
+        "valor":{
+        "NF": 38398.73,
+        "base":38398.73
+        },
+        "retencao":{
+        "base": 1843.13904,
+        "mes": 1843.13904,
+        "corrigido": 2011.6019482559998,
+        "status": "RETIDO"
+        },
+        "reajuste": {
+        "ultimo": 1.0914
+        }
+        },{
+        "mes":{
+        "nome": "Nov/2018",
+        "reajuste": 1,
+        "link":"http://webrun.perbras.com.br/medicao/RM_ArquivoAPI.rule?sys=MDC&id=9",
+        "RM": 1733,
+        "NF": 1733
+        },
+        "valor":{
+        "NF": 2769.22,
+        "base":2769.22
+        },
+        "retencao":{
+        "base": 132.92256,
+        "mes": 132.92256,
+        "corrigido": 145.07168198399998,
+        "status": "RETIDO"
+        },
+        "reajuste": {
+        "ultimo": 1.0914
+        }
+        },{
+        "mes":{
+        "nome": "Dez/2018",
+        "reajuste": 1,
+        "link":"http://webrun.perbras.com.br/medicao/RM_ArquivoAPI.rule?sys=MDC&id=10",
+        "RM": 19,
+        "NF": 1735
+        },
+        "valor":{
+        "NF": 77180.34,
+        "base":77180.34
+        },
+        "retencao":{
+        "base": 3704.65632,
+        "mes": 3704.65632,
+        "corrigido": 4043.2619076479996,
+        "status": "RETIDO"
+        },
+        "reajuste": {
+        "ultimo": 1.0914
+        }
+        },{
+        "mes":{
+        "nome": "Dez/2018",
+        "reajuste": 1,
+        "link":"http://webrun.perbras.com.br/medicao/RM_ArquivoAPI.rule?sys=MDC&id=11",
+        "RM": 20,
+        "NF": 1736
+        },
+        "valor":{
+        "NF": 1254.15,
+        "base":1254.15
+        },
+        "retencao":{
+        "base": 60.1992,
+        "mes": 60.1992,
+        "corrigido": 65.70140688,
+        "status": "RETIDO"
+        },
+        "reajuste": {
+        "ultimo": 1.0914
+        }
+        },{
+        "mes":{
+        "nome": "Dez/2018",
+        "reajuste": 1,
+        "link":"http://webrun.perbras.com.br/medicao/RM_ArquivoAPI.rule?sys=MDC&id=12",
+        "RM": 18,
+        "NF": 1734
+        },
+        "valor":{
+        "NF": 829000.85,
+        "base":829000.85
+        },
+        "retencao":{
+        "base": 39792.040799999995,
+        "mes": 39792.040799999995,
+        "corrigido": 43429.03332911999,
+        "status": "RETIDO"
+        },
+        "reajuste": {
+        "ultimo": 1.0914
+        }
+        }]
+        }
 }

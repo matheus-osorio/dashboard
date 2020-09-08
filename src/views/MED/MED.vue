@@ -1,7 +1,7 @@
 <template>
   <div id="MED" class="zoom-background" v-if="isLoaded">
     <graficoDiario @zoom="(zoom,unzoom) => {zoomActivator('diario',zoom,unzoom)}" id="diario" />
-    <pizzaFuncionarios @zoom="(zoom,unzoom) => {zoomActivator('pizza-funcionarios',zoom,unzoom)}" id="pizza-funcionarios"/>
+    <!-- <pizzaFuncionarios @zoom="(zoom,unzoom) => {zoomActivator('pizza-funcionarios',zoom,unzoom)}" id="pizza-funcionarios"/> -->
     <graficoPPU id="PPU"
     @zoom="(zoom,unzoom) => {zoomActivator('PPU',zoom,unzoom)}"
     />
@@ -16,7 +16,12 @@
     />
     <graficoSetor :obj="obj" @zoom="(zoom,unzoom) => {zoomActivator('setor',zoom,unzoom)}" id="setor" />
     <div id="total">
+      <contratoMaximo/>
+      <div></div>
       <totalContrato :obj="obj"/>
+    </div>
+    <div id="total2">
+      <retencaoTotal/>
       <div></div>
       <totalFuncionarios :obj="obj"/>
     </div>
@@ -50,8 +55,10 @@ import tabelaArea from "./tabela_area";
 import graficoAnual from "./grafico_anual";
 import totalFuncionarios from "./total_funcionarios";
 import graficoSetor from "./grafico_setor";
-import pizzaFuncionarios from './pizza_funcionarios';
+//import pizzaFuncionarios from './pizza_funcionarios';
 import graficoPPU from './grafico_ppu';
+import contratoMaximo from './contrato_maximo';
+import retencaoTotal from './retencao_total';
 
 export default {
   data() {
@@ -71,8 +78,10 @@ export default {
     graficoAnual,
     totalFuncionarios,
     graficoSetor,
-    pizzaFuncionarios,
-    graficoPPU
+    //pizzaFuncionarios,
+    graficoPPU,
+    contratoMaximo,
+    retencaoTotal
   },
   methods: {
     objDoMes(mes){
@@ -184,7 +193,7 @@ export default {
   grid-template-columns: 30px 200px 10px 200px 10px 220px 10px 220px 10px 1fr 10px;
   grid-template-areas:
     "nada nada nada nada nada nada nada nada nada nada nada"
-    "nd1 total nd2 pizzaFuncionarios nd5 PPU PPU PPU nf tabela nf2"
+    "nd1 total nd2 total2 nd5 PPU PPU PPU nf tabela nf2"
     "nada2 nada2 nada2 nada2 nada2 nada2 nada2 nada2 nada2 nada2 nada2"
     "espaco diario diario diario nd10 acumulado acumulado acumulado barra4 historico barra5"
     "nd3 nd3 nd3 nd3 nd3 nd3 nd3 nd3 nd3 nd3 nd3"
@@ -251,6 +260,13 @@ export default {
 
 #total {
   grid-area: total;
+  display: grid;
+  grid-template-rows:49% 5px 1fr;
+  grid-template-columns:100%;
+}
+
+#total2{
+  grid-area: total2;
   display: grid;
   grid-template-rows:49% 5px 1fr;
   grid-template-columns:100%;
