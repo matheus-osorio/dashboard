@@ -1,7 +1,7 @@
 <template>
   <div class="background division">
     <div class="area-definida">
-      <div class="title">Valor Total Contrato</div>
+      <div class="title">Valor Total (Período)</div>
       <div class="number">$ {{valor}}</div>
     </div>
   </div>
@@ -15,10 +15,16 @@ export default {
         }
     },
     mounted(){
-        fetch(this.$store.getters.link('contrato',this.$route.params))
+        fetch(this.$store.getters.link('grafico',this.$route.params))
         .then(response => response.json())
         .then(obj => {
-            this.valor = obj.total
+            const arr = obj.data
+            const valor = arr.reduce((soma,categoria) => {
+              return soma + categoria.reduce((soma,valor) => {
+                return parseFloat(soma) + parseFloat(valor)
+              })
+            },0).toFixed(2)
+            this.valor = valor
             this.valor = ("" + this.valor).replace(".", ",");
             if (!this.valor.match(",")) {
             this.valor += ",00";

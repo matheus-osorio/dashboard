@@ -152,7 +152,6 @@ export default {
     },
   },
   mounted() {
-    console.log("anual OK!")
     const obj = this.obj;
     const length = obj.data.length;
     const month = obj.inicio.mes;

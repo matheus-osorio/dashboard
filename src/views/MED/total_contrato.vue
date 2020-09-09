@@ -1,7 +1,7 @@
 <template>
   <div class="background">
     <div class="area-definida">
-      <div class="title">Valor Relativo ao Contrato</div>
+      <div class="title">Verba Consumida do Contrato (%)</div>
       <div class="number">{{valor}}%</div>
     </div>
   </div>

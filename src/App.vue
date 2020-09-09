@@ -104,6 +104,91 @@ body{
 ::-webkit-scrollbar-thumb:hover {
   background: #555; 
 }
+
+html {
+    font-size:12px;
+}
+#MED {
+    background: #f5f5f5;
+}
+.background, .fixo {
+    background:#ffffff;
+}
+td, th {
+    text-align:center;
+}
+thead th {
+    padding: 6px;
+}
+.background {
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(225,225,225,1);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(225,225,225,1);
+    box-shadow: 0px 0px 5px 0px #9f9f9f;
+    padding: 0;
+}
+.area-definida {
+    display: table;
+    border-collapse: collapse; 
+}
+.cabecalho,.title {
+    font-size:14px;
+    font-weight:normal;
+    /*background:#ebf2f8;*/
+    border-bottom: 1px solid  #d0d0d0;
+    display:table-row;
+    width:100%;
+    text-align:left;
+}
+.area-definida .title {
+    display:table-row;
+    height: 40px;
+    text-indent: 7px;
+    line-height: 30px;
+}
+.number {
+    font-size: 26px;
+}
+.area .cabecalho {
+    justify-content: left;
+    padding-left: 7px;
+    padding-right: 0;
+    display:block;
+    height: 40px;
+    text-align:left;
+}
+.overflow-graph, .echarts {
+    top: 10px;
+    position: relative;
+    overflow-x: hidden;
+    padding:10px 10px 10px;
+}
+.number {
+    margin:auto;
+    display:table-cell;
+    vertical-align:middle;
+    height:100%;
+    text-align:center;
+}
+.cabecalho .btn-small {
+    height:24px;
+    width:24px;
+    line-height:25px;
+    padding:0;
+    float:right;
+    background-color: #ffffff !important;
+    color: #00796b;
+}
+.btn-small i {
+    font-size:12px;
+}
+.btn-arrow,.teal.darken-2 {
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    padding-left: 6px;
+    background-color: #ffffff !important;
+    color: #00796b;
+}
 </style>
 
 

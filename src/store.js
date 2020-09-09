@@ -5,7 +5,7 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    urls: {
+    /*urls: {
       grafico: "/medicao/graficoNovoAPI.rule?sys=MDC&mes={{mes}}&contrato={{contrato}}", //validado
       periodo: "/medicao/periodoAPI.rule?sys=MDC&mes={{mes}}&contrato={{contrato}}", //validado
       hoje: "/medicao/statusHojeAPI.rule?sys=MDC&estab={{estab}}", //validado
@@ -16,8 +16,8 @@ export default new Vuex.Store({
       PPU: "/medicao/ppuTotalAPI.rule?sys=MDC&contrato={{contrato}}",
       contrato: "/medicao/contratoAPI.rule?sys=MDC&contrato={{contrato}}",
       retencao: "/medicao/retencaoAPI.rule?sys=MDC&contrato={{contrato}}"
-    }
-    /*urls: {
+    }*/
+    urls: {
       grafico: "http://localhost:3000/grafico_medicao",
       periodo: "http://localhost:3000/periodo",
       hoje: "http://localhost:3000/hoje",
@@ -27,7 +27,7 @@ export default new Vuex.Store({
       PPU: "http://localhost:3000/PPU",
       contrato: "http://localhost:3000/contrato",
       retencao: "http://localhost:3000/retencao"
-    }*/
+    }
   },
   mutations: {
 

@@ -104,7 +104,20 @@ export default {
       this.graph = this.setores[this.index];
       this.setor = this.nomes[this.index];
     },
-    criarGrafico(obj) {
+    fazerMes(periodo,valores){
+      const arr = []
+      console.log('periodo:', periodo)
+      for(let index in valores){
+        if(index < periodo.range.totalDias){
+          arr.push((parseInt(periodo.range.inicio) + parseInt(index)))
+        }
+        else{
+          arr.push((1 + parseInt(index) - parseInt(periodo.range.totalDias)))
+        }
+      }
+      return arr
+    },
+    criarGrafico(obj,periodo) {
       const cores = ["#4287f5", "#ed4574", "#41a81e"];
       const valores = obj.valor;
       const funcionarios = obj.funcionarios.diario;
@@ -151,9 +164,7 @@ export default {
         {
           type: "category",
           axisTick: { show: false },
-          data: valores.map((valor, index) => {
-            return index + 1;
-          }),
+          data: this.fazerMes(periodo,valores),
         },
       ]),
         (options.yAxis = [
@@ -174,16 +185,17 @@ export default {
       const nomes = raw.map((valor) => {
         return valor.setor;
       });
-      console.log(nomes);
       return nomes;
     },
   },
   mounted() {
     const obj = this.obj
     const mes = obj.data[obj.data.length - 1];
-
-    const graphs = mes.map((obj) => {
-      return this.criarGrafico(obj);
+    fetch(this.$store.getters.link('periodo',this.$route.params))
+    .then(response => response.json())
+    .then(periodo => {
+      const graphs = mes.map((obj) => {
+      return this.criarGrafico(obj,periodo);
     });
 
     this.setores = graphs;
@@ -192,6 +204,8 @@ export default {
     this.setor = this.nomes[0];
     this.index = 0;
     this.loading = false;
+    })
+    
   },
 };
 </script>

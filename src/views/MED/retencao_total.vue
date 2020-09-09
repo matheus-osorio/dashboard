@@ -1,7 +1,7 @@
 <template>
   <div class="background division">
     <div class="area-definida">
-      <div class="title">Retenção Total</div>
+      <div class="title">Retenção Acumulada</div>
       <div class="number">$ {{valor}}</div>
     </div>
   </div>
@@ -20,9 +20,7 @@ export default {
         .then(obj => {
             
             this.valor = obj.dados.reduce((total,atual) => {
-                console.log("base:", atual.valor.base)
-                console.log('total: ',total)
-                return (atual.valor.base * atual.reajuste.ultimo) + total
+                return atual.retencao.corrigido + total
             },0).toFixed(2)
             this.valor = ("" + this.valor).replace(".", ",");
             if (!this.valor.match(",")) {
