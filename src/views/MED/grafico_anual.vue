@@ -163,6 +163,7 @@ export default {
         lastYear += 12
       }
     }
+    
     const calculate = obj.data.slice(lastYear);
     const xAxis = this.arrayData(obj).slice(lastYear);
     this.graph = this.createGraph(calculate, xAxis);

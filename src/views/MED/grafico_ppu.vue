@@ -83,12 +83,14 @@ export default {
                     }
                 }
             ]
-            const total = Object.values(obj).reduce((soma,valor) => soma + valor)
+            
+            option.tooltip = {}
+
             option.series = Object.keys(obj).map((ppu) => {
                 return {
                     name: ppu,
                     type: 'bar',
-                    data: [parseFloat(obj[ppu]*100/total).toFixed(2)],
+                    data: [parseFloat(obj[ppu].atual*100/obj[ppu].total).toFixed(2)],
                     label:{
                         show: true,
                         position: 'right',

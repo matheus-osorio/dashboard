@@ -128,6 +128,18 @@ export default {
       return { data: linha, header, mes: meses[index]};
     });
     this.index = this.info.length - 1;
+    this.info = this.info.reduce((novoArray,valor) => {
+      const total = valor.data.reduce((total,valor) => {
+        total.funcionarios += valor.funcionarios
+        total.valor += valor.valor
+        return total
+      },{funcionarios:0,valor:0,setor:'Total'})
+      
+      total.media = (total.valor / total.funcionarios).toFixed(2)
+      valor.data.push(total)
+      novoArray.push(valor)
+      return novoArray
+    },[])
     this.tabela = this.info[this.index];
     console.log(this.tabela);
   },
