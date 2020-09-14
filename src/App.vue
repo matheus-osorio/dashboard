@@ -3,8 +3,8 @@
     <nav class="vertical-bar">
       <img src="./img/logo.svg" class="logo" alt="">
       <hr class="line">
-      <router-link :to="{name:'medicao',params:$route.params}" :class="{'selected':$route.name == 'medicao'}" @click="selected = 'MED'" class="waves-effect waves-teal btn-flat btn-custom"><i class="fas fa-pencil-ruler"></i></router-link>
-      <router-link :to="{name:'escala',params:$route.params}" :class="{'selected':$route.name == 'escala'}" @click="selected = 'ESC'" class="waves-effect waves-teal btn-flat btn-custom"><i class="fas fa-table"></i></router-link>
+      <router-link :to="{name:'medicao',params:$route.params}" :class="{'selected':$route.name == 'medicao'}" @click="selected = 'MED'" class="waves-effect waves-teal btn-flat btn-custom"><i class="fas fa-pencil-ruler centered"></i></router-link>
+      <router-link :to="{name:'escala',params:$route.params}" :class="{'selected':$route.name == 'escala'}" @click="selected = 'ESC'" class="waves-effect waves-teal btn-flat btn-custom"><i class="fas fa-table centered"></i></router-link>
     </nav>
     <router-view/>
   </div>
@@ -52,15 +52,7 @@ body{
   margin: 0px;
 }
 
-@media(max-width: 600px){
-  .vertical-bar{
-    height: 100%;
-  }
 
-  #app{
-    height: 1775px;
-  }
-}
 .logo{
   height: 35px;
   margin-top: 5px;
@@ -189,6 +181,44 @@ thead th {
     background-color: #ffffff !important;
     color: #00796b;
 }
+
+@media(max-width: 600px){
+  #app {
+  height: 100%;
+  display: grid;
+  grid-template-rows: 50px 1fr;
+  grid-template-columns: 1fr;
+  grid-template-areas: 
+  "navbar" 
+  "data";
+
+ }
+
+ .vertical-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  grid-area: navbar;
+  height: 100%;
+  background: rgb(6,183,227);
+  background: linear-gradient(180deg, rgba(6,183,227,1) 9%, rgba(11,221,157,1) 73%);
+ }
+
+ .line{
+   display: none;
+ }
+
+ .btn-custom{
+   padding-right: 10px;
+   padding-left: 10px;
+   height: 100%;
+ }
+
+ .centered{
+   padding-top: 30%;
+ }
+}
+
 </style>
 
 

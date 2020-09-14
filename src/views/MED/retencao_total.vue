@@ -18,7 +18,6 @@ export default {
         fetch(this.$store.getters.link('retencao',this.$route.params))
         .then(response => response.json())
         .then(obj => {
-            
             this.valor = obj.dados.reduce((total,atual) => {
                 return atual.retencao.corrigido + total
             },0).toFixed(2)
