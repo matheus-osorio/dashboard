@@ -206,9 +206,58 @@ export default {
 }
 
 
-@media (max-width: 600px) {
-
+@media (max-width: 1200px) {
+  #MED {
+    display: grid;
+    height: 100vh;
+    grid-template-rows: 2px 300px 10px 410px 10px 400px 10px 400px 10px 400px;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-areas:
+    "nada nada nada nada"
+    "total total2 tabela tabela"
+    "nada2 nada2 nada2 nada2"
+    "diario diario acumulado acumulado"
+    "nada3 nada3 nada3 nada3"
+    "anual anual anual anual"
+    "nada4 nada4 nada4 nada4"
+    "PPU PPU historico historico"
+    "nada5 nada5 nada5 nada5"
+    "setor setor setor setor"
+    
+    ;
+    overflow: auto;
+  }
 }
+
+@media (max-width: 600px) {
+  #MED {
+    display: grid;
+    height: 100vh;
+    grid-template-rows: 2px 300px 10px 410px 10px 260px 10px 400px 10px 400px 10px 400px 10px 400px 10px 400px;
+    grid-template-columns: 50% 50%;
+    grid-template-areas:
+    "nada nada"
+    "total total2"
+    "nada2 nada2"
+    "PPU PPU"
+    "nada3 nada3"
+    "tabela tabela"
+    "nada4 nada4"
+    "diario diario"
+    "nada5 nada5"
+    "acumulado acumulado"
+    "nada6 nada6"
+    "historico historico"
+    "nada7 nada7"
+    "anual anual"
+    "nada8 nada8"
+    "setor setor"
+    ;
+    overflow: auto;
+  }
+}
+
+
 .blur {
   background-color: rgba(121, 120, 120, 0.8);
   filter: blur(90%);
