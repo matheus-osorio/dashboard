@@ -1,5 +1,5 @@
 <template>
-<div class="area-total" :class="{'background':zoomBtn}">
+<div class="area-total tamanho" :class="{'background':zoomBtn}">
   <div class="grafico grafico1">
     <div class="center-align container loader" v-if="loading">
       <h5>Carregando dados</h5>
@@ -69,51 +69,54 @@ export default {
           return resultado
       },
       pegarCores(cores){
-          return cores.reduce((obj,atual) => {
-              obj[atual.name] = atual.color
-              return obj
+          return cores.reduce((obj,cor) => {
+            obj[cor.name] = cor
+            return obj
           },{})
       },
       construirGrafico(dados,cores){
-          const keys = Object.keys(dados)
-          const data = []
-          for(let sigla of keys){
-              let obj = {
-                  color: cores[sigla],
-                  value: dados[sigla],
-                  name: sigla
-              }
-              data.push(obj)
-          }
-
-        const options = {
-            tooltip: {
-                trigger: 'item',
-                formatter: '{a} <br/>{b} : {c} ({d}%)'
-            },
-            legend: {
-                orient: 'vertical',
-                left: 'left',
-                data: keys
-            },
-            series: [
-                {
-                    name: 'Funcionários Hoje',
-                    type: 'pie',
-                    radius: '55%',
-                    center: ['50%', '60%'],
-                    data,
-                    emphasis: {
-                        itemStyle: {
-                            shadowBlur: 10,
-                            shadowOffsetX: 0,
-                            shadowColor: 'rgba(0, 0, 0, 0.5)'
-                        }
-                    }
-                }
-            ]
+         const options = {}
+         options.legend = {
+           type: 'scroll',
+           data: Object.values(cores).map((obj) => {
+             return obj.fullName
+           })
+         }
+         options.legend.data.push('Total')
+         options.tooltip = {
+           trigger: 'item',
+           axisPointer: {
+            type: 'shadow'
         }
-        return options
+         }
+
+         options.xAxis = {
+           data:['']
+         }
+
+         options.yAxis = {
+           splitNumber: 10
+         }
+         const chaves = Object.keys(dados)
+         const series = chaves.reduce((arr, tag) => {
+           const obj = {
+              name: cores[tag].fullName,
+              type: 'bar',
+              data: [dados[tag]]
+           }
+           arr.push(obj)
+           return arr
+         },[])
+          series.push({
+            name:'Total',
+            type:'bar',
+            data: [Object.values(dados).reduce((total,valor) => {
+              return total + valor
+            })]
+          })
+         options.series = series
+
+         return options
       }
   },
   mounted() {
@@ -124,8 +127,7 @@ export default {
         fetch(this.$store.getters.link('cor',this.$route.params))
         .then(response => {return response.json()})
         .then(cores => {
-            const objCores = this.pegarCores(cores)
-            this.graph = this.construirGrafico(dados,objCores)
+            this.graph = this.construirGrafico(dados,this.pegarCores(cores))
             this.loading = false
         })
       })
@@ -174,5 +176,8 @@ export default {
   padding-right: 5px;
   padding-top: 2px;
   padding-left: 5px;
+}
+.tamanho{
+  height:100%
 }
 </style>

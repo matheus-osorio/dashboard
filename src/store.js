@@ -6,8 +6,8 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     /*urls: {
-      grafico: "/medicao/graficoNovoAPI.rule?sys=MDC&mes={{mes}}&contrato={{contrato}}", //validado
-      periodo: "/medicao/periodoAPI.rule?sys=MDC&mes={{mes}}&contrato={{contrato}}", //validado
+      grafico: "/medicao/graficoNovoAPI.rule?sys=MDC&mes={{periodo}}&contrato={{contrato}}", //validado
+      periodo: "/medicao/periodoAPI.rule?sys=MDC&mes={{periodo}}&contrato={{contrato}}", //validado
       hoje: "/medicao/statusHojeAPI.rule?sys=MDC&estab={{estab}}", //validado
       cor: "/medicao/colorAPI.rule?sys=MDC&estab={{estab}}", //validado
       //historico: "/medicao/historicoAPI.rule?sys=MDC&contrato={{contrato}}" //validado
@@ -15,7 +15,9 @@ export default new Vuex.Store({
       grupo: "/medicao/gruposAPI.rule?sys=MDC&contrato={{contrato}}",
       PPU: "/medicao/ppuTotalAPI.rule?sys=MDC&contrato={{contrato}}",
       contrato: "/medicao/contratoAPI.rule?sys=MDC&contrato={{contrato}}",
-      retencao: "/medicao/retencaoAPI.rule?sys=MDC&contrato={{contrato}}"
+      retencao: "/medicao/retencaoAPI.rule?sys=MDC&contrato={{contrato}}",
+      escala: "/medicao/escalaAPI.rule?sys=MDC&mes={{mes}}&ano={{ano}}&estab={{estab}},
+      sinistro: "/medicao/sinistralidadeAPI.rule?sys=MDC&contrato={{contrato}}""
     }*/
     urls: {
       grafico: "http://localhost:3000/grafico_medicao",
@@ -26,7 +28,9 @@ export default new Vuex.Store({
       grupo: "http://localhost:3000/grupos",
       PPU: "http://localhost:3000/PPU",
       contrato: "http://localhost:3000/contrato",
-      retencao: "http://localhost:3000/retencao"
+      retencao: "http://localhost:3000/retencao",
+      escala: "http://localhost:3000/funcionarios",
+      sinistro: "http://localhost:3000/sinistro"
     }
   },
   mutations: {

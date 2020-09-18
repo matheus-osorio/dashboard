@@ -27,22 +27,7 @@
     </div>
     <tabelaArea :obj="obj" id="tabela"/>
     <graficoAnual id="anual" :obj="obj" @zoom="(zoom,unzoom) => {zoomActivator('anual',zoom,unzoom)}" />
-    <div class="zoom-full" v-show="zoom">
-      <div id="cima" class="blur"></div>
-      <div id="esquerda" class="blur"></div>
-      <div id="direita" class="blur"></div>
-      <div id="baixo" class="blur"></div>
-      <div class="background">
-        <div class="zoom">
-          <div class="box" id="zoom-box">
-            <div class="botoes">
-              <a href="#" @click="undoZoom"><i class="fas fa-times pad-custom"></i></a>
-            </div>
-            <div id="zoom-area"></div>
-          </div>
-        </div>
-      </div>
-    </div>
+    
   </div>
 </template>
 
@@ -97,8 +82,24 @@ export default {
         return valor + arr2[index]
       })
     },
+    excluirInvalidos(meses,invalidos,grupos){
+      console.log(grupos)
+      let mesUnico = []
+      for(let grupo of invalidos){
+        mesUnico = []
+        meses.map((mes) => {
+          let valor = mes.filter((obj) => {   
+              console.log('grupos: ',grupos, 'grupo:', grupo)
+              return !grupos[grupo].grupo.includes(obj.setor)   
+            })
+          mesUnico.push(valor)
+        })
+
+        meses = mesUnico
+      }
+      return meses
+    },
     somaGrupos(mes,grupo,nome){
-      console.log('mes:', mes)
       let filtrado = mes.filter((obj) => {return grupo.includes(obj.setor)})
       //filtrado = Object.values(filtrado)
       const somado = {}
@@ -124,7 +125,6 @@ export default {
       const area = document.querySelector("#" + id)
       document.querySelector("#zoom-area").appendChild(area)
       this.saveMethod = unzoom
-      console.log(zoom)
       zoom()
     },
     undoZoom() {
@@ -143,12 +143,20 @@ export default {
         fetch(this.$store.getters.link('grupo',this.$route.params))
           .then((response) => response.json())
           .then(grupos => {
+            const invalidos = Object.keys(grupos).filter(grupo => !grupos[grupo].valido)
+            obj.data = this.excluirInvalidos(obj.data,invalidos,grupos)
+            Object.keys(grupos).forEach(grupo => {
+              if(!grupos[grupo].valido){
+                delete grupos[grupo]
+              }
+            })
             const historico = obj.data
+            
             const total = []
             for(let mes of historico){
               let mesGrupo = []
               for(let grupo of Object.keys(grupos)){
-                let agrupado = this.somaGrupos(mes,grupos[grupo],grupo)
+                let agrupado = this.somaGrupos(mes,grupos[grupo].grupo,grupo)
                 mesGrupo.push(agrupado)
               }
               total.push(mesGrupo)
@@ -201,6 +209,7 @@ export default {
     "nd4 nd4 nd4 nd4 nd4 nd4 nd4 nd4 nd4 nd4 nd4";
   overflow: auto;
 }
+
 .background{
   background: white !important;
 }

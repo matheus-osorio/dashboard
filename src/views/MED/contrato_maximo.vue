@@ -23,8 +23,8 @@ export default {
               return soma + categoria.reduce((soma,valor) => {
                 return parseFloat(soma) + parseFloat(valor)
               })
-            },0).toFixed(2)
-            this.valor = valor
+            },0)
+            this.valor = (valor * obj.reajuste).toFixed(2)
             this.valor = ("" + this.valor).replace(".", ",");
             if (!this.valor.match(",")) {
             this.valor += ",00";
