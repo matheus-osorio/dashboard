@@ -18,8 +18,12 @@ export default {
         fetch(this.$store.getters.link('sinistro',this.$route.params))
         .then(response => response.json())
         .then(sinistro => {
-            const ultimos = sinistro.splice(sinistro.length - (sinistro.length % 12))
-            this.valor = ultimos.reduce((soma,valor) => soma + valor)/ultimos.length
+          console.log('sinistro: ',sinistro)
+            let ultimos = sinistro
+            if(ultimos.length > 12){
+             ultimos = sinistro.splice(sinistro.length - (sinistro.length % 12))
+            }
+            this.valor = (ultimos.reduce((soma,valor) => soma + valor)/ultimos.length).toFixed(2)
         })
     }
 }

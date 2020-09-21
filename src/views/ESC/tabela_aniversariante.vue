@@ -52,7 +52,7 @@ export default {
         aniversarioNoMes(funcionario){
             const nasc = funcionario.nasc
             const mes = nasc.split(' ')[0].split('/')[1]
-            const mesAtual = (new Date()).getMonth()
+            const mesAtual = (new Date()).getMonth() + 1
             console.log('mes:',mes,mesAtual)
             return mes == mesAtual
         }

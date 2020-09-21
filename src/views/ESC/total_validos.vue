@@ -1,7 +1,7 @@
 <template>
     <div class="background">
     <div class="area-definida">
-      <div class="title">Status Válidos</div>
+      <div class="title">Funcionários Ativos Hoje</div>
       <div class="number">{{valor}}</div>
     </div>
   </div>

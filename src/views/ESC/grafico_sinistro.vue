@@ -78,8 +78,8 @@ export default {
         }
 
         options.yAxis = {
-           splitNumber: 10,
-           max:100
+           min: 0,
+           interval:10
         }
 
         const media = sinistro.reduce((soma,atual) => {
