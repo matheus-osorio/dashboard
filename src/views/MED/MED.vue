@@ -27,7 +27,22 @@
     </div>
     <tabelaArea :obj="obj" id="tabela"/>
     <graficoAnual id="anual" :obj="obj" @zoom="(zoom,unzoom) => {zoomActivator('anual',zoom,unzoom)}" />
-    
+    <div class="zoom-full" v-show="zoom">
+      <div id="cima" class="blur"></div>
+      <div id="esquerda" class="blur"></div>
+      <div id="direita" class="blur"></div>
+      <div id="baixo" class="blur"></div>
+      <div class="background">
+        <div class="zoom">
+          <div class="box" id="zoom-box">
+            <div class="botoes">
+              <a href="#" @click="undoZoom"><i class="fas fa-times pad-custom"></i></a>
+            </div>
+            <div id="zoom-area"></div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -83,13 +98,11 @@ export default {
       })
     },
     excluirInvalidos(meses,invalidos,grupos){
-      console.log(grupos)
       let mesUnico = []
       for(let grupo of invalidos){
         mesUnico = []
         meses.map((mes) => {
-          let valor = mes.filter((obj) => {   
-              console.log('grupos: ',grupos, 'grupo:', grupo)
+          let valor = mes.filter((obj) => { 
               return !grupos[grupo].grupo.includes(obj.setor)   
             })
           mesUnico.push(valor)

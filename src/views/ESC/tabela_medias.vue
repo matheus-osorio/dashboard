@@ -27,7 +27,7 @@
                    {{linha.tempo}}
                </td>
                <td>
-                   <money :raw="linha.salario" invalid="Inválido"/>
+                   R$ <money :raw="linha.salario" invalid="Inválido"/>
                </td>
            </tr>
         </tbody>  

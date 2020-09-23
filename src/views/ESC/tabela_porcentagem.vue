@@ -22,16 +22,16 @@
                    {{linha.total}}
                </td>
                <td>
-                   {{linha.alimentacao}}%
+                   {{linha.alimentacao}}
                </td>
                <td>
-                   {{linha.transporte}}%
+                   {{linha.transporte}}
                </td>
                <td>
-                   {{linha.cesta}}%
+                   {{linha.cesta}}
                </td>
                <td>
-                   {{linha.ferias}}%
+                   {{linha.ferias}}
                </td>
            </tr>
         </tbody>  
@@ -45,7 +45,7 @@ export default {
   props: ['funcionarios'],
   data(){
       return {
-          titulo:'Tabela Porcentagem',
+          titulo:'Tabela Benefícios',
           tabela: []
       }
   },
@@ -65,23 +65,23 @@ export default {
 
             const ferias = this.mapear(obj,['ferias']).reduce((soma,valor) => {
                 return soma + (valor == true ? 1 : 0)
-            })*100/soma
+            })
             const alimentacao = this.mapear(obj,['alimentacao']).reduce((soma,valor) => {
                 return soma + (valor == true ? 1 : 0)
-            })*100/soma
+            })
             const transporte = this.mapear(obj,['transporte']).reduce((soma,valor) => {
                 return soma + (valor == true ? 1 : 0)
-            })*100/soma
+            })
             const cesta = this.mapear(obj,['basica']).reduce((soma,valor) => {
                 return soma + (valor == true ? 1 : 0)
-            })*100/soma
+            })
 
             return {
                 setor: categoria,
-                ferias: ferias.toFixed(2),
-                alimentacao: alimentacao.toFixed(2),
-                transporte: transporte.toFixed(2),
-                cesta: cesta.toFixed(2),
+                ferias: ferias,
+                alimentacao: alimentacao,
+                transporte: transporte,
+                cesta: cesta,
                 total: soma
             }
 

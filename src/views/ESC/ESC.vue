@@ -1,13 +1,13 @@
 <template>
   <div id="ESC" v-if="isLoaded">
-    <pizzaFuncionarios @zoom="(zoom,unzoom) => {zoomActivator('pizza-funcionarios',zoom,unzoom)}" id="pizza-funcionarios"/>
+    <graficoSetores @zoom="(zoom,unzoom) => {zoomActivator('grafico-setores',zoom,unzoom)}" id="grafico-setores"/>
     <tabelaMedias :funcionarios='funcionarios'  id="tabela-medias"/>
     <tabelaPorcentagem :funcionarios='funcionarios' id="tabela-porcentagem"/>
     <graficoFuncao :funcionarios='funcionarios' @zoom="(zoom,unzoom) => {zoomActivator('grafico-funcao',zoom,unzoom)}" id="grafico-funcao"/>
     <graficoSinistro @zoom="(zoom,unzoom) => {zoomActivator('grafico-sinistro',zoom,unzoom)}" id="grafico-sinistro"/>
     
     <div id="subdivisao">
-      <totalValidos id="quadro1"/>
+      <totalValidos @zoom="(zoom,unzoom) => {zoomActivator('quadro1',zoom,unzoom)}" id="quadro1"/>
       <totalSinistro id="quadro2"/>
       <aniversarioMes :funcionarios="funcionarios" id="aniversario"/>
     </div>
@@ -32,7 +32,7 @@
 
 <script>
 
-import pizzaFuncionarios from './pizza_funcionarios'
+import graficoSetores from './grafico_setores'
 import tabelaMedias from './tabela_medias'
 import tabelaPorcentagem  from './tabela_porcentagem'
 import graficoFuncao from './grafico_funcao'
@@ -51,7 +51,7 @@ export default {
     }
   },
   components:{
-    pizzaFuncionarios,
+    graficoSetores,
     tabelaMedias,
     tabelaPorcentagem,
     graficoFuncao,
@@ -62,7 +62,6 @@ export default {
   },
   methods:{
     zoomActivator(id, zoom, unzoom) {
-      
       if (this.zoom) {
         return;
       }
@@ -114,7 +113,7 @@ export default {
   "nada nada nada nada nada nada nada"
   "nada2 tabelaMedias nada3 graficoSinistro nada4 tabelaPorcentagem nada5"
   "linha2 linha2 linha2 linha2 linha2 linha2 linha2"
-  "nada6 graficoFuncao nada0 subdivisao nada7 pizzaFuncionarios nada8"
+  "nada6 graficoFuncao nada0 subdivisao nada7 graficoSetores nada8"
   "tst tst tst tst tst tst tst"
   ;
 }
@@ -132,7 +131,7 @@ export default {
   "espaco espaco espaco espaco espaco"
   "nada5 graficoFuncao nada6 tabelaPorcentagem nada7"
   "espaco2 espaco2 espaco2 espaco2 espaco2"
-  "nada8 pizzaFuncionarios nada9 subdivisao nada10"
+  "nada8 graficoSetores nada9 subdivisao nada10"
   ;
 }
 }
@@ -152,7 +151,7 @@ export default {
   "nada3"
   "tabelaMedias"
   "nada4"
-  "pizzaFuncionarios"
+  "graficoSetores"
   "nada5"
   "tabelaPorcentagem"
   "nada6"
@@ -185,8 +184,8 @@ export default {
   grid-area: cima;
 }
 
-#pizza-funcionarios{
-  grid-area:pizzaFuncionarios
+#grafico-setores{
+  grid-area:graficoSetores
 }
 
 #grafico-funcao{

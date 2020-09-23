@@ -23,7 +23,7 @@ export default {
             if(ultimos.length > 12){
              ultimos = sinistro.splice(sinistro.length - (sinistro.length % 12))
             }
-            this.valor = (ultimos.reduce((soma,valor) => soma + valor)/ultimos.length).toFixed(2)
+            this.valor = (ultimos.reduce((soma,valor) => soma + valor.valor,0)/ultimos.length).toFixed(2)
         })
     }
 }

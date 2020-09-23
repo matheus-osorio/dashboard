@@ -53,7 +53,7 @@ export default {
         zoom(){
             this.$emit('zoom',this.onZoom,this.onUnzoom)
         },
-        criarGrafico(sinistro){
+        criarGrafico(valores,mes){
             const options = {}
 
             options.legend = {
@@ -65,16 +65,10 @@ export default {
            axisPointer: {
             type: 'shadow'
            }
-        }
-        let mes = 1
-        const xAxis = []
-        while(xAxis.length < sinistro.length){
-            xAxis.push(mes)
-            mes++
-        }
+        }        
 
         options.xAxis = {
-           data: xAxis
+           data: mes
         }
 
         options.yAxis = {
@@ -82,21 +76,21 @@ export default {
            interval:10
         }
 
-        const media = sinistro.reduce((soma,atual) => {
+        const media = valores.reduce((soma,atual) => {
             return soma + atual
-        })/sinistro.length
+        })/valores.length
 
         options.series = [
             {
               name: 'sinistralidade',
               type: 'line',
               areaStyle: {},
-              data: sinistro
+              data: valores
            },
            {
               name: 'média',
               type: 'line',
-              data: sinistro.map(() => media.toFixed(2))
+              data: valores.map(() => media.toFixed(2))
            }
         ]
 
@@ -111,8 +105,9 @@ export default {
                 if(sinistro.length > 12){
                     sinistro = sinistro.slice(sinistro.length - 12)
                 }
-
-                this.graph = this.criarGrafico(sinistro)
+                const valores = sinistro.map(obj => obj.valor)
+                const meses = sinistro.map(obj => obj.mes)
+                this.graph = this.criarGrafico(valores,meses)
                 this.loading = false
             })
         }
