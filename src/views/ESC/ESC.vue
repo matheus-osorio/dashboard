@@ -82,9 +82,11 @@ export default {
     fetch(this.$store.getters.link('escala',this.$route.params))
     .then((response) => response.json())
     .then(funcionarios => {
+      
       fetch(this.$store.getters.link('grupo',this.$route.params))
       .then(response => response.json())
       .then(grupos => {
+
         const chaves = Object.keys(grupos)
         for(let chave of chaves){
           funcionarios = funcionarios.map((obj) => {

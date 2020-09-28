@@ -9,6 +9,7 @@
            <th>Setor</th>
            <th>Funcionários</th>
            <th>Idade</th>
+           <th>Dependentes</th>
            <th>Tempo de Empresa</th>
            <th>Salário</th>
        </thead>
@@ -22,6 +23,9 @@
                </td>
                <td>
                    {{linha.idade}}
+               </td>
+               <td>
+                   {{linha.dependentes}}
                </td>
                <td>
                    {{linha.tempo}}
@@ -85,18 +89,22 @@ export default {
             let idades = this.mapear(arr,['nasc'])
             let tempo = this.mapear(arr,['adm'])
             let salario = this.mapear(arr,['salario','maior'])
+            let dependentes = this.mapear(arr,['dependentes'])
             salario = salario.map((valor) => parseFloat(valor.replace(',','.')))
-
+        
             salario = salario.reduce((soma,valor) => {return soma + valor})/totalFuncionarios
             tempo = tempo.map((data) => {return this.idade(data)}).reduce((soma,valor) => {return soma + valor})/totalFuncionarios
             idades = idades.map((data) => {return this.idade(data)}).reduce((soma,valor) => {return soma + valor})/totalFuncionarios 
-            console.log('tempo:', tempo, 'idades: ',idades, 'salario:', salario)
+            dependentes = dependentes.reduce((soma, valor) => {
+                return soma + valor})/totalFuncionarios
+                
             return {
                 setor: categoria,
                 funcionarios: totalFuncionarios,
                 idade: idades.toFixed(2),
                 tempo: tempo.toFixed(2),
-                salario: salario.toFixed(2)
+                salario: salario.toFixed(2),
+                dependentes: dependentes.toFixed(2)
             }
         }
     },

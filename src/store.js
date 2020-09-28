@@ -16,8 +16,8 @@ export default new Vuex.Store({
       PPU: "/medicao/ppuTotalAPI.rule?sys=MDC&contrato={{contrato}}",
       contrato: "/medicao/contratoAPI.rule?sys=MDC&contrato={{contrato}}",
       retencao: "/medicao/retencaoAPI.rule?sys=MDC&contrato={{contrato}}",
-      escala: "/medicao/escalaAPI.rule?sys=MDC&mes={{mes}}&ano={{ano}}&estab={{estab}},
-      sinistro: "/medicao/sinistralidadeAPI.rule?sys=MDC&contrato={{contrato}}""
+      escala: "/medicao/escalaAPI.rule?sys=MDC&mes={{mes}}&ano={{ano}}&estab={{estab}}",
+      sinistro: "/medicao/sinistralidadeAPI.rule?sys=MDC&contrato={{contrato}}
     }*/
     urls: {
       grafico: "http://localhost:3000/grafico_medicao",
