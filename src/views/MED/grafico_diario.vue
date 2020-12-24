@@ -137,110 +137,63 @@ function sequenciaParaDias(dias) {
   return dias;
 }
 
-function montarGraficoDiario() {
-  let titulo = criaTitulo(""); //diário
-  let totalDias = valores.data[0].length;
-  let xAxis = [];
-  adicionarX(
-    xAxis,
-    "category",
-    false,
-    sequenciaParaDias(acumularValor(replicarValor(1, totalDias), 0))
-  );
+function montarGraficoDiario(){
+  let titulo = criaTitulo('') //diário
+  let totalDias = valores.data[0].length
+  let xAxis = []
+  adicionarX(xAxis, 'category',false,sequenciaParaDias(acumularValor(replicarValor(1,totalDias),0)))
 
-  let yAxis = [];
+  let yAxis = []
+  
+  let divisoes = Math.max(gerarDivisoes(5000,montarVetorDiario, divisoesParaDiario),10)* 5000
 
-  let divisoes =
-    Math.max(gerarDivisoes(5000, montarVetorDiario, divisoesParaDiario), 10) *
-    5000;
+  adicionarY(yAxis,'Diario(R$)',true,0,divisoes,'value','left',5000)
+  adicionarY(yAxis,'Acumulado(R$)',true,0,divisoes*10,'value','right',50000)
 
-  adicionarY(yAxis, "", true, 0, divisoes, "value", "left", 5000);
-  adicionarY(yAxis, "", true, 0, divisoes * 10, "value", "right", 50000);
 
-  let tooltip = criarTooltip("axis");
-  let dadosLegenda = [];
-  let series = [];
-  let cor = [
-    "#4287f5",
-    "#e80721",
-    "#079125",
-    "#c9cc00",
-    "#8a0685",
-    "#7ca3cc",
-    "#565e66",
-    "#0e3012",
-  ];
-  let valoresAcumulados = replicarValor(0, totalDias);
-  let categoria = 0;
+  let tooltip = criarTooltip('axis')
+  let dadosLegenda = []
+  let series = []
+  let cor = ['#4287f5','#e80721','#079125','#c9cc00','#8a0685','#7ca3cc','#565e66','#0e3012']
+  let valoresAcumulados = replicarValor(0,totalDias)
+  let categoria = 0
 
-  adicionarPonto(
-    series,
-    "Total",
-    "scatter",
-    0,
-    0.1,
-    "",
-    montarVetorDiario().map((numero) => {
-      return Number(numero).toFixed(2);
-    })
-  );
+  adicionarPonto(series,'Total','scatter',0,0.1,'',montarVetorDiario().map((numero) => {return Number(numero).toFixed(2)}))
 
-  for (let index in valores.data) {
-    valoresAcumulados = somaDiaria(valoresAcumulados, valores.data[index]);
-    categoria++;
-    dadosLegenda.push(`${categoria}.x`);
-    adicionarBarra(
-      series,
-      `${categoria}.x`,
-      "bar",
-      0,
-      "one",
-      cor[index] == undefined ? "" : cor[index],
-      valores.data[index].map((x) => parseFloat(x).toFixed(2))
-    );
+  for(let index in valores.data){
+     valoresAcumulados = somaDiaria(valoresAcumulados,valores.data[index])
+     categoria++
+     dadosLegenda.push(`${(categoria)}.x`)
+     adicionarBarra(series,`${categoria}.x`,'bar',0,'one',cor[index] == undefined? '':cor[index],(valores.data[index]).map(x => parseFloat(x).toFixed(2))) 
   }
 
-  dadosLegenda.push("Acumulado", "Orçado", "Média", "Ideal");
-  let legend = criarLegenda(dadosLegenda, "right", "right");
-  adicionarLinha(
-    series,
-    "Acumulado",
-    "line",
-    1,
-    "none",
-    "#535154",
-    acumularValor(valoresAcumulados, 2)
-  ); //Linha valor acumulado
-  adicionarLinha(
-    series,
-    "Orçado",
-    "line",
-    1,
-    "none",
-    "#6B4C9A",
-    replicarValor(valores.orcado, totalDias)
-  ); //Linha de valor orçado
-  adicionarLinha(
-    series,
-    "Média",
-    "line",
-    0,
-    "none",
-    "#922428",
-    fazerMediaDiario()
-  ); //Linha de média
-  adicionarLinha(
-    series,
-    "Ideal",
-    "line",
-    0,
-    "none",
-    "#948B3D",
-    replicarValor(Number(valores.orcado / 31).toFixed(2), totalDias)
-  ); //linha de valor ideal(orçado/31)
+ 
+  /*series[series.length - 1].label = {
+        show: true,
+        rotate: 90,
+        formatter: retornarLabel(valores.data),
+        fontSize: 15,
+        color: 'black',
+        position: 'top'
+  }*/
 
-  let option = criarGrafico(titulo, xAxis, yAxis, legend, tooltip, series);
-  return option;
+  
+
+  
+
+  dadosLegenda.push('Acumulado','Orçado','Custo','Média','Ideal','Líquido')
+  let legend = criarLegenda(dadosLegenda,'right','right')
+  adicionarLinha(series,'Acumulado','line',1,'none','#535154',acumularValor(valoresAcumulados,2)) //Linha valor acumulado
+  adicionarLinha(series,'Orçado','line',1,'none','#6B4C9A',replicarValor(valores.orcado,totalDias)) //Linha de valor orçado
+  adicionarLinha(series,'Custo','line',1,'none','#f75f00',replicarValor(valores.custo,totalDias))
+  adicionarLinha(series,'Líquido','line',1,'none','#34ebab',replicarValor(valores.liquido,totalDias))
+  
+  adicionarLinha(series,'Média','line',0,'none','#922428',fazerMediaDiario()) //Linha de média
+  adicionarLinha(series,'Ideal','line',0,'none','#948B3D',replicarValor(Number(valores.orcado/31).toFixed(2),totalDias)) //linha de valor ideal(orçado/31)
+
+
+  let option = criarGrafico(titulo,xAxis,yAxis,legend,tooltip, series)
+  return option
 }
 
 function somaDiaria(vetor1, vetor2) {

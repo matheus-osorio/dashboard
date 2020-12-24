@@ -5,6 +5,7 @@
       <hr class="line">
       <router-link :to="{name:'medicao',params:$route.params}" :class="{'selected':$route.name == 'medicao'}" @click="selected = 'MED'" class="waves-effect waves-teal btn-flat btn-custom"><i class="fas fa-pencil-ruler centered"></i></router-link>
       <router-link :to="{name:'escala',params:$route.params}" :class="{'selected':$route.name == 'escala'}" @click="selected = 'ESC'" class="waves-effect waves-teal btn-flat btn-custom"><i class="fas fa-table centered"></i></router-link>
+      <router-link :to="{name:'funcionarios',params:$route.params}" :class="{'selected':$route.name == 'funcionarios'}" @click="selected = 'FUN'" class="waves-effect waves-teal btn-flat btn-custom"><i class="fas fa-user-friends centered"></i></router-link>
     </nav>
     <router-view/>
   </div>

@@ -9,6 +9,8 @@
     <div id="subdivisao">
       <totalValidos @zoom="(zoom,unzoom) => {zoomActivator('quadro1',zoom,unzoom)}" id="quadro1"/>
       <totalSinistro id="quadro2"/>
+      <totalRotatividade id="rotatividade" :total="numeroTotal" :funcionarios="funcionarios"/>
+      <totalAbsenteismo id="absenteismo" :funcionarios="funcionarios"/>
       <aniversarioMes :funcionarios="funcionarios" id="aniversario"/>
     </div>
     <div class="zoom-full" v-show="zoom">
@@ -40,6 +42,8 @@ import graficoSinistro from './grafico_sinistro'
 import totalValidos from './total_validos'
 import totalSinistro from './total_sinistro'
 import aniversarioMes from './tabela_aniversariante'
+import totalRotatividade from './total_rotatividade.vue'
+import totalAbsenteismo from './total_absenteismo'
 
 export default {
   data(){
@@ -47,7 +51,8 @@ export default {
       zoom:false,
       saveMethod: undefined,
       funcionarios: {},
-      isLoaded: false
+      isLoaded: false,
+      numeroTotal: 0
     }
   },
   components:{
@@ -58,7 +63,9 @@ export default {
     graficoSinistro,
     totalValidos,
     totalSinistro,
-    aniversarioMes 
+    aniversarioMes,
+    totalRotatividade,
+    totalAbsenteismo 
   },
   methods:{
     zoomActivator(id, zoom, unzoom) {
@@ -78,11 +85,13 @@ export default {
       this.saveMethod()
     },
   },
+  
   mounted(){
     fetch(this.$store.getters.link('escala',this.$route.params))
     .then((response) => response.json())
     .then(funcionarios => {
-      
+      this.numeroTotal = funcionarios.length
+      funcionarios = funcionarios.filter((f) => f.setor != '')
       fetch(this.$store.getters.link('grupo',this.$route.params))
       .then(response => response.json())
       .then(grupos => {
@@ -210,12 +219,22 @@ export default {
   grid-area: subdivisao;
   display: grid;
   height: 100%;
-  grid-template-rows: 1fr 10px 2fr;
+  grid-template-rows: 1fr 10px 1fr 10px 1fr;
   grid-template-columns: 1fr 10px 1fr;
   grid-template-areas: 
   "quadro1 coluna quadro2"
   "nada nada nada"
-  "aniversario aniversario aniversario";
+  "rotatividade nada2 aniversario"
+  "nada3 nada2 aniversario"
+  "absenteismo nada2 aniversario";
+}
+
+#absenteismo{
+  grid-area:absenteismo;
+}
+
+#rotatividade{
+  grid-area: rotatividade;
 }
 
 #quadro1{
