@@ -35,7 +35,7 @@ export default {
     props:['cargos','media','tipo'],
     data(){
         return {
-            titulo: 'Gráfico Salário',
+            titulo: 'Evolução de Carreira',
             graph: {},
             zoomBtn: true
         }
@@ -133,7 +133,7 @@ export default {
             const arr = []
 
             for(let i=0;i<valor;i++){
-                arr.push(0)
+                arr.push(-1)
             }
 
             return arr
@@ -220,7 +220,8 @@ export default {
                 type:'category'
             }
             option.yAxis = {
-                type: 'value'
+                type: 'value',
+                min: 0
             }
             option.series = []
             option.legend = {

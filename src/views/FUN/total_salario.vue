@@ -1,47 +1,31 @@
 <template>
-  <div class="area-total tamanho" :class="{'background':zoomBtn}">
-  <div class="grafico grafico1">
-    <div class="center-align container loader" v-if="loading">
-      <h5>Carregando dados</h5>
-      <div class="preloader-wrapper big active">
-        <div class="spinner-layer spinner-blue-only">
-          <div class="circle-clipper left">
-            <div class="circle"></div>
-          </div>
-          <div class="gap-patch">
-            <div class="circle"></div>
-          </div>
-          <div class="circle-clipper right">
-            <div class="circle"></div>
-          </div>
-        </div>
-      </div>
+  <div class="background">
+    <div class="area-definida">
+      <div class="title">Média Salário</div>
+      <div class="number">{{valor}} %</div>
     </div>
-     <div class="area">
-       <div class="cabecalho">
-        {{titulo}}
-        <btn classes="btn-zoom blue lighten-2" frase="" evento="zoom" modo="icone" icone="fas fa-search-plus" @zoom="zoom()" :show="zoomBtn" />
-      </div>
-     <e-chart :options="graph" autoresize></e-chart>
-     </div>
   </div>
-</div>
+</template>
+<template>
+  <div class="background">
+    <div class="area-definida">
+      <div class="title">Média Sinistralidade</div>
+      <div class="number">R${{valor}}</div>
+    </div>
+  </div>
 </template>
 
-<script>
-import btn from './botao.vue'
 
+<script>
 export default {
     props:['cargos','media','tipo'],
     data(){
         return {
             titulo: 'Gráfico Salário',
             graph: {},
-            zoomBtn: true
+            zoomBtn: true,
+            valor:0
         }
-    },
-    components:{
-    btn
     },
     methods:{
         onZoom(){
@@ -190,29 +174,11 @@ export default {
             })
 
         },
-        montarGrafico(dados){
-            const option = {}
-            option.xAxis = {
-                type:'category'
-            }
-            option.yAxis = {
-                type: 'value',
-                min:0
-            }
-            option.series = []
-            option.legend = {
-                data: []
-            }
+        pegaMedia(dados){
+            
             const media = []
             const mediaArr = []
             for(let f of dados){
-                option.legend.data.push(f.nome)
-                option.series.push({
-                    name: f.nome,
-                    type:'line',
-                    data: f.dados
-                })
-
                 media.push(f.dados)
             }
 
@@ -227,20 +193,14 @@ export default {
                 mediaArr.push(total/validos)
             }
 
-            console.log(media)
-            option.legend.data.push('Média')
-            option.series.push({
-                    name: 'Média',
-                    type:'line',
-                    data: mediaArr
-             })
-            return option
+            console.log('media: ',mediaArr)
+            return mediaArr[mediaArr.length-1]
         }
     },
     
     mounted(){
         const graph = this.criarDados(this.cargos)
-        this.graph = this.montarGrafico(graph)
+        this.valor = this.pegaMedia(graph)
     }
 
 }
@@ -248,7 +208,4 @@ export default {
 
 <style>
 
-.tamanho{
-  height:100%
-}
 </style>

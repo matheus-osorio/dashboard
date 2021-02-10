@@ -1,8 +1,11 @@
 <template>
   <div id="FUN" v-if="!loading">
       <Menu :cargos="cargos" :config="config" :filtros="filtros" :lista="lista" @fazFiltragem="fazFiltragem" />
-      <graficoSalario :cargos="cargosFiltrados" :media="config.media" :tipo="config.precisao.tipo"/>
-      <graficoFuncao :cargos="cargosFiltrados" :media="config.media" :tipo="config.precisao.tipo"/>
+      <graficoSalario :cargos="cargosFiltrados" :media="config.media" :tipo="config.precisao.tipo" :key="keys.graficoSalario"/>
+      <graficoFuncao :cargos="cargosFiltrados" :media="config.media" :tipo="config.precisao.tipo" :key="keys.graficoFuncao"/>
+      <div id="cards">
+          <totalSalario :cargos="cargosFiltrados" :media="config.media" :tipo="config.precisao.tipo" :key="keys.totalSalario"/>
+      </div>
   </div>
 </template>
 
@@ -11,12 +14,14 @@
 import Menu from './menu.vue'
 import graficoSalario from './grafico_salario'
 import graficoFuncao from './grafico_promocao'
+import totalSalario from './total_salario'
 
 export default {
     components:{
         Menu,
         graficoSalario,
-        graficoFuncao
+        graficoFuncao,
+        totalSalario
     },
     data(){
         return{
@@ -36,6 +41,11 @@ export default {
                     show: false,
                     tipo: 'TOTAL'
                 }
+            },
+            keys:{
+                graficoSalario: 1,
+                graficoFuncao:10,
+                totalSalario:20
             }
         }
     },
@@ -84,6 +94,12 @@ export default {
            })
 
            this.cargosFiltrados = funcFiltrados
+           this.updateKeys()
+        },
+        updateKeys(){
+            for(let chave of Object.keys(this.keys)){
+                this.keys[chave]++
+            }
         }
     },
     async mounted(){
@@ -132,8 +148,14 @@ export default {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas: 
     "menu grafico-salario grafico-evolucao"
-    "nada cards nada2"
+    "menu cards nada2"
     ;
+}
+
+#cards{
+    grid-area: cards;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
 }
 
 #menu{
