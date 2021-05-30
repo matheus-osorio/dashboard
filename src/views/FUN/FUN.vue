@@ -1,11 +1,33 @@
 <template>
   <div id="FUN" v-if="!loading">
-      <Menu :cargos="cargos" :config="config" :filtros="filtros" :lista="lista" @fazFiltragem="fazFiltragem" />
-      <graficoSalario :cargos="cargosFiltrados" :media="config.media" :tipo="config.precisao.tipo" :key="keys.graficoSalario"/>
-      <graficoFuncao :cargos="cargosFiltrados" :media="config.media" :tipo="config.precisao.tipo" :key="keys.graficoFuncao"/>
+      <Menu :cargos="cargos" :config="config" :filtros="filtros" :lista="lista" @fazFiltragem="fazFiltragem"/>
+      <graficoSalario @zoom="(zoom,unzoom) => {zoomActivator('grafico-salario',zoom,unzoom)}" id="grafico-salario" :cargos="cargosFiltrados" :media="config.media" :tipo="config.precisao.tipo" :loading="loading" :tooltip="config.tooltip" :smooth="config.smooth" :key="keys.graficoSalario"/>
+      <graficoFuncao @zoom="(zoom,unzoom) => {zoomActivator('grafico-evolucao',zoom,unzoom)}" id="grafico-evolucao" :cargos="cargosFiltrados" :media="config.media" :tipo="config.precisao.tipo" :loading="loading" :tooltip="config.tooltip" :smooth="config.smooth" :key="keys.graficoFuncao"/>
       <div id="cards">
           <totalSalario :cargos="cargosFiltrados" :media="config.media" :tipo="config.precisao.tipo" :key="keys.totalSalario"/>
+          <totalEvolucao :cargos="cargosFiltrados" :media="config.media" :tipo="config.precisao.tipo" :key="keys.totalEvolucao"/>
       </div>
+      
+      
+      
+      
+      
+      <div class="zoom-full" v-show="zoom">
+        <div id="cima" class="blur"></div>
+        <div id="esquerda" class="blur"></div>
+        <div id="direita" class="blur"></div>
+        <div id="baixo" class="blur"></div>
+        <div class="background">
+            <div class="zoom">
+            <div class="box" id="zoom-box">
+                <div class="botoes">
+                <a href="#" @click="undoZoom"><i class="fas fa-times pad-custom"></i></a>
+                </div>
+                <div id="zoom-area"></div>
+            </div>
+            </div>
+        </div>
+    </div>
   </div>
 </template>
 
@@ -15,17 +37,20 @@ import Menu from './menu.vue'
 import graficoSalario from './grafico_salario'
 import graficoFuncao from './grafico_promocao'
 import totalSalario from './total_salario'
+import totalEvolucao from './total_evolucao'
 
 export default {
     components:{
         Menu,
         graficoSalario,
         graficoFuncao,
-        totalSalario
+        totalSalario,
+        totalEvolucao
     },
     data(){
         return{
             cargosFiltrados:{},
+            zoom: false,
             cargos:{},
             loading: true,
             lista: { nome: [], setor: [], funcao: [] },
@@ -33,6 +58,8 @@ export default {
             config: {
                 media: true,
                 ponderado: true,
+                tooltip:true,
+                smooth: false,
                 precisao:{
                     tipo: 'DIA',
                     show:false
@@ -45,11 +72,28 @@ export default {
             keys:{
                 graficoSalario: 1,
                 graficoFuncao:10,
-                totalSalario:20
+                totalSalario:20,
+                totalEvolucao:30
             }
         }
     },
     methods:{
+        zoomActivator(id, zoom, unzoom) {
+            if (this.zoom) {
+                return;
+            }
+            this.zoom = true;
+            const area = document.querySelector("#" + id)
+            document.querySelector("#zoom-area").appendChild(area)
+            this.saveMethod = unzoom
+            zoom()
+        },
+        undoZoom() {
+            const node = document.querySelector("#zoom-area").firstElementChild
+            document.querySelector("#FUN").appendChild(node)
+            this.zoom = false
+            this.saveMethod()
+        },
         filtraNome(nome,lista){
             return lista.includes(nome)
         },
@@ -70,7 +114,7 @@ export default {
             }
 
         },
-        fazFiltragem(){
+        fazFiltragem(first = false){
             Array.prototype.getFromArray = function(arr) {
             const values = []
             for(let n in arr){
@@ -93,7 +137,12 @@ export default {
                return this.filtraNome(nome,nomesValidos) && this.filtraSetor(setor,setoresValidos) && this.filtraFuncao(cargos,funcoesValidas,this.config.filtragem.tipo)
            })
 
-           this.cargosFiltrados = funcFiltrados
+          if(!first){
+            this.cargosFiltrados = funcFiltrados
+          }
+          else{
+              this.cargosFiltrados = []
+          }
            this.updateKeys()
         },
         updateKeys(){
@@ -131,7 +180,7 @@ export default {
 
         this.filtros = filtros;
         this.lista = lista;
-        this.fazFiltragem();
+        this.fazFiltragem(true);
         this.loading = false        
     }
 }
@@ -140,23 +189,69 @@ export default {
 <style>
 
 #FUN{
-    display: grid;
     row-gap: 10px;
     column-gap: 10px;
     padding:10px;
+}
+
+#FUN{
+    display: grid;
     grid-template-rows: 1fr 1fr;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-areas: 
-    "menu grafico-salario grafico-evolucao"
-    "menu cards nada2"
-    ;
+    "menu menu cards grafico-salario grafico-salario grafico-salario"
+    "menu menu cards grafico-evolucao grafico-evolucao grafico-evolucao";
+}
+
+.zoom-full {
+  position: absolute;
+  z-index: 2;
+  display: grid;
+  width: calc(100% - 50px);
+  height: 100vh;
+  grid-template-rows: 5vh 90vh 5vh;
+  grid-template-columns: calc(5% - 20px) 90% 1fr;
+  grid-template-areas:
+    "cima cima cima"
+    "esquerda zoomBox direita"
+    "baixo baixo baixo";
+}
+
+#zoom-area {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+#cima {
+  grid-area: cima;
+}
+
+#esquerda {
+  grid-area: esquerda;
+}
+
+#direita {
+  grid-area: direita;
+}
+
+#baixo {
+  grid-area: baixo;
 }
 
 #cards{
     grid-area: cards;
-    grid-template-rows: 1fr 1fr;
-    grid-template-columns: 1fr 1fr;
 }
+
+#cards{
+    display: grid;
+    grid-gap: 10px;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr;
+}
+
+
+
 
 #menu{
     grid-area: menu;
@@ -174,4 +269,15 @@ export default {
     grid-area: cards
 }
 
+
+
+.print-page #FUN{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 2fr 5fr;
+    grid-template-areas: 
+    "cards grafico-salario"
+    "cards grafico-evolucao";
+    height: 95%;
+}
 </style>

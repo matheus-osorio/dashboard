@@ -55,7 +55,6 @@ import tabelaArea from "./tabela_area";
 import graficoAnual from "./grafico_anual";
 import totalFuncionarios from "./total_funcionarios";
 import graficoSetor from "./grafico_setor";
-//import pizzaFuncionarios from './pizza_funcionarios';
 import graficoPPU from './grafico_ppu';
 import contratoMaximo from './contrato_maximo';
 import retencaoTotal from './retencao_total';
@@ -78,7 +77,6 @@ export default {
     graficoAnual,
     totalFuncionarios,
     graficoSetor,
-    //pizzaFuncionarios,
     graficoPPU,
     contratoMaximo,
     retencaoTotal
@@ -114,7 +112,6 @@ export default {
     },
     somaGrupos(mes,grupo,nome){
       let filtrado = mes.filter((obj) => {return grupo.includes(obj.setor)})
-      //filtrado = Object.values(filtrado)
       const somado = {}
       somado.setor = nome
       somado.valor = filtrado.reduce((soma,setor) => {
@@ -148,8 +145,6 @@ export default {
     },
   },
   mounted(){
-      //this.$store.getters.link('grafico',this.$route.params)
-      //const obj = this.obj
     fetch(this.$store.getters.link('historico',this.$route.params))
       .then((response) => response.json())
       .then((obj) => {
@@ -179,8 +174,6 @@ export default {
             this.obj = obj
             this.isLoaded = true
           })
-        // this.obj = obj
-        // this.isLoaded = true
       });
   }
 };
@@ -421,5 +414,38 @@ export default {
   display: flex;
   align-items: flex-start;
   justify-content: flex-end;
+}
+
+.print-page #MED {
+    display: grid;
+    height: 3000px;
+    grid-template-rows: 2px 300px 10px 410px 50px 260px 10px 400px 50px 360px 10px 360px 10px 360px 10px 360px;
+    grid-template-columns: 50% 50%;
+    grid-template-areas:
+    "nada nada"
+    "total total2"
+    "nada2 nada2"
+    "PPU PPU"
+    "nada3 nada3"
+    "tabela tabela"
+    "nada4 nada4"
+    "diario diario"
+    "nada5 nada5"
+    "acumulado acumulado"
+    "nada6 nada6"
+    "historico historico"
+    "nada7 nada7"
+    "anual anual"
+    "nada8 nada8"
+    "setor setor"
+    ;
+  }
+
+.print-page #PPU {
+  page-break-after: always;
+}
+
+.print-page #acumulado{
+  page-break-after: always;
 }
 </style>

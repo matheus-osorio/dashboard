@@ -32,7 +32,7 @@
 import btn from './botao.vue'
 
 export default {
-    props:['cargos','media','tipo'],
+    props:['cargos','media','tipo','tooltip','smooth','loading'],
     data(){
         return {
             titulo: 'Gráfico Salário',
@@ -83,6 +83,30 @@ export default {
 
             return repetidos
         },
+        criaAxisX(raw){
+            const funcTratado = this.tratarFunc(raw) //funciona
+
+
+            const diferencaDeDias = this.diferencaDeDias(funcTratado[0][0].adm)
+            const data = new Date(this.dataParaAmericano(funcTratado[0][0].adm))
+
+            const arr = []
+
+            for(let i=0;i<diferencaDeDias;i++){
+                arr.push((data.getDate() < 10? '0':'') + data.getDate() + '/' + (data.getMonth()+1 < 10? '0':'') + (data.getMonth() + 1) + '/' + (1900 + data.getYear()))
+                if(this.tipo == 'DIA'){
+                    data.setTime(data.getTime() + 1*1000*60*60*24)
+                }
+                if(this.tipo == 'MES'){
+                    data.setMonth(data.getMonth + 1)
+                }
+                if(this.tipo == 'ANO'){
+                    data.setFullYear(data.getYear() + 1)
+                }
+            }
+            
+            return arr
+        },
         diferencaDeDias(inicio){
             inicio = inicio.replace(/(\d\d)\/(\d\d)\/(\d\d\d\d)/,'$2/$1/$3')
             const inicioData = new Date(inicio)
@@ -112,7 +136,7 @@ export default {
             const arr = []
 
             for(let i=0;i<valor;i++){
-                arr.push(-10000)
+                arr.push(undefined)
             }
 
             return arr
@@ -140,7 +164,6 @@ export default {
 
                 inicioArr++
             }
-            console.log(admDATA)
             const finalDATA = funcionario[0].desligamento == '' ? new Date() : new Date(this.dataParaAmericano(funcionario[0].desligamento))
             let casaAtual = 0
             
@@ -186,14 +209,15 @@ export default {
             const diferencaDeDias = this.diferencaDeDias(funcTratado[0][0].adm)
             const primeiraData = funcTratado[0][0].adm
             return funcTratado.map(f => {
-                return {nome: f.nome,dados: this.criarDadosFuncionario(f,diferencaDeDias,primeiraData)}
+                return {nome: f[0].nome,dados: this.criarDadosFuncionario(f,diferencaDeDias,primeiraData)}
             })
 
         },
-        montarGrafico(dados){
+        montarGrafico(dados,raw){
             const option = {}
             option.xAxis = {
-                type:'category'
+                type:'category',
+                data: this.criaAxisX(raw)
             }
             option.yAxis = {
                 type: 'value',
@@ -201,16 +225,46 @@ export default {
             }
             option.series = []
             option.legend = {
+                type:'scroll',
                 data: []
             }
+
+            if(this.tooltip){
+                option.tooltip = {
+                    trigger: 'axis'
+                }
+            }
+
+            option.toolbox = {
+                feature: {
+                    dataZoom: {
+                        yAxisIndex: 'none'
+                    },
+                    restore: {},
+                    saveAsImage: {}
+                }
+            }
+            
+            option.dataZoom = [{
+                type: 'inside',
+                start: 80,
+                end: 100
+            }, {
+                start: 0,
+                end: 20
+            }]
+            option.legend.data.push('Média')
+
             const media = []
             const mediaArr = []
+            console.log('smooth', this.smooth)
             for(let f of dados){
                 option.legend.data.push(f.nome)
                 option.series.push({
                     name: f.nome,
                     type:'line',
-                    data: f.dados
+                    data: f.dados,
+                    smooth: this.smooth
                 })
 
                 media.push(f.dados)
@@ -220,15 +274,14 @@ export default {
                 let total = 0
                 let validos = 0
                 for(let valor of media){
-                    total += valor[i]
-                    validos += valor[i] > 0? 1:0
+                    total += valor[i] != undefined ? valor[i]: 0
+                    validos += valor[i] != undefined ? 1:0
                 }
 
                 mediaArr.push(total/validos)
             }
 
-            console.log(media)
-            option.legend.data.push('Média')
+            
             option.series.push({
                     name: 'Média',
                     type:'line',
@@ -240,7 +293,7 @@ export default {
     
     mounted(){
         const graph = this.criarDados(this.cargos)
-        this.graph = this.montarGrafico(graph)
+        this.graph = this.montarGrafico(graph,this.cargos)
     }
 
 }

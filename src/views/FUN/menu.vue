@@ -1,5 +1,5 @@
 <template>
-  <div class="area-total tamanho" :class="{ background: zoomBtn }">
+  <div id="menu" class="area-total tamanho" :class="{ background: zoomBtn }">
     <div class="area">
       <div class="cabecalho-menu">
         <div class="wrapper-menu">
@@ -80,6 +80,28 @@
               </div>
             </td>
             <td colspan="3">Cálculo Inteligente</td>
+          </tr>
+          <tr>
+            <td colspan="1">
+              <div class="checkmark-box cursor-pointer" @click="config.tooltip = !config.tooltip">
+                <br v-if="false" /><i
+                  class="fas fa-check"
+                  v-if="config.tooltip"
+                ></i>
+              </div>
+            </td>
+            <td colspan="3">Mostrar Tooltip</td>
+          </tr>
+          <tr>
+            <td colspan="1">
+              <div class="checkmark-box cursor-pointer" @click="config.smooth = !config.smooth">
+                <br v-if="false" /><i
+                  class="fas fa-check"
+                  v-if="config.smooth"
+                ></i>
+              </div>
+            </td>
+            <td colspan="3">Linhas Suaves</td>
           </tr>
           <tr>
             <td  class="" colspan="1">
@@ -233,6 +255,12 @@ export default {
 #criar-botao{
   background-color: #4caf50 ;
 }
+
+#menu{
+  height: 100%;
+  overflow: auto;
+}
+
 .checkmark-box {
   border-style: solid;
   border-width: 1px;
@@ -300,7 +328,12 @@ export default {
 
 .cabecalho-menu {
   display: grid;
+  position: sticky;
   grid-template-columns: 1fr 1fr 1fr;
   column-gap: 5px;
+}
+
+.print-page  #menu{
+    display: none;
 }
 </style>

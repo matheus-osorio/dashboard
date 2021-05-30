@@ -1,186 +1,3333 @@
-{
-   "cargos":[
-      {
-         "nome":"Funcionario FuncUM",
-         "adm":"10/11/2015",
-         "setor": "SETOR 1",
-         "historico":[
-            {
-               "salario": 1000.00,
-               "cargo": "Cargo 1",
-               "inicio": "10/11/2015"
-            },
-            {
-               "salario": 2000.00,
-               "cargo": "Cargo 1",
-               "inicio": "25/03/2018"
-            },
-            {
-               "salario": 3250.00,
-               "cargo": "Cargo 4",
-               "inicio": "01/01/2020"
-            }
-         ],
-         "desligamento": ""
-      },
-      {
-         "nome":"Funcionario FuncDOIS",
-         "adm":"03/03/2008",
-         "setor": "SETOR 2",
-         "historico":[
-            {
-               "salario": 1000.00,
-               "cargo": "Cargo 1",
-               "inicio": "03/03/2008"
-            },
-            {
-               "salario": 1000.00,
-               "cargo": "Cargo 2",
-               "inicio": "25/03/2018"
-            },
-            {
-               "salario": 4500.00,
-               "cargo": "Cargo 3",
-               "inicio": "01/01/2020"
-            }
-         ],
-         "desligamento": "03/03/2020"
-      }
-   ],
-    "grafico_medicao": {
-        "nomeMes": "Julho",
-        "orcado": 775000,
-        "reajuste": 1,
-        "data": [
-            [
-                4554.78,
-                14997.35,
-                5092,
-                2546,
-                2546,
-                10766.439999999999,
-                9109.56,
-                33899.87,
-                12881.96,
-                31458.32,
-                16479.49,
-                1726.67,
-                12157.37,
-                13558.08,
-                19915.22,
-                12363.630000000001,
-                9608.74,
-                15600.440000000002,
-                10179.5,
-                10437.279999999999,
-                20207.909999999996,
-                18650.03,
-                6369.34,
-                17909.5,
-                11082.13,
-                23856.06,
-                8044.75,
-                9442.94,
-                5276.55,
-                6804.46
-            ],
-            [
-                521.64,
-                229.92000000000002,
-                0,
-                0,
-                1324.34,
-                2161.08,
-                1750.23,
-                298.08,
-                0,
-                0,
-                1043.28,
-                1713.9599999999998,
-                1189.1999999999998,
-                2682.72,
-                3502.4399999999996,
-                0,
-                0,
-                447.11999999999995,
-                521.64,
-                372.6,
-                1564.9199999999998,
-                376.84000000000003,
-                0,
-                0,
-                2161.08,
-                1639.44,
-                1192.3200000000002,
-                7899.12,
-                3726,
-                0
-            ],
-            [
-                4203.95,
-                312.69,
-                0,
-                434.3,
-                521.15,
-                4412.4400000000005,
-                15339.41,
-                1253.24,
-                7423.88,
-                7551.73,
-                5593.76,
-                13758.469999999998,
-                11448.14,
-                9624.070000000002,
-                11568.460000000001,
-                2015.15,
-                3056.17,
-                14383.83,
-                10023.630000000001,
-                8199.52,
-                12420.969999999998,
-                8595.299999999997,
-                5697.939999999999,
-                2397.29,
-                6420.079999999999,
-                19239.129999999997,
-                2935.82,
-                521.15,
-                2953.21,
-                19960.41
-            ],
-            [
-                0,
-                0,
-                0,
-                86.31666,
-                93.01704,
-                79.61627999999999,
-                86.31666,
-                0,
-                0,
-                0,
-                0,
-                624.31776,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                89.66685,
-                588.05688,
-                33.5019,
-                0,
-                0,
-                0,
-                526.5710399999999,
-                0,
-                0,
-                0,
-                0,
-                0
-            ]
+{   
+   "cargos":[{
+      "nome": "ACACIO TEOFILO VIEIRA",
+      "adm":"01/11/2016 00:00:00",
+      "setor":"N/A",
+      "desligamento": "09/09/2020 00:00:00",
+      "historico":[{
+      "inicio": "01/11/2016 00:00:00",
+      "cargo": "AUXILIAR DE MOVIMENT CARGA",
+      "salario": 1052.34
+      },{
+      "inicio": "01/01/2018 00:00:00",
+      "cargo": "AUXILIAR DE MOVIMENT CARGA",
+      "salario": 1136.53
+      },{
+      "inicio": "01/03/2018 00:00:00",
+      "cargo": "AUXILIAR DE MOVIMENT CARGA I",
+      "salario": 1136.53
+      },{
+      "inicio": "01/03/2018 00:00:00",
+      "cargo": "AUXILIAR DE MOVIMENT CARGA II",
+      "salario": 1136.53
+      },{
+      "inicio": "02/03/2018 00:00:00",
+      "cargo": "AUXILIAR DE MOVIMENT CARGA II",
+      "salario": 1137.67
+      },{
+      "inicio": "01/10/2019 00:00:00",
+      "cargo": "AUXILIAR DE MOVIMENT CARGA II",
+      "salario": 1239.12
+      },{
+      "inicio": "01/01/2020 00:00:00",
+      "cargo": "AUXILIAR DE MOVIMENT CARGA II",
+      "salario": 1239.12
+      }]
+      },{
+      "nome": "ALAINE DIAS DA CUNHA",
+      "adm":"15/05/2017 00:00:00",
+      "setor":"N/A",
+      "desligamento": "14/10/2018 00:00:00",
+      "historico":[{
+      "inicio": "15/05/2017 00:00:00",
+      "cargo": "JOVEM APRENDIZ",
+      "salario": 553.49
+      },{
+      "inicio": "01/06/2018 00:00:00",
+      "cargo": "JOVEM APRENDIZ",
+      "salario": 581.16
+      }]
+      },{
+      "nome": "ALAN LUIZ DA SILVA CARVALHO",
+      "adm":"17/10/2016 00:00:00",
+      "setor":"TRIAGEM",
+      "desligamento": "05/08/2019 00:00:00",
+      "historico":[{
+      "inicio": "17/10/2016 00:00:00",
+      "cargo": "TECNICO DE MANUTENCAO",
+      "salario": 1871.1
+      },{
+      "inicio": "01/11/2016 00:00:00",
+      "cargo": "TECNICO MANUTENCAO TIR",
+      "salario": 1871.1
+      },{
+      "inicio": "01/05/2017 00:00:00",
+      "cargo": "TECNICO DE MANUTENCAO",
+      "salario": 1871.1
+      },{
+      "inicio": "01/02/2018 00:00:00",
+      "cargo": "TECNICO MANUTENCAO TIR",
+      "salario": 1871.1
+      },{
+      "inicio": "01/03/2018 00:00:00",
+      "cargo": "TECNICO MANUTENCAO TIR III",
+      "salario": 1872.97
+      },{
+      "inicio": "01/01/2019 00:00:00",
+      "cargo": "TECNICO MANUTENCAO TIR III",
+      "salario": 1872.97
+      }]
+      },{
+      "nome": "ALAN LUIZ DA SILVA CARVALHO",
+      "adm":"11/03/2020 00:00:00",
+      "setor":"TRIAGEM",
+      "desligamento": "",
+      "historico":[{
+      "inicio": "11/03/2020 00:00:00",
+      "cargo": "ANALISTA TECNICO I",
+      "salario": 2527.01
+      }]
+      },{
+      "nome": "ALESSANDRO DA CRUZ FERREIRA",
+      "adm":"22/07/2016 00:00:00",
+      "setor":"N/A",
+      "desligamento": "",
+      "historico":[{
+      "inicio": "22/07/2016 00:00:00",
+      "cargo": "ANALISTA TECNICO",
+      "salario": 3127.49
+      },{
+      "inicio": "22/07/2016 00:00:00",
+      "cargo": "AUX PLATAFORMA OFFSH",
+      "salario": 1671.26
+      },{
+      "inicio": "01/03/2018 00:00:00",
+      "cargo": "ANALISTA TECNICO III",
+      "salario": 3130.62
+      },{
+      "inicio": "01/01/2019 00:00:00",
+      "cargo": "ANALISTA TECNICO III",
+      "salario": 3130.62
+      },{
+      "inicio": "01/10/2019 00:00:00",
+      "cargo": "ANALISTA TECNICO III",
+      "salario": 3161.92
+      },{
+      "inicio": "01/01/2020 00:00:00",
+      "cargo": "ANALISTA TECNICO III",
+      "salario": 3161.92
+      }]
+      },{
+      "nome": "ALEXANDRE CASCABULHO DA COSTA",
+      "adm":"14/02/2017 00:00:00",
+      "setor":"N/A",
+      "desligamento": "15/06/2020 00:00:00",
+      "historico":[{
+      "inicio": "14/02/2017 00:00:00",
+      "cargo": "AUXILIAR DE MOVIMENT CARGA",
+      "salario": 1052.34
+      },{
+      "inicio": "01/12/2017 00:00:00",
+      "cargo": "TECNICO DE MANUTENCAO",
+      "salario": 1871.1
+      },{
+      "inicio": "01/03/2018 00:00:00",
+      "cargo": "TECNICO DE MANUTENCAO III",
+      "salario": 1872.97
+      },{
+      "inicio": "01/01/2019 00:00:00",
+      "cargo": "TECNICO DE MANUTENCAO III",
+      "salario": 1872.97
+      },{
+      "inicio": "01/10/2019 00:00:00",
+      "cargo": "TECNICO DE MANUTENCAO III",
+      "salario": 1891.7
+      },{
+      "inicio": "01/01/2020 00:00:00",
+      "cargo": "TECNICO DE MANUTENCAO III",
+      "salario": 1891.7
+      }]
+      },{
+      "nome": "ALINE DA SILVA FERREIRA",
+      "adm":"03/06/2019 00:00:00",
+      "setor":"N/A",
+      "desligamento": "",
+      "historico":[{
+      "inicio": "03/06/2019 00:00:00",
+      "cargo": "TECNICO ADM LOGISTICA",
+      "salario": 1359.23
+      },{
+      "inicio": "03/06/2019 00:00:00",
+      "cargo": "TECNICO ADM LOGISTICA I",
+      "salario": 1359.23
+      },{
+      "inicio": "01/10/2019 00:00:00",
+      "cargo": "TECNICO ADM LOGISTICA I",
+      "salario": 1373.82
+      },{
+      "inicio": "01/01/2020 00:00:00",
+      "cargo": "TECNICO ADM LOGISTICA I",
+      "salario": 1373.82
+      },{
+      "inicio": "01/09/2020 00:00:00",
+      "cargo": "TECNICO ADM LOGISTICA II",
+      "salario": 1460
+      }]
+      },{
+      "nome": "ALISSON BENEVIDES MESQUITA",
+      "adm":"06/08/2012 00:00:00",
+      "setor":"N/A",
+      "desligamento": "",
+      "historico":[{
+      "inicio": "06/08/2012 00:00:00",
+      "cargo": "TEC SEGUR TRAB II",
+      "salario": 1609.35
+      },{
+      "inicio": "01/09/2012 00:00:00",
+      "cargo": "TEC SEGUR TRAB II",
+      "salario": 1696.09
+      },{
+      "inicio": "01/09/2012 00:00:00",
+      "cargo": "TECNICO DE SEGURANCA III",
+      "salario": 1690
+      },{
+      "inicio": "01/01/2013 00:00:00",
+      "cargo": "TECNICO DE SEGURANCA III",
+      "salario": 1707.8
+      },{
+      "inicio": "01/12/2013 00:00:00",
+      "cargo": "TECNICO DE SEGURANCA III",
+      "salario": 1707.8
+      },{
+      "inicio": "01/12/2013 00:00:00",
+      "cargo": "TECNICO DE SEGURANCA III",
+      "salario": 1793.19
+      },{
+      "inicio": "01/01/2014 00:00:00",
+      "cargo": "TECNICO DE SEGURANCA III",
+      "salario": 1811.98
+      },{
+      "inicio": "01/12/2014 00:00:00",
+      "cargo": "TECNICO DE SEGURANCA III",
+      "salario": 1938.82
+      },{
+      "inicio": "01/05/2015 00:00:00",
+      "cargo": "TECNICO DE SEGURANCA IV",
+      "salario": 2152.08
+      },{
+      "inicio": "01/05/2016 00:00:00",
+      "cargo": "TECNICO DE SEGURANCA IV",
+      "salario": 2259.69
+      },{
+      "inicio": "01/06/2016 00:00:00",
+      "cargo": "TECNICO DE SEGURANCA IV",
+      "salario": 2302.73
+      },{
+      "inicio": "01/02/2017 00:00:00",
+      "cargo": "TECNICO DE SEGURANCA IV",
+      "salario": 2440.89
+      },{
+      "inicio": "01/12/2017 00:00:00",
+      "cargo": "TECNICO DE SEGURANCA IV",
+      "salario": 2482.63
+      },{
+      "inicio": "01/01/2019 00:00:00",
+      "cargo": "TECNICO DE SEGURANCA IV",
+      "salario": 2482.63
+      },{
+      "inicio": "01/10/2019 00:00:00",
+      "cargo": "TECNICO DE SEGURANCA IV",
+      "salario": 2507.46
+      },{
+      "inicio": "01/01/2020 00:00:00",
+      "cargo": "TECNICO DE SEGURANCA IV",
+      "salario": 2507.46
+      }]
+      },{
+      "nome": "ANA CAROLINA OLIVEIRA COUTINHO",
+      "adm":"11/12/2019 00:00:00",
+      "setor":"TRIAGEM",
+      "desligamento": "31/08/2020 00:00:00",
+      "historico":[{
+      "inicio": "11/12/2019 00:00:00",
+      "cargo": "TEC SEGURANCA DO TRABALHO I",
+      "salario": 1359.23
+      },{
+      "inicio": "01/01/2020 00:00:00",
+      "cargo": "TEC SEGURANCA DO TRABALHO I",
+      "salario": 1359.23
+      }]
+      },{
+      "nome": "ANA CLARA CARVALHO DA SILVA",
+      "adm":"19/06/2017 00:00:00",
+      "setor":"N/A",
+      "desligamento": "18/11/2018 00:00:00",
+      "historico":[{
+      "inicio": "19/06/2017 00:00:00",
+      "cargo": "JOVEM APRENDIZ",
+      "salario": 553.49
+      },{
+      "inicio": "01/06/2018 00:00:00",
+      "cargo": "JOVEM APRENDIZ",
+      "salario": 581.16
+      }]
+      },{
+      "nome": "ANDERSON FRANCO MACHADO",
+      "adm":"05/09/2017 00:00:00",
+      "setor":"N/A",
+      "desligamento": "13/03/2019 00:00:00",
+      "historico":[{
+      "inicio": "05/09/2017 00:00:00",
+      "cargo": "AUXILIAR DE MOVIMENT CARGA",
+      "salario": 1052.34
+      },{
+      "inicio": "01/01/2018 00:00:00",
+      "cargo": "AUXILIAR DE MOVIMENT CARGA",
+      "salario": 1136.53
+      },{
+      "inicio": "01/03/2018 00:00:00",
+      "cargo": "AUXILIAR DE MOVIMENT CARGA II",
+      "salario": 1137.67
+      },{
+      "inicio": "01/09/2018 00:00:00",
+      "cargo": "AUXILIAR MOVIMENT CARGA TIR II",
+      "salario": 1137.67
+      },{
+      "inicio": "01/01/2019 00:00:00",
+      "cargo": "AUXILIAR MOVIMENT CARGA TIR II",
+      "salario": 1137.67
+      }]
+      },{
+      "nome": "AUBERICIO SOUSA OLIVEIRA DA SILVA",
+      "adm":"01/08/2005 00:00:00",
+      "setor":"OFICINA",
+      "desligamento": "",
+      "historico":[{
+      "inicio": "01/08/2005 00:00:00",
+      "cargo": "ADMINISTRADOR I",
+      "salario": 1910.77
+      },{
+      "inicio": "01/01/2006 00:00:00",
+      "cargo": "ADMINISTRADOR I",
+      "salario": 2021.59
+      },{
+      "inicio": "01/01/2007 00:00:00",
+      "cargo": "ADMINISTRADOR I",
+      "salario": 2092.35
+      },{
+      "inicio": "01/03/2007 00:00:00",
+      "cargo": "ADMINISTRADOR II",
+      "salario": 2479.88
+      },{
+      "inicio": "01/10/2007 00:00:00",
+      "cargo": "ADMINISTRADOR II",
+      "salario": 2653.47
+      },{
+      "inicio": "01/09/2008 00:00:00",
+      "cargo": "ADMINISTRADOR III",
+      "salario": 3478.09
+      },{
+      "inicio": "01/10/2008 00:00:00",
+      "cargo": "ADMINISTRADOR III",
+      "salario": 3483.31
+      },{
+      "inicio": "01/03/2009 00:00:00",
+      "cargo": "COORDENADOR I",
+      "salario": 4060.43
+      },{
+      "inicio": "01/03/2009 00:00:00",
+      "cargo": "COORDENADOR I",
+      "salario": 4005.79
+      },{
+      "inicio": "01/05/2009 00:00:00",
+      "cargo": "COORDENADOR I",
+      "salario": 4303.65
+      },{
+      "inicio": "01/09/2009 00:00:00",
+      "cargo": "COORDENADOR I",
+      "salario": 4487.85
+      },{
+      "inicio": "01/10/2009 00:00:00",
+      "cargo": "COORDENADOR I",
+      "salario": 4495.17
+      },{
+      "inicio": "01/11/2009 00:00:00",
+      "cargo": "COORDENADOR I",
+      "salario": 4518.83
+      },{
+      "inicio": "01/11/2010 00:00:00",
+      "cargo": "COORDENADOR I",
+      "salario": 4789.96
+      },{
+      "inicio": "01/03/2011 00:00:00",
+      "cargo": "COORDENADOR II",
+      "salario": 5508.46
+      },{
+      "inicio": "01/11/2011 00:00:00",
+      "cargo": "COORDENADOR II",
+      "salario": 5910.03
+      },{
+      "inicio": "01/12/2011 00:00:00",
+      "cargo": "COORDENADOR II",
+      "salario": 5949.14
+      },{
+      "inicio": "01/03/2012 00:00:00",
+      "cargo": "COORDENADOR II",
+      "salario": 6383.2
+      },{
+      "inicio": "01/09/2012 00:00:00",
+      "cargo": "COORDENADOR II",
+      "salario": 6727.24
+      },{
+      "inicio": "01/01/2013 00:00:00",
+      "cargo": "COORDENADOR II",
+      "salario": 6798.11
+      },{
+      "inicio": "01/04/2013 00:00:00",
+      "cargo": "COORDENADOR SÊNIOR - II",
+      "salario": 6798.11
+      },{
+      "inicio": "02/04/2013 00:00:00",
+      "cargo": "COORDENADOR SÊNIOR - II",
+      "salario": 7239.21
+      },{
+      "inicio": "01/12/2013 00:00:00",
+      "cargo": "COORDENADOR SÊNIOR - II",
+      "salario": 7601.17
+      },{
+      "inicio": "01/12/2013 00:00:00",
+      "cargo": "COORDENADOR SÊNIOR - II",
+      "salario": 6798.11
+      },{
+      "inicio": "01/01/2014 00:00:00",
+      "cargo": "COORDENADOR SÊNIOR - II",
+      "salario": 7680.8
+      },{
+      "inicio": "01/04/2014 00:00:00",
+      "cargo": "COORDENADOR SÊNIOR - III",
+      "salario": 8448.88
+      },{
+      "inicio": "01/12/2014 00:00:00",
+      "cargo": "COORDENADOR SÊNIOR - III",
+      "salario": 9040.3
+      },{
+      "inicio": "01/04/2015 00:00:00",
+      "cargo": "COORDENADOR SÊNIOR - IV",
+      "salario": 9944.33
+      },{
+      "inicio": "01/12/2015 00:00:00",
+      "cargo": "COORDENADOR SÊNIOR - IV",
+      "salario": 10441.55
+      },{
+      "inicio": "01/01/2017 00:00:00",
+      "cargo": "COORDENADOR SÊNIOR - IV",
+      "salario": 11068.05
+      },{
+      "inicio": "01/12/2017 00:00:00",
+      "cargo": "COORDENADOR SÊNIOR - IV",
+      "salario": 11257.3
+      },{
+      "inicio": "01/09/2018 00:00:00",
+      "cargo": "COORDENADOR MASTER - I",
+      "salario": 11932.75
+      },{
+      "inicio": "01/01/2019 00:00:00",
+      "cargo": "COORDENADOR MASTER - I",
+      "salario": 11932.75
+      },{
+      "inicio": "01/09/2019 00:00:00",
+      "cargo": "COORDENADOR MASTER - II",
+      "salario": 12648.71
+      },{
+      "inicio": "01/10/2019 00:00:00",
+      "cargo": "COORDENADOR MASTER - II",
+      "salario": 12648.71
+      },{
+      "inicio": "01/01/2020 00:00:00",
+      "cargo": "COORDENADOR MASTER - II",
+      "salario": 12901.69
+      }]
+      },{
+      "nome": "BARBARA DE LIMA SEABRA MACHADO",
+      "adm":"03/04/2018 00:00:00",
+      "setor":"N/A",
+      "desligamento": "04/11/2019 00:00:00",
+      "historico":[{
+      "inicio": "03/04/2018 00:00:00",
+      "cargo": "TECNICO ADM LOGISTICA I",
+      "salario": 1359.23
+      },{
+      "inicio": "03/04/2018 00:00:00",
+      "cargo": "TECNICO ADM LOGISTICA",
+      "salario": 1359.23
+      },{
+      "inicio": "01/01/2019 00:00:00",
+      "cargo": "TECNICO ADM LOGISTICA I",
+      "salario": 1359.23
+      },{
+      "inicio": "01/10/2019 00:00:00",
+      "cargo": "TECNICO ADM LOGISTICA I",
+      "salario": 1373.82
+      }]
+      },{
+      "nome": "BERNALI LOVELY ABATH INQUIG",
+      "adm":"10/08/2018 00:00:00",
+      "setor":"N/A",
+      "desligamento": "10/11/2019 00:00:00",
+      "historico":[{
+      "inicio": "10/08/2018 00:00:00",
+      "cargo": "TEC SEGURANCA DO TRABALHO I",
+      "salario": 1359.23
+      },{
+      "inicio": "01/01/2019 00:00:00",
+      "cargo": "TEC SEGURANCA DO TRABALHO I",
+      "salario": 1359.23
+      },{
+      "inicio": "01/10/2019 00:00:00",
+      "cargo": "TEC SEGURANCA DO TRABALHO I",
+      "salario": 1359.23
+      }]
+      },{
+      "nome": "BIANCA VALENTIM BEZERRA CAETANO",
+      "adm":"21/05/2019 00:00:00",
+      "setor":"N/A",
+      "desligamento": "03/09/2020 00:00:00",
+      "historico":[{
+      "inicio": "21/05/2019 00:00:00",
+      "cargo": "TECNICO ADM LOGISTICA",
+      "salario": 1359.23
+      },{
+      "inicio": "01/06/2019 00:00:00",
+      "cargo": "TECNICO ADM LOGISTICA I",
+      "salario": 1359.23
+      },{
+      "inicio": "01/10/2019 00:00:00",
+      "cargo": "TECNICO ADM LOGISTICA I",
+      "salario": 1373.82
+      },{
+      "inicio": "01/01/2020 00:00:00",
+      "cargo": "TECNICO ADM LOGISTICA I",
+      "salario": 1373.82
+      }]
+      },{
+      "nome": "CARLITO RODRIGUES DA SILVA JUNIOR",
+      "adm":"22/07/2016 00:00:00",
+      "setor":"N/A",
+      "desligamento": "",
+      "historico":[{
+      "inicio": "22/07/2016 00:00:00",
+      "cargo": "AUX PLATAFORMA OFFSH",
+      "salario": 1671.26
+      },{
+      "inicio": "22/07/2016 00:00:00",
+      "cargo": "TECNICO DE MANUTENCAO",
+      "salario": 1871.1
+      },{
+      "inicio": "01/11/2016 00:00:00",
+      "cargo": "TECNICO MANUTENCAO TIR",
+      "salario": 1871.1
+      },{
+      "inicio": "01/03/2018 00:00:00",
+      "cargo": "TECNICO MANUTENCAO TIR III",
+      "salario": 1872.97
+      },{
+      "inicio": "01/01/2019 00:00:00",
+      "cargo": "TECNICO MANUTENCAO TIR III",
+      "salario": 1872.97
+      },{
+      "inicio": "01/10/2019 00:00:00",
+      "cargo": "TECNICO MANUTENCAO TIR III",
+      "salario": 1891.7
+      },{
+      "inicio": "01/01/2020 00:00:00",
+      "cargo": "ANALISTA TECNICO I",
+      "salario": 2527.01
+      }]
+      },{
+      "nome": "CARLOS CRISTIANO SILVA LOPES",
+      "adm":"13/09/2016 00:00:00",
+      "setor":"N/A",
+      "desligamento": "05/06/2020 00:00:00",
+      "historico":[{
+      "inicio": "13/09/2016 00:00:00",
+      "cargo": "AUXILIAR DE MOVIMENT CARGA",
+      "salario": 1052.34
+      },{
+      "inicio": "01/01/2018 00:00:00",
+      "cargo": "AUXILIAR DE MOVIMENT CARGA",
+      "salario": 1136.53
+      },{
+      "inicio": "01/03/2018 00:00:00",
+      "cargo": "AUXILIAR DE MOVIMENT CARGA II",
+      "salario": 1137.67
+      },{
+      "inicio": "01/01/2019 00:00:00",
+      "cargo": "AUXILIAR DE MOVIMENT CARGA II",
+      "salario": 1137.67
+      },{
+      "inicio": "01/10/2019 00:00:00",
+      "cargo": "AUXILIAR DE MOVIMENT CARGA II",
+      "salario": 1239.12
+      },{
+      "inicio": "01/01/2020 00:00:00",
+      "cargo": "AUXILIAR DE MOVIMENT CARGA II",
+      "salario": 1239.12
+      }]
+      },{
+      "nome": "CARLOS FELIPE VARGAS DE SIQUEIRA COSTA",
+      "adm":"11/08/2017 00:00:00",
+      "setor":"N/A",
+      "desligamento": "23/11/2018 00:00:00",
+      "historico":[{
+      "inicio": "11/08/2017 00:00:00",
+      "cargo": "JOVEM APRENDIZ",
+      "salario": 553.49
+      },{
+      "inicio": "01/06/2018 00:00:00",
+      "cargo": "JOVEM APRENDIZ",
+      "salario": 581.16
+      }]
+      },{
+      "nome": "CARLOS GUTTIERRES DA SILVA PINHEIRO",
+      "adm":"01/11/2016 00:00:00",
+      "setor":"N/A",
+      "desligamento": "",
+      "historico":[{
+      "inicio": "01/11/2016 00:00:00",
+      "cargo": "AUXILIAR MOVIMENT CARGA TIR",
+      "salario": 1052.34
+      },{
+      "inicio": "01/11/2016 00:00:00",
+      "cargo": "AUXILIAR DE MOVIMENT CARGA",
+      "salario": 1052.34
+      },{
+      "inicio": "01/01/2018 00:00:00",
+      "cargo": "AUXILIAR MOVIMENT CARGA TIR",
+      "salario": 1136.53
+      },{
+      "inicio": "01/03/2018 00:00:00",
+      "cargo": "AUXILIAR MOVIMENT CARGA TIR II",
+      "salario": 1137.67
+      },{
+      "inicio": "01/09/2018 00:00:00",
+      "cargo": "AUXILIAR JATISTA TIR III",
+      "salario": 1158.73
+      },{
+      "inicio": "01/01/2019 00:00:00",
+      "cargo": "AUXILIAR JATISTA TIR III",
+      "salario": 1158.73
+      },{
+      "inicio": "01/06/2019 00:00:00",
+      "cargo": "JATISTA TIR I",
+      "salario": 1187.43
+      },{
+      "inicio": "01/10/2019 00:00:00",
+      "cargo": "JATISTA TIR I",
+      "salario": 1250.49
+      },{
+      "inicio": "01/01/2020 00:00:00",
+      "cargo": "JATISTA TIR I",
+      "salario": 1250.49
+      },{
+      "inicio": "01/05/2020 00:00:00",
+      "cargo": "JATISTA I",
+      "salario": 1250.49
+      }]
+      },{
+      "nome": "CLAUDIO MAIA CAMARGO",
+      "adm":"17/10/2016 00:00:00",
+      "setor":"TRIAGEM",
+      "desligamento": "",
+      "historico":[{
+      "inicio": "17/10/2016 00:00:00",
+      "cargo": "AUXILIAR DE MOVIMENT CARGA",
+      "salario": 1052.34
+      },{
+      "inicio": "01/01/2018 00:00:00",
+      "cargo": "AUXILIAR DE MOVIMENT CARGA",
+      "salario": 1136.53
+      },{
+      "inicio": "01/03/2018 00:00:00",
+      "cargo": "AUXILIAR DE MOVIMENT CARGA II",
+      "salario": 1137.67
+      },{
+      "inicio": "01/01/2019 00:00:00",
+      "cargo": "AUXILIAR DE MOVIMENT CARGA II",
+      "salario": 1137.67
+      },{
+      "inicio": "01/10/2019 00:00:00",
+      "cargo": "AUXILIAR DE MOVIMENT CARGA II",
+      "salario": 1239.12
+      },{
+      "inicio": "01/01/2020 00:00:00",
+      "cargo": "AUXILIAR DE MOVIMENT CARGA II",
+      "salario": 1239.12
+      }]
+      },{
+      "nome": "CLOVES DA SILVA ARAUJO",
+      "adm":"01/08/2018 00:00:00",
+      "setor":"N/A",
+      "desligamento": "01/07/2019 00:00:00",
+      "historico":[{
+      "inicio": "01/08/2018 00:00:00",
+      "cargo": "SOLDADOR 6G",
+      "salario": 1336.5
+      },{
+      "inicio": "01/09/2018 00:00:00",
+      "cargo": "SOLDADOR 6G I",
+      "salario": 1336.5
+      },{
+      "inicio": "01/01/2019 00:00:00",
+      "cargo": "SOLDADOR 6G I",
+      "salario": 1336.5
+      }]
+      },{
+      "nome": "DANIEL RAMOS SOARES",
+      "adm":"17/10/2016 00:00:00",
+      "setor":"N/A",
+      "desligamento": "15/01/2020 00:00:00",
+      "historico":[{
+      "inicio": "17/10/2016 00:00:00",
+      "cargo": "TECNICO DE MANUTENCAO",
+      "salario": 1871.1
+      },{
+      "inicio": "01/11/2016 00:00:00",
+      "cargo": "TECNICO MANUTENCAO TIR",
+      "salario": 1871.1
+      },{
+      "inicio": "01/03/2018 00:00:00",
+      "cargo": "TECNICO MANUTENCAO TIR III",
+      "salario": 1872.97
+      },{
+      "inicio": "01/01/2019 00:00:00",
+      "cargo": "TECNICO MANUTENCAO TIR III",
+      "salario": 1872.97
+      },{
+      "inicio": "01/10/2019 00:00:00",
+      "cargo": "TECNICO MANUTENCAO TIR III",
+      "salario": 1891.7
+      },{
+      "inicio": "01/01/2020 00:00:00",
+      "cargo": "TECNICO MANUTENCAO TIR III",
+      "salario": 1891.7
+      }]
+      },{
+      "nome": "DENIS LIMA DA SILVA",
+      "adm":"22/07/2016 00:00:00",
+      "setor":"N/A",
+      "desligamento": "05/06/2020 00:00:00",
+      "historico":[{
+      "inicio": "22/07/2016 00:00:00",
+      "cargo": "AUXILIAR DE MOVIMENT CARGA",
+      "salario": 1052.34
+      },{
+      "inicio": "22/07/2016 00:00:00",
+      "cargo": "AUX PLATAFORMA OFFSH",
+      "salario": 1671.26
+      },{
+      "inicio": "01/11/2016 00:00:00",
+      "cargo": "AUXILIAR JATISTA TIR",
+      "salario": 1157.57
+      },{
+      "inicio": "01/03/2018 00:00:00",
+      "cargo": "AUXILIAR JATISTA TIR III",
+      "salario": 1158.73
+      },{
+      "inicio": "01/01/2019 00:00:00",
+      "cargo": "AUXILIAR JATISTA TIR III",
+      "salario": 1158.73
+      },{
+      "inicio": "01/06/2019 00:00:00",
+      "cargo": "JATISTA TIR I",
+      "salario": 1187.43
+      },{
+      "inicio": "01/10/2019 00:00:00",
+      "cargo": "JATISTA TIR I",
+      "salario": 1250.49
+      },{
+      "inicio": "01/01/2020 00:00:00",
+      "cargo": "JATISTA TIR I",
+      "salario": 1250.49
+      },{
+      "inicio": "01/05/2020 00:00:00",
+      "cargo": "JATISTA I",
+      "salario": 1250.49
+      }]
+      },{
+      "nome": "DIEGO BARCELOS PINTO",
+      "adm":"15/10/2019 00:00:00",
+      "setor":"N/A",
+      "desligamento": "27/05/2020 00:00:00",
+      "historico":[{
+      "inicio": "15/10/2019 00:00:00",
+      "cargo": "TECNICO DE MANUTENCAO I",
+      "salario": 1496.88
+      },{
+      "inicio": "15/10/2019 00:00:00",
+      "cargo": "TECNICO DE MANUTENCAO I",
+      "salario": 1511.85
+      },{
+      "inicio": "01/01/2020 00:00:00",
+      "cargo": "TECNICO DE MANUTENCAO I",
+      "salario": 1511.85
+      }]
+      },{
+      "nome": "DIEGO LIRIO DE BARCELOS",
+      "adm":"22/07/2016 00:00:00",
+      "setor":"OFICINA",
+      "desligamento": "10/07/2020 00:00:00",
+      "historico":[{
+      "inicio": "22/07/2016 00:00:00",
+      "cargo": "AUX PLATAFORMA OFFSH",
+      "salario": 1671.26
+      },{
+      "inicio": "22/07/2016 00:00:00",
+      "cargo": "TECNICO DE MANUTENCAO",
+      "salario": 1871.1
+      },{
+      "inicio": "01/11/2016 00:00:00",
+      "cargo": "TECNICO MANUTENCAO TIR",
+      "salario": 1871.1
+      },{
+      "inicio": "01/03/2018 00:00:00",
+      "cargo": "TECNICO MANUTENCAO TIR III",
+      "salario": 1872.97
+      },{
+      "inicio": "01/01/2019 00:00:00",
+      "cargo": "TECNICO MANUTENCAO TIR III",
+      "salario": 1872.97
+      },{
+      "inicio": "01/10/2019 00:00:00",
+      "cargo": "TECNICO MANUTENCAO TIR III",
+      "salario": 1891.7
+      },{
+      "inicio": "01/01/2020 00:00:00",
+      "cargo": "TECNICO MANUTENCAO TIR III",
+      "salario": 1891.7
+      },{
+      "inicio": "01/05/2020 00:00:00",
+      "cargo": "TECNICO DE MANUTENCAO III",
+      "salario": 1891.7
+      }]
+      },{
+      "nome": "EDNEY TERTULIANO DOS SANTOS",
+      "adm":"01/11/2016 00:00:00",
+      "setor":"N/A",
+      "desligamento": "12/06/2020 00:00:00",
+      "historico":[{
+      "inicio": "01/11/2016 00:00:00",
+      "cargo": "AUXILIAR JATISTA",
+      "salario": 1157.57
+      },{
+      "inicio": "01/10/2017 00:00:00",
+      "cargo": "AUXILIAR JATISTA TIR",
+      "salario": 1157.57
+      },{
+      "inicio": "01/03/2018 00:00:00",
+      "cargo": "AUXILIAR JATISTA TIR III",
+      "salario": 1158.73
+      },{
+      "inicio": "01/01/2019 00:00:00",
+      "cargo": "AUXILIAR JATISTA TIR III",
+      "salario": 1158.73
+      },{
+      "inicio": "01/06/2019 00:00:00",
+      "cargo": "JATISTA TIR I",
+      "salario": 1187.43
+      },{
+      "inicio": "01/10/2019 00:00:00",
+      "cargo": "JATISTA TIR I",
+      "salario": 1250.49
+      },{
+      "inicio": "01/01/2020 00:00:00",
+      "cargo": "JATISTA TIR I",
+      "salario": 1250.49
+      },{
+      "inicio": "01/05/2020 00:00:00",
+      "cargo": "JATISTA I",
+      "salario": 1250.49
+      }]
+      },{
+      "nome": "EDVALDO TEIXEIRA DO NASCIMENTO",
+      "adm":"01/06/2018 00:00:00",
+      "setor":"N/A",
+      "desligamento": "13/09/2019 00:00:00",
+      "historico":[{
+      "inicio": "01/06/2018 00:00:00",
+      "cargo": "SOLDADOR 6G I",
+      "salario": 1336.5
+      },{
+      "inicio": "01/01/2019 00:00:00",
+      "cargo": "SOLDADOR 6G I",
+      "salario": 1336.5
+      }]
+      },{
+      "nome": "ELIAS PINTO GOMES",
+      "adm":"17/02/2020 00:00:00",
+      "setor":"N/A",
+      "desligamento": "12/03/2020 00:00:00",
+      "historico":[{
+      "inicio": "17/02/2020 00:00:00",
+      "cargo": "TECNICO ADM LOGISTICA I",
+      "salario": 1373.82
+      }]
+      },{
+      "nome": "ELIO JORGE ELEOTERIO DA COSTA",
+      "adm":"04/09/2017 00:00:00",
+      "setor":"N/A",
+      "desligamento": "09/07/2019 00:00:00",
+      "historico":[{
+      "inicio": "04/09/2017 00:00:00",
+      "cargo": "AUXILIAR DE MOVIMENT CARGA",
+      "salario": 1052.34
+      },{
+      "inicio": "01/01/2018 00:00:00",
+      "cargo": "AUXILIAR DE MOVIMENT CARGA",
+      "salario": 1136.53
+      },{
+      "inicio": "01/03/2018 00:00:00",
+      "cargo": "AUXILIAR DE MOVIMENT CARGA II",
+      "salario": 1137.67
+      },{
+      "inicio": "01/01/2019 00:00:00",
+      "cargo": "AUXILIAR DE MOVIMENT CARGA II",
+      "salario": 1137.67
+      }]
+      },{
+      "nome": "ENILSON FRANCISCO DOS SANTOS",
+      "adm":"11/06/2019 00:00:00",
+      "setor":"N/A",
+      "desligamento": "07/07/2020 00:00:00",
+      "historico":[{
+      "inicio": "11/06/2019 00:00:00",
+      "cargo": "AUXILIAR DE MOVIMENT CARGA I",
+      "salario": 1136.53
+      },{
+      "inicio": "01/10/2019 00:00:00",
+      "cargo": "AUXILIAR DE MOVIMENT CARGA I",
+      "salario": 1238.11
+      },{
+      "inicio": "01/01/2020 00:00:00",
+      "cargo": "AUXILIAR DE MOVIMENT CARGA I",
+      "salario": 1238.11
+      }]
+      },{
+      "nome": "ERICA FONSECA",
+      "adm":"17/10/2016 00:00:00",
+      "setor":"TRIAGEM",
+      "desligamento": "",
+      "historico":[{
+      "inicio": "17/10/2016 00:00:00",
+      "cargo": "TECNICO ADM LOGISTICA",
+      "salario": 1699.04
+      },{
+      "inicio": "01/03/2018 00:00:00",
+      "cargo": "TECNICO ADM LOGISTICA III",
+      "salario": 1700.74
+      },{
+      "inicio": "01/09/2018 00:00:00",
+      "cargo": "TECNICO ADM LOGISTICA TIR III",
+      "salario": 1700.74
+      },{
+      "inicio": "01/01/2019 00:00:00",
+      "cargo": "TECNICO ADM LOGISTICA TIR III",
+      "salario": 1700.74
+      },{
+      "inicio": "01/10/2019 00:00:00",
+      "cargo": "TECNICO ADM LOGISTICA TIR III",
+      "salario": 1717.75
+      },{
+      "inicio": "01/01/2020 00:00:00",
+      "cargo": "TECNICO ADM LOGISTICA TIR III",
+      "salario": 1717.75
+      },{
+      "inicio": "01/05/2020 00:00:00",
+      "cargo": "TECNICO ADM LOGISTICA III",
+      "salario": 1717.75
+      }]
+      },{
+      "nome": "EULER AGUINALDO DOS SANTOS COUTINHO",
+      "adm":"01/08/2016 00:00:00",
+      "setor":"N/A",
+      "desligamento": "05/06/2020 00:00:00",
+      "historico":[{
+      "inicio": "01/08/2016 00:00:00",
+      "cargo": "TECNICO DE MANUTENCAO",
+      "salario": 1871.1
+      },{
+      "inicio": "01/03/2018 00:00:00",
+      "cargo": "TECNICO DE MANUTENCAO III",
+      "salario": 1872.97
+      },{
+      "inicio": "01/01/2019 00:00:00",
+      "cargo": "TECNICO DE MANUTENCAO III",
+      "salario": 1872.97
+      },{
+      "inicio": "01/10/2019 00:00:00",
+      "cargo": "TECNICO DE MANUTENCAO III",
+      "salario": 1891.7
+      },{
+      "inicio": "01/01/2020 00:00:00",
+      "cargo": "TECNICO DE MANUTENCAO III",
+      "salario": 1891.7
+      }]
+      },{
+      "nome": "FABRICIO SANTOS SILVA",
+      "adm":"07/10/2019 00:00:00",
+      "setor":"TRIAGEM",
+      "desligamento": "27/05/2020 00:00:00",
+      "historico":[{
+      "inicio": "07/10/2019 00:00:00",
+      "cargo": "AUXILIAR DE MOVIMENT CARGA I",
+      "salario": 1136.53
+      },{
+      "inicio": "07/10/2019 00:00:00",
+      "cargo": "AUXILIAR DE MOVIMENT CARGA I",
+      "salario": 1238.11
+      },{
+      "inicio": "01/01/2020 00:00:00",
+      "cargo": "AUXILIAR DE MOVIMENT CARGA I",
+      "salario": 1238.11
+      }]
+      },{
+      "nome": "FELIPE VELOSO BARBOSA DOS SANTOS",
+      "adm":"01/08/2016 00:00:00",
+      "setor":"N/A",
+      "desligamento": "31/05/2020 00:00:00",
+      "historico":[{
+      "inicio": "01/08/2016 00:00:00",
+      "cargo": "TECNICO DE MANUTENCAO",
+      "salario": 1871.1
+      },{
+      "inicio": "01/11/2016 00:00:00",
+      "cargo": "TECNICO MANUTENCAO TIR",
+      "salario": 1871.1
+      },{
+      "inicio": "01/03/2018 00:00:00",
+      "cargo": "TECNICO MANUTENCAO TIR III",
+      "salario": 1872.97
+      },{
+      "inicio": "01/01/2019 00:00:00",
+      "cargo": "TECNICO MANUTENCAO TIR III",
+      "salario": 1872.97
+      },{
+      "inicio": "01/10/2019 00:00:00",
+      "cargo": "TECNICO MANUTENCAO TIR III",
+      "salario": 1891.7
+      },{
+      "inicio": "01/01/2020 00:00:00",
+      "cargo": "TECNICO MANUTENCAO TIR III",
+      "salario": 1891.7
+      }]
+      },{
+      "nome": "FERNANDO ANDRADE TORRES",
+      "adm":"14/03/2018 00:00:00",
+      "setor":"N/A",
+      "desligamento": "18/11/2019 00:00:00",
+      "historico":[{
+      "inicio": "14/03/2018 00:00:00",
+      "cargo": "TEC SEGURANCA DO TRABALHO I",
+      "salario": 1359.23
+      },{
+      "inicio": "01/01/2019 00:00:00",
+      "cargo": "TEC SEGURANCA DO TRABALHO I",
+      "salario": 1359.23
+      },{
+      "inicio": "01/10/2019 00:00:00",
+      "cargo": "TEC SEGURANCA DO TRABALHO I",
+      "salario": 1359.23
+      }]
+      },{
+      "nome": "FERNANDO COIMBRA MOTA",
+      "adm":"05/11/2018 00:00:00",
+      "setor":"N/A",
+      "desligamento": "01/01/2019 00:00:00",
+      "historico":[{
+      "inicio": "05/11/2018 00:00:00",
+      "cargo": "TEC SEGURANCA DO TRABALHO I",
+      "salario": 1359.23
+      }]
+      },{
+      "nome": "FLAVIO DA CRUZ AZEVEDO",
+      "adm":"17/10/2016 00:00:00",
+      "setor":"N/A",
+      "desligamento": "",
+      "historico":[{
+      "inicio": "17/10/2016 00:00:00",
+      "cargo": "TECNICO DE MANUTENCAO",
+      "salario": 1871.1
+      },{
+      "inicio": "01/11/2016 00:00:00",
+      "cargo": "TECNICO MANUTENCAO TIR",
+      "salario": 1871.1
+      },{
+      "inicio": "01/03/2018 00:00:00",
+      "cargo": "TECNICO MANUTENCAO TIR III",
+      "salario": 1872.97
+      },{
+      "inicio": "01/01/2019 00:00:00",
+      "cargo": "TECNICO MANUTENCAO TIR III",
+      "salario": 1872.97
+      },{
+      "inicio": "01/10/2019 00:00:00",
+      "cargo": "TECNICO MANUTENCAO TIR III",
+      "salario": 1891.7
+      },{
+      "inicio": "01/01/2020 00:00:00",
+      "cargo": "TECNICO MANUTENCAO TIR III",
+      "salario": 1891.7
+      },{
+      "inicio": "01/05/2020 00:00:00",
+      "cargo": "TECNICO DE MANUTENCAO III",
+      "salario": 1891.7
+      }]
+      },{
+      "nome": "FRANCISCO JOSE ALVES LOPES",
+      "adm":"17/10/2016 00:00:00",
+      "setor":"N/A",
+      "desligamento": "21/05/2019 00:00:00",
+      "historico":[{
+      "inicio": "17/10/2016 00:00:00",
+      "cargo": "JATISTA",
+      "salario": 1439.31
+      },{
+      "inicio": "01/11/2016 00:00:00",
+      "cargo": "JATISTA TIR",
+      "salario": 1439.31
+      },{
+      "inicio": "01/03/2018 00:00:00",
+      "cargo": "JATISTA TIR III",
+      "salario": 1440.75
+      },{
+      "inicio": "01/01/2019 00:00:00",
+      "cargo": "JATISTA TIR III",
+      "salario": 1440.75
+      }]
+      },{
+      "nome": "FRANCISCO JOSE ALVES LOPES",
+      "adm":"20/02/2020 00:00:00",
+      "setor":"N/A",
+      "desligamento": "19/05/2020 00:00:00",
+      "historico":[{
+      "inicio": "20/02/2020 00:00:00",
+      "cargo": "AUXILIAR DE MOVIMENT CARGA I",
+      "salario": 1238.11
+      }]
+      },{
+      "nome": "FRANCOIS RANGEL RAMOS",
+      "adm":"03/09/2012 00:00:00",
+      "setor":"OFICINA",
+      "desligamento": "",
+      "historico":[{
+      "inicio": "03/09/2012 00:00:00",
+      "cargo": "ENGENHEIRO EM TREINAMENTO",
+      "salario": 2332.16
+      },{
+      "inicio": "03/09/2012 00:00:00",
+      "cargo": "ENGENHEIRO EM TREINAMENTO",
+      "salario": 2212.9
+      },{
+      "inicio": "01/12/2012 00:00:00",
+      "cargo": "ENGENHEIRO I",
+      "salario": 3264.52
+      },{
+      "inicio": "01/01/2013 00:00:00",
+      "cargo": "ENGENHEIRO I",
+      "salario": 3298.91
+      },{
+      "inicio": "01/04/2013 00:00:00",
+      "cargo": "COORDENADOR JÚNIOR - III",
+      "salario": 3306.25
+      },{
+      "inicio": "01/12/2013 00:00:00",
+      "cargo": "COORDENADOR JÚNIOR - III",
+      "salario": 3471.56
+      },{
+      "inicio": "01/01/2014 00:00:00",
+      "cargo": "COORDENADOR JÚNIOR - III",
+      "salario": 3507.93
+      },{
+      "inicio": "01/04/2014 00:00:00",
+      "cargo": "COORDENADOR JÚNIOR - IV",
+      "salario": 4034.12
+      },{
+      "inicio": "01/12/2014 00:00:00",
+      "cargo": "COORDENADOR JÚNIOR - IV",
+      "salario": 4316.51
+      },{
+      "inicio": "01/04/2015 00:00:00",
+      "cargo": "COORDENADOR PLENO - I",
+      "salario": 4834.49
+      },{
+      "inicio": "01/01/2016 00:00:00",
+      "cargo": "COORDENADOR PLENO - I",
+      "salario": 5076.21
+      },{
+      "inicio": "01/01/2017 00:00:00",
+      "cargo": "COORDENADOR PLENO - I",
+      "salario": 5380.79
+      },{
+      "inicio": "01/12/2017 00:00:00",
+      "cargo": "COORDENADOR PLENO - I",
+      "salario": 5472.8
+      },{
+      "inicio": "01/09/2018 00:00:00",
+      "cargo": "COORDENADOR PLENO - II",
+      "salario": 6129.53
+      },{
+      "inicio": "01/01/2019 00:00:00",
+      "cargo": "COORDENADOR PLENO - II",
+      "salario": 6129.53
+      },{
+      "inicio": "01/09/2019 00:00:00",
+      "cargo": "COORDENADOR PLENO - III",
+      "salario": 6865.09
+      },{
+      "inicio": "01/10/2019 00:00:00",
+      "cargo": "COORDENADOR PLENO - III",
+      "salario": 6865.09
+      },{
+      "inicio": "01/01/2020 00:00:00",
+      "cargo": "COORDENADOR PLENO - III",
+      "salario": 7002.4
+      }]
+      },{
+      "nome": "GELSON CAETANO REZENDE",
+      "adm":"22/07/2016 00:00:00",
+      "setor":"N/A",
+      "desligamento": "23/08/2019 00:00:00",
+      "historico":[{
+      "inicio": "22/07/2016 00:00:00",
+      "cargo": "TECNICO DE MANUTENCAO",
+      "salario": 1871.1
+      },{
+      "inicio": "22/07/2016 00:00:00",
+      "cargo": "AUX PLATAFORMA",
+      "salario": 1671.26
+      },{
+      "inicio": "01/11/2016 00:00:00",
+      "cargo": "TECNICO MANUTENCAO TIR",
+      "salario": 1871.1
+      },{
+      "inicio": "01/03/2018 00:00:00",
+      "cargo": "TECNICO MANUTENCAO TIR III",
+      "salario": 1872.97
+      },{
+      "inicio": "01/01/2019 00:00:00",
+      "cargo": "TECNICO MANUTENCAO TIR III",
+      "salario": 1872.97
+      }]
+      },{
+      "nome": "GUTEMBERG GOMES MOREIRA JUNIOR",
+      "adm":"22/07/2016 00:00:00",
+      "setor":"TRIAGEM",
+      "desligamento": "12/09/2020 00:00:00",
+      "historico":[{
+      "inicio": "22/07/2016 00:00:00",
+      "cargo": "TECNICO DE MANUTENCAO",
+      "salario": 1871.1
+      },{
+      "inicio": "22/07/2016 00:00:00",
+      "cargo": "AUX PLATAFORMA OFFSH",
+      "salario": 1671.26
+      },{
+      "inicio": "01/03/2018 00:00:00",
+      "cargo": "TECNICO DE MANUTENCAO III",
+      "salario": 1872.97
+      },{
+      "inicio": "01/01/2019 00:00:00",
+      "cargo": "TECNICO DE MANUTENCAO III",
+      "salario": 1872.97
+      },{
+      "inicio": "01/10/2019 00:00:00",
+      "cargo": "TECNICO DE MANUTENCAO III",
+      "salario": 1891.7
+      },{
+      "inicio": "01/01/2020 00:00:00",
+      "cargo": "TECNICO DE MANUTENCAO III",
+      "salario": 1891.7
+      }]
+      },{
+      "nome": "HENRIQUE TOMAZINHO DE SOUZA",
+      "adm":"01/11/2016 00:00:00",
+      "setor":"N/A",
+      "desligamento": "21/05/2019 00:00:00",
+      "historico":[{
+      "inicio": "01/11/2016 00:00:00",
+      "cargo": "JATISTA",
+      "salario": 1439.31
+      },{
+      "inicio": "02/11/2016 00:00:00",
+      "cargo": "JATISTA TIR",
+      "salario": 1439.31
+      },{
+      "inicio": "01/03/2018 00:00:00",
+      "cargo": "JATISTA TIR III",
+      "salario": 1440.75
+      },{
+      "inicio": "01/01/2019 00:00:00",
+      "cargo": "JATISTA TIR III",
+      "salario": 1440.75
+      }]
+      },{
+      "nome": "HIGOR LEMOS DOS SANTOS",
+      "adm":"14/02/2017 00:00:00",
+      "setor":"TRIAGEM",
+      "desligamento": "",
+      "historico":[{
+      "inicio": "14/02/2017 00:00:00",
+      "cargo": "AUXILIAR DE MOVIMENT CARGA",
+      "salario": 1052.34
+      },{
+      "inicio": "01/01/2018 00:00:00",
+      "cargo": "AUXILIAR DE MOVIMENT CARGA",
+      "salario": 1136.53
+      },{
+      "inicio": "01/03/2018 00:00:00",
+      "cargo": "AUXILIAR DE MOVIMENT CARGA II",
+      "salario": 1137.67
+      },{
+      "inicio": "01/01/2019 00:00:00",
+      "cargo": "AUXILIAR DE MOVIMENT CARGA II",
+      "salario": 1137.67
+      },{
+      "inicio": "01/10/2019 00:00:00",
+      "cargo": "AUXILIAR DE MOVIMENT CARGA II",
+      "salario": 1239.12
+      },{
+      "inicio": "01/01/2020 00:00:00",
+      "cargo": "AUXILIAR DE MOVIMENT CARGA II",
+      "salario": 1239.12
+      }]
+      },{
+      "nome": "ISABELLA DOS SANTOS FERREIRA OLIVEIRA",
+      "adm":"20/10/2016 00:00:00",
+      "setor":"TRIAGEM",
+      "desligamento": "",
+      "historico":[{
+      "inicio": "20/10/2016 00:00:00",
+      "cargo": "TECNICO ADM LOGISTICA",
+      "salario": 1699.04
+      },{
+      "inicio": "01/03/2018 00:00:00",
+      "cargo": "TECNICO ADM LOGISTICA III",
+      "salario": 1700.74
+      },{
+      "inicio": "01/09/2018 00:00:00",
+      "cargo": "TECNICO ADM LOGISTICA III",
+      "salario": 1700.74
+      },{
+      "inicio": "01/01/2019 00:00:00",
+      "cargo": "TECNICO ADM LOGISTICA III",
+      "salario": 1700.74
+      },{
+      "inicio": "01/10/2019 00:00:00",
+      "cargo": "TECNICO ADM LOGISTICA III",
+      "salario": 1717.75
+      },{
+      "inicio": "01/01/2020 00:00:00",
+      "cargo": "TECNICO ADM LOGISTICA III",
+      "salario": 1717.75
+      }]
+      },{
+      "nome": "JEAN DE OLIVEIRA LIMA",
+      "adm":"20/06/2017 00:00:00",
+      "setor":"N/A",
+      "desligamento": "09/09/2020 00:00:00",
+      "historico":[{
+      "inicio": "20/06/2017 00:00:00",
+      "cargo": "AUXILIAR DE MOVIMENT CARGA",
+      "salario": 1052.34
+      },{
+      "inicio": "01/10/2017 00:00:00",
+      "cargo": "AUXILIAR MOVIMENT CARGA TIR",
+      "salario": 1052.34
+      },{
+      "inicio": "01/01/2018 00:00:00",
+      "cargo": "AUXILIAR MOVIMENT CARGA TIR",
+      "salario": 1136.53
+      },{
+      "inicio": "01/03/2018 00:00:00",
+      "cargo": "AUXILIAR JATISTA TIR III",
+      "salario": 1158.73
+      },{
+      "inicio": "01/09/2018 00:00:00",
+      "cargo": "TECNICO DE MANUTENCAO I",
+      "salario": 1496.88
+      },{
+      "inicio": "02/09/2018 00:00:00",
+      "cargo": "TECNICO DE MANUTENCAO I",
+      "salario": 1496.88
+      },{
+      "inicio": "01/01/2019 00:00:00",
+      "cargo": "TECNICO DE MANUTENCAO I",
+      "salario": 1496.88
+      },{
+      "inicio": "01/10/2019 00:00:00",
+      "cargo": "TECNICO DE MANUTENCAO I",
+      "salario": 1511.85
+      },{
+      "inicio": "01/01/2020 00:00:00",
+      "cargo": "TECNICO DE MANUTENCAO I",
+      "salario": 1511.85
+      }]
+      },{
+      "nome": "JEFFERSON NASCIMENTO ROSSI",
+      "adm":"22/07/2016 00:00:00",
+      "setor":"N/A",
+      "desligamento": "21/05/2019 00:00:00",
+      "historico":[{
+      "inicio": "22/07/2016 00:00:00",
+      "cargo": "AUX PLATAFORMA OFFSH",
+      "salario": 1671.26
+      },{
+      "inicio": "22/07/2016 00:00:00",
+      "cargo": "AUXILIAR JATISTA",
+      "salario": 1157.57
+      },{
+      "inicio": "01/08/2016 00:00:00",
+      "cargo": "JATISTA",
+      "salario": 1439.31
+      },{
+      "inicio": "01/11/2016 00:00:00",
+      "cargo": "JATISTA TIR",
+      "salario": 1439.31
+      },{
+      "inicio": "01/03/2018 00:00:00",
+      "cargo": "JATISTA TIR III",
+      "salario": 1440.75
+      },{
+      "inicio": "01/01/2019 00:00:00",
+      "cargo": "JATISTA TIR III",
+      "salario": 1440.75
+      }]
+      },{
+      "nome": "JOELHITON SANTOS DE JESUS",
+      "adm":"16/09/2016 00:00:00",
+      "setor":"N/A",
+      "desligamento": "",
+      "historico":[{
+      "inicio": "16/09/2016 00:00:00",
+      "cargo": "AUXILIAR DE MOVIMENT CARGA",
+      "salario": 1052.34
+      },{
+      "inicio": "01/11/2016 00:00:00",
+      "cargo": "AUXILIAR JATISTA TIR",
+      "salario": 1157.57
+      },{
+      "inicio": "01/03/2018 00:00:00",
+      "cargo": "JATISTA TIR I",
+      "salario": 1187.43
+      },{
+      "inicio": "01/03/2018 00:00:00",
+      "cargo": "AUXILIAR JATISTA TIR III",
+      "salario": 1158.73
+      },{
+      "inicio": "01/01/2019 00:00:00",
+      "cargo": "JATISTA TIR I",
+      "salario": 1187.43
+      },{
+      "inicio": "01/10/2019 00:00:00",
+      "cargo": "JATISTA TIR I",
+      "salario": 1250.49
+      },{
+      "inicio": "01/01/2020 00:00:00",
+      "cargo": "JATISTA TIR I",
+      "salario": 1250.49
+      },{
+      "inicio": "01/05/2020 00:00:00",
+      "cargo": "JATISTA I",
+      "salario": 1250.49
+      },{
+      "inicio": "01/10/2020 00:00:00",
+      "cargo": "TECNICO DE MANUTENCAO I",
+      "salario": 1511.85
+      }]
+      },{
+      "nome": "JORDAN CHAGAS RAMOS CRUZ",
+      "adm":"03/07/2017 00:00:00",
+      "setor":"N/A",
+      "desligamento": "",
+      "historico":[{
+      "inicio": "03/07/2017 00:00:00",
+      "cargo": "AUXILIAR DE MOVIMENT CARGA",
+      "salario": 1052.34
+      },{
+      "inicio": "01/01/2018 00:00:00",
+      "cargo": "AUXILIAR DE MOVIMENT CARGA",
+      "salario": 1136.53
+      },{
+      "inicio": "01/03/2018 00:00:00",
+      "cargo": "AUXILIAR DE MOVIMENT CARGA II",
+      "salario": 1137.67
+      },{
+      "inicio": "01/01/2019 00:00:00",
+      "cargo": "AUXILIAR DE MOVIMENT CARGA II",
+      "salario": 1137.67
+      },{
+      "inicio": "01/10/2019 00:00:00",
+      "cargo": "AUXILIAR DE MOVIMENT CARGA II",
+      "salario": 1239.12
+      },{
+      "inicio": "01/01/2020 00:00:00",
+      "cargo": "AUXILIAR DE MOVIMENT CARGA II",
+      "salario": 1239.12
+      },{
+      "inicio": "01/11/2020 00:00:00",
+      "cargo": "TECNICO DE MANUTENCAO I",
+      "salario": 1511.85
+      }]
+      },{
+      "nome": "JORGE ALEXANDRE DE SOUZA LIMA",
+      "adm":"07/12/2016 00:00:00",
+      "setor":"N/A",
+      "desligamento": "11/10/2019 00:00:00",
+      "historico":[{
+      "inicio": "07/12/2016 00:00:00",
+      "cargo": "AUXILIAR DE MOVIMENT CARGA",
+      "salario": 1052.34
+      },{
+      "inicio": "01/01/2018 00:00:00",
+      "cargo": "AUXILIAR DE MOVIMENT CARGA",
+      "salario": 1136.53
+      },{
+      "inicio": "01/02/2018 00:00:00",
+      "cargo": "AUXILIAR MOVIMENT CARGA TIR",
+      "salario": 1136.53
+      },{
+      "inicio": "01/03/2018 00:00:00",
+      "cargo": "AUXILIAR MOVIMENT CARGA TIR II",
+      "salario": 1137.67
+      },{
+      "inicio": "01/01/2019 00:00:00",
+      "cargo": "AUXILIAR MOVIMENT CARGA TIR II",
+      "salario": 1137.67
+      },{
+      "inicio": "01/06/2019 00:00:00",
+      "cargo": "AUXILIAR JATISTA TIR II",
+      "salario": 1145.99
+      }]
+      },{
+      "nome": "JOSE EDUARDO TAVARES DE SOUZA",
+      "adm":"03/06/2019 00:00:00",
+      "setor":"TRIAGEM",
+      "desligamento": "",
+      "historico":[{
+      "inicio": "03/06/2019 00:00:00",
+      "cargo": "AUXILIAR DE MOVIMENT CARGA",
+      "salario": 1136.53
+      },{
+      "inicio": "01/10/2019 00:00:00",
+      "cargo": "AUXILIAR DE MOVIMENT CARGA",
+      "salario": 1238.11
+      },{
+      "inicio": "01/01/2020 00:00:00",
+      "cargo": "AUXILIAR DE MOVIMENT CARGA",
+      "salario": 1238.11
+      },{
+      "inicio": "01/05/2020 00:00:00",
+      "cargo": "AUXILIAR DE MOVIMENT CARGA I",
+      "salario": 1238.11
+      }]
+      },{
+      "nome": "JOSE LUCAS PEREIRA DE SOUZA",
+      "adm":"17/12/2018 00:00:00",
+      "setor":"N/A",
+      "desligamento": "05/07/2019 00:00:00",
+      "historico":[{
+      "inicio": "17/12/2018 00:00:00",
+      "cargo": "JOVEM APRENDIZ",
+      "salario": 581.16
+      },{
+      "inicio": "01/01/2019 00:00:00",
+      "cargo": "JOVEM APRENDIZ",
+      "salario": 581.16
+      }]
+      },{
+      "nome": "JOSE LUIZ DA CRUZ FERREIRA",
+      "adm":"01/08/2016 00:00:00",
+      "setor":"N/A",
+      "desligamento": "",
+      "historico":[{
+      "inicio": "01/08/2016 00:00:00",
+      "cargo": "TECNICO DE MANUTENCAO",
+      "salario": 1871.1
+      },{
+      "inicio": "01/11/2016 00:00:00",
+      "cargo": "TECNICO MANUTENCAO TIR",
+      "salario": 1871.1
+      },{
+      "inicio": "01/03/2018 00:00:00",
+      "cargo": "TECNICO MANUTENCAO TIR III",
+      "salario": 1872.97
+      },{
+      "inicio": "01/01/2019 00:00:00",
+      "cargo": "TECNICO MANUTENCAO TIR III",
+      "salario": 1872.97
+      },{
+      "inicio": "01/10/2019 00:00:00",
+      "cargo": "TECNICO MANUTENCAO TIR III",
+      "salario": 1891.7
+      },{
+      "inicio": "01/01/2020 00:00:00",
+      "cargo": "TECNICO MANUTENCAO TIR III",
+      "salario": 1891.7
+      },{
+      "inicio": "01/05/2020 00:00:00",
+      "cargo": "TECNICO DE MANUTENCAO III",
+      "salario": 1891.7
+      }]
+      },{
+      "nome": "JOSE MAURO DOS SANTOS ALVARENGA",
+      "adm":"22/07/2016 00:00:00",
+      "setor":"N/A",
+      "desligamento": "16/01/2020 00:00:00",
+      "historico":[{
+      "inicio": "22/07/2016 00:00:00",
+      "cargo": "ANALISTA TECNICO",
+      "salario": 3127.49
+      },{
+      "inicio": "22/07/2016 00:00:00",
+      "cargo": "AUX PLATAFORMA OFFSH",
+      "salario": 1671.26
+      },{
+      "inicio": "01/03/2018 00:00:00",
+      "cargo": "ANALISTA TECNICO III",
+      "salario": 3130.62
+      },{
+      "inicio": "01/01/2019 00:00:00",
+      "cargo": "ANALISTA TECNICO III",
+      "salario": 3130.62
+      },{
+      "inicio": "01/10/2019 00:00:00",
+      "cargo": "ANALISTA TECNICO III",
+      "salario": 3161.92
+      }]
+      },{
+      "nome": "JOSE WILSON DE SOUSA",
+      "adm":"17/10/2016 00:00:00",
+      "setor":"N/A",
+      "desligamento": "31/05/2020 00:00:00",
+      "historico":[{
+      "inicio": "17/10/2016 00:00:00",
+      "cargo": "AUXILIAR DE MOVIMENT CARGA",
+      "salario": 1052.34
+      },{
+      "inicio": "01/01/2018 00:00:00",
+      "cargo": "AUXILIAR DE MOVIMENT CARGA",
+      "salario": 1136.53
+      },{
+      "inicio": "01/03/2018 00:00:00",
+      "cargo": "AUXILIAR DE MOVIMENT CARGA II",
+      "salario": 1137.67
+      },{
+      "inicio": "01/01/2019 00:00:00",
+      "cargo": "AUXILIAR DE MOVIMENT CARGA II",
+      "salario": 1137.67
+      },{
+      "inicio": "01/10/2019 00:00:00",
+      "cargo": "AUXILIAR DE MOVIMENT CARGA II",
+      "salario": 1239.12
+      },{
+      "inicio": "01/01/2020 00:00:00",
+      "cargo": "AUXILIAR DE MOVIMENT CARGA II",
+      "salario": 1239.12
+      }]
+      },{
+      "nome": "JOSIMAR CARLOS DO NASCIMENTO",
+      "adm":"17/10/2016 00:00:00",
+      "setor":"N/A",
+      "desligamento": "31/05/2020 00:00:00",
+      "historico":[{
+      "inicio": "17/10/2016 00:00:00",
+      "cargo": "TECNICO DE MANUTENCAO",
+      "salario": 1871.1
+      },{
+      "inicio": "01/11/2016 00:00:00",
+      "cargo": "TECNICO MANUTENCAO TIR",
+      "salario": 1871.1
+      },{
+      "inicio": "01/03/2017 00:00:00",
+      "cargo": "TECNICO DE MANUTENCAO",
+      "salario": 1871.1
+      },{
+      "inicio": "01/01/2018 00:00:00",
+      "cargo": "TECNICO MANUTENCAO TIR",
+      "salario": 1871.1
+      },{
+      "inicio": "01/03/2018 00:00:00",
+      "cargo": "TECNICO MANUTENCAO TIR III",
+      "salario": 1872.97
+      },{
+      "inicio": "01/01/2019 00:00:00",
+      "cargo": "TECNICO MANUTENCAO TIR III",
+      "salario": 1872.97
+      },{
+      "inicio": "01/10/2019 00:00:00",
+      "cargo": "TECNICO MANUTENCAO TIR III",
+      "salario": 1891.7
+      },{
+      "inicio": "01/01/2020 00:00:00",
+      "cargo": "TECNICO MANUTENCAO TIR III",
+      "salario": 1891.7
+      }]
+      },{
+      "nome": "JUDSON ALCANTARA DOS SANTOS JUNIOR",
+      "adm":"17/08/2016 00:00:00",
+      "setor":"N/A",
+      "desligamento": "25/11/2019 00:00:00",
+      "historico":[{
+      "inicio": "17/08/2016 00:00:00",
+      "cargo": "AUXILIAR DE MOVIMENT CARGA",
+      "salario": 1052.34
+      },{
+      "inicio": "01/01/2018 00:00:00",
+      "cargo": "AUXILIAR DE MOVIMENT CARGA",
+      "salario": 1136.53
+      },{
+      "inicio": "01/03/2018 00:00:00",
+      "cargo": "AUXILIAR DE MOVIMENT CARGA II",
+      "salario": 1137.67
+      },{
+      "inicio": "01/01/2019 00:00:00",
+      "cargo": "AUXILIAR DE MOVIMENT CARGA II",
+      "salario": 1137.67
+      },{
+      "inicio": "01/10/2019 00:00:00",
+      "cargo": "AUXILIAR DE MOVIMENT CARGA II",
+      "salario": 1239.12
+      }]
+      },{
+      "nome": "KALEBE DA SILVA CASTRO",
+      "adm":"03/03/2017 00:00:00",
+      "setor":"N/A",
+      "desligamento": "09/09/2020 00:00:00",
+      "historico":[{
+      "inicio": "03/03/2017 00:00:00",
+      "cargo": "TECNICO ADM LOGISTICA",
+      "salario": 1699.04
+      },{
+      "inicio": "04/03/2017 00:00:00",
+      "cargo": "TECNICO ADM LOGISTICA TIR",
+      "salario": 1699.04
+      },{
+      "inicio": "01/03/2018 00:00:00",
+      "cargo": "TECNICO ADM LOGISTICA TIR III",
+      "salario": 1700.74
+      },{
+      "inicio": "01/01/2019 00:00:00",
+      "cargo": "TECNICO ADM LOGISTICA TIR III",
+      "salario": 1700.74
+      },{
+      "inicio": "01/10/2019 00:00:00",
+      "cargo": "TECNICO ADM LOGISTICA TIR III",
+      "salario": 1717.75
+      },{
+      "inicio": "01/01/2020 00:00:00",
+      "cargo": "TECNICO ADM LOGISTICA TIR III",
+      "salario": 1717.75
+      },{
+      "inicio": "01/05/2020 00:00:00",
+      "cargo": "TECNICO ADM LOGISTICA III",
+      "salario": 1717.75
+      }]
+      },{
+      "nome": "LAION MARTINS DOS SANTOS",
+      "adm":"16/09/2016 00:00:00",
+      "setor":"N/A",
+      "desligamento": "",
+      "historico":[{
+      "inicio": "16/09/2016 00:00:00",
+      "cargo": "AUXILIAR DE MOVIMENT CARGA",
+      "salario": 1052.34
+      },{
+      "inicio": "01/01/2018 00:00:00",
+      "cargo": "AUXILIAR DE MOVIMENT CARGA",
+      "salario": 1136.53
+      },{
+      "inicio": "01/03/2018 00:00:00",
+      "cargo": "AUXILIAR DE MOVIMENT CARGA II",
+      "salario": 1137.67
+      },{
+      "inicio": "01/01/2019 00:00:00",
+      "cargo": "AUXILIAR DE MOVIMENT CARGA II",
+      "salario": 1137.67
+      },{
+      "inicio": "01/10/2019 00:00:00",
+      "cargo": "AUXILIAR DE MOVIMENT CARGA II",
+      "salario": 1239.12
+      },{
+      "inicio": "01/11/2019 00:00:00",
+      "cargo": "AUXILIAR JATISTA TIR II",
+      "salario": 1239.12
+      },{
+      "inicio": "01/01/2020 00:00:00",
+      "cargo": "AUXILIAR JATISTA TIR II",
+      "salario": 1239.12
+      },{
+      "inicio": "01/05/2020 00:00:00",
+      "cargo": "AUXILIAR JATISTA II",
+      "salario": 1239.12
+      }]
+      },{
+      "nome": "LAIS OLIVEIRA PINTO",
+      "adm":"25/07/2016 00:00:00",
+      "setor":"N/A",
+      "desligamento": "",
+      "historico":[{
+      "inicio": "25/07/2016 00:00:00",
+      "cargo": "AUX PLATAFORMA OFFSH",
+      "salario": 1671.26
+      },{
+      "inicio": "25/07/2016 00:00:00",
+      "cargo": "TECNICO ADM LOGISTICA",
+      "salario": 1699.04
+      },{
+      "inicio": "01/11/2016 00:00:00",
+      "cargo": "TECNICO ADM LOGISTICA TIR",
+      "salario": 1699.04
+      },{
+      "inicio": "01/03/2018 00:00:00",
+      "cargo": "TECNICO ADM LOGISTICA TIR III",
+      "salario": 1700.74
+      },{
+      "inicio": "01/01/2019 00:00:00",
+      "cargo": "TECNICO ADM LOGISTICA TIR III",
+      "salario": 1700.74
+      },{
+      "inicio": "01/10/2019 00:00:00",
+      "cargo": "TECNICO ADM LOGISTICA TIR III",
+      "salario": 1717.75
+      },{
+      "inicio": "01/01/2020 00:00:00",
+      "cargo": "TECNICO ADM LOGISTICA TIR III",
+      "salario": 1717.75
+      },{
+      "inicio": "01/05/2020 00:00:00",
+      "cargo": "TECNICO ADM LOGISTICA III",
+      "salario": 1717.75
+      }]
+      },{
+      "nome": "LAIS SERRA SILVESTRE",
+      "adm":"05/10/2017 00:00:00",
+      "setor":"TRIAGEM",
+      "desligamento": "",
+      "historico":[{
+      "inicio": "05/10/2017 00:00:00",
+      "cargo": "TECNICO ADM LOGISTICA",
+      "salario": 1699.04
+      },{
+      "inicio": "01/03/2018 00:00:00",
+      "cargo": "TECNICO ADM LOGISTICA III",
+      "salario": 1700.74
+      },{
+      "inicio": "01/01/2019 00:00:00",
+      "cargo": "TECNICO ADM LOGISTICA III",
+      "salario": 1700.74
+      },{
+      "inicio": "01/10/2019 00:00:00",
+      "cargo": "TECNICO ADM LOGISTICA III",
+      "salario": 1717.75
+      },{
+      "inicio": "01/01/2020 00:00:00",
+      "cargo": "TECNICO ADM LOGISTICA III",
+      "salario": 1717.75
+      }]
+      },{
+      "nome": "LEANDRO LIRIO DE CARVALHO",
+      "adm":"22/07/2016 00:00:00",
+      "setor":"N/A",
+      "desligamento": "",
+      "historico":[{
+      "inicio": "22/07/2016 00:00:00",
+      "cargo": "AUX PLATAFORMA OFFSH",
+      "salario": 1671.26
+      },{
+      "inicio": "22/07/2016 00:00:00",
+      "cargo": "TECNICO DE MANUTENCAO",
+      "salario": 1871.1
+      },{
+      "inicio": "01/11/2016 00:00:00",
+      "cargo": "TECNICO MANUTENCAO TIR",
+      "salario": 1871.1
+      },{
+      "inicio": "01/03/2018 00:00:00",
+      "cargo": "TECNICO MANUTENCAO TIR III",
+      "salario": 1872.97
+      },{
+      "inicio": "01/01/2019 00:00:00",
+      "cargo": "TECNICO MANUTENCAO TIR III",
+      "salario": 1872.97
+      },{
+      "inicio": "01/10/2019 00:00:00",
+      "cargo": "TECNICO MANUTENCAO TIR III",
+      "salario": 1891.7
+      },{
+      "inicio": "01/01/2020 00:00:00",
+      "cargo": "TECNICO MANUTENCAO TIR III",
+      "salario": 1891.7
+      },{
+      "inicio": "01/05/2020 00:00:00",
+      "cargo": "TECNICO DE MANUTENCAO III",
+      "salario": 1891.7
+      }]
+      },{
+      "nome": "LEANDRO MACHADO DE LIMA",
+      "adm":"17/02/2017 00:00:00",
+      "setor":"N/A",
+      "desligamento": "",
+      "historico":[{
+      "inicio": "17/02/2017 00:00:00",
+      "cargo": "TECNICO DE SEGURANCA",
+      "salario": 1699.04
+      },{
+      "inicio": "01/03/2018 00:00:00",
+      "cargo": "TEC SEGURANCA DO TRABALHO III",
+      "salario": 1700.74
+      },{
+      "inicio": "01/01/2019 00:00:00",
+      "cargo": "TEC SEGURANCA DO TRABALHO III",
+      "salario": 1700.74
+      },{
+      "inicio": "01/10/2019 00:00:00",
+      "cargo": "TEC SEGURANCA DO TRABALHO III",
+      "salario": 1700.74
+      },{
+      "inicio": "01/01/2020 00:00:00",
+      "cargo": "TEC SEGURANCA DO TRABALHO III",
+      "salario": 1700.74
+      }]
+      },{
+      "nome": "LETICIA DOS SANTOS COELHO",
+      "adm":"14/01/2019 00:00:00",
+      "setor":"N/A",
+      "desligamento": "19/07/2019 00:00:00",
+      "historico":[{
+      "inicio": "14/01/2019 00:00:00",
+      "cargo": "ESTAGIARIO",
+      "salario": 1000
+      }]
+      },{
+      "nome": "LUCIO MARIO LIMA VIEIRA",
+      "adm":"20/06/2017 00:00:00",
+      "setor":"N/A",
+      "desligamento": "",
+      "historico":[{
+      "inicio": "20/06/2017 00:00:00",
+      "cargo": "AUXILIAR DE MOVIMENT CARGA",
+      "salario": 1052.34
+      },{
+      "inicio": "01/01/2018 00:00:00",
+      "cargo": "AUXILIAR DE MOVIMENT CARGA",
+      "salario": 1136.53
+      },{
+      "inicio": "01/03/2018 00:00:00",
+      "cargo": "AUXILIAR DE MOVIMENT CARGA II",
+      "salario": 1137.67
+      },{
+      "inicio": "01/05/2018 00:00:00",
+      "cargo": "AUXILIAR MOVIMENT CARGA TIR II",
+      "salario": 1137.67
+      },{
+      "inicio": "01/01/2019 00:00:00",
+      "cargo": "AUXILIAR MOVIMENT CARGA TIR II",
+      "salario": 1137.67
+      },{
+      "inicio": "01/10/2019 00:00:00",
+      "cargo": "AUXILIAR MOVIMENT CARGA TIR II",
+      "salario": 1239.12
+      },{
+      "inicio": "01/01/2020 00:00:00",
+      "cargo": "AUXILIAR MOVIMENT CARGA TIR II",
+      "salario": 1239.12
+      },{
+      "inicio": "01/05/2020 00:00:00",
+      "cargo": "AUXILIAR DE MOVIMENT CARGA II",
+      "salario": 1239.12
+      }]
+      },{
+      "nome": "LUIZ ANTONIO PIRES",
+      "adm":"25/07/2016 00:00:00",
+      "setor":"N/A",
+      "desligamento": "",
+      "historico":[{
+      "inicio": "25/07/2016 00:00:00",
+      "cargo": "TECNICO DE MANUTENCAO",
+      "salario": 1871.1
+      },{
+      "inicio": "25/07/2016 00:00:00",
+      "cargo": "AUX PLATAFORMA OFFSH",
+      "salario": 1671.26
+      },{
+      "inicio": "01/03/2018 00:00:00",
+      "cargo": "TECNICO DE MANUTENCAO III",
+      "salario": 1872.97
+      },{
+      "inicio": "01/01/2019 00:00:00",
+      "cargo": "TECNICO DE MANUTENCAO III",
+      "salario": 1872.97
+      },{
+      "inicio": "01/10/2019 00:00:00",
+      "cargo": "TECNICO DE MANUTENCAO III",
+      "salario": 1891.7
+      },{
+      "inicio": "01/01/2020 00:00:00",
+      "cargo": "TECNICO DE MANUTENCAO III",
+      "salario": 1891.7
+      }]
+      },{
+      "nome": "MARCELLO CORREA PEREIRA DA SILVA",
+      "adm":"01/08/2019 00:00:00",
+      "setor":"N/A",
+      "desligamento": "27/05/2020 00:00:00",
+      "historico":[{
+      "inicio": "01/08/2019 00:00:00",
+      "cargo": "TEC SEGURANCA DO TRABALHO I",
+      "salario": 1359.23
+      },{
+      "inicio": "01/10/2019 00:00:00",
+      "cargo": "TEC SEGURANCA DO TRABALHO I",
+      "salario": 1359.23
+      },{
+      "inicio": "01/01/2020 00:00:00",
+      "cargo": "TEC SEGURANCA DO TRABALHO I",
+      "salario": 1359.23
+      }]
+      },{
+      "nome": "MARCELO DAMES DA SILVA",
+      "adm":"17/10/2016 00:00:00",
+      "setor":"N/A",
+      "desligamento": "",
+      "historico":[{
+      "inicio": "17/10/2016 00:00:00",
+      "cargo": "TECNICO DE MANUTENCAO",
+      "salario": 1871.1
+      },{
+      "inicio": "01/11/2016 00:00:00",
+      "cargo": "TECNICO MANUTENCAO TIR",
+      "salario": 1871.1
+      },{
+      "inicio": "01/03/2018 00:00:00",
+      "cargo": "TECNICO MANUTENCAO TIR III",
+      "salario": 1872.97
+      },{
+      "inicio": "01/05/2018 00:00:00",
+      "cargo": "TECNICO DE MANUTENCAO III",
+      "salario": 1872.97
+      },{
+      "inicio": "01/01/2019 00:00:00",
+      "cargo": "TECNICO DE MANUTENCAO III",
+      "salario": 1872.97
+      },{
+      "inicio": "01/10/2019 00:00:00",
+      "cargo": "TECNICO DE MANUTENCAO III",
+      "salario": 1891.7
+      },{
+      "inicio": "01/01/2020 00:00:00",
+      "cargo": "TECNICO DE MANUTENCAO III",
+      "salario": 1891.7
+      }]
+      },{
+      "nome": "MARCELO DE SOUZA PINTO JUNIOR",
+      "adm":"23/10/2018 00:00:00",
+      "setor":"N/A",
+      "desligamento": "01/01/2019 00:00:00",
+      "historico":[{
+      "inicio": "23/10/2018 00:00:00",
+      "cargo": "TEC SEGURANCA DO TRABALHO I",
+      "salario": 1359.23
+      }]
+      },{
+      "nome": "MARCELO DE SOUZA PINTO JUNIOR",
+      "adm":"01/07/2019 00:00:00",
+      "setor":"N/A",
+      "desligamento": "27/05/2020 00:00:00",
+      "historico":[{
+      "inicio": "01/07/2019 00:00:00",
+      "cargo": "TEC SEGURANCA DO TRABALHO I",
+      "salario": 1359.23
+      },{
+      "inicio": "01/10/2019 00:00:00",
+      "cargo": "TEC SEGURANCA DO TRABALHO I",
+      "salario": 1359.23
+      },{
+      "inicio": "01/01/2020 00:00:00",
+      "cargo": "TEC SEGURANCA DO TRABALHO I",
+      "salario": 1359.23
+      }]
+      },{
+      "nome": "MARCELO DE SOUZA PINTO JUNIOR",
+      "adm":"16/07/2020 00:00:00",
+      "setor":"N/A",
+      "desligamento": "",
+      "historico":[{
+      "inicio": "16/07/2020 00:00:00",
+      "cargo": "TEC SEGURANCA DO TRABALHO I",
+      "salario": 1359.23
+      }]
+      },{
+      "nome": "MARCELO MONTEIRO ROCHA",
+      "adm":"22/07/2016 00:00:00",
+      "setor":"N/A",
+      "desligamento": "03/10/2019 00:00:00",
+      "historico":[{
+      "inicio": "22/07/2016 00:00:00",
+      "cargo": "TECNICO DE MANUTENCAO",
+      "salario": 1871.1
+      },{
+      "inicio": "22/07/2016 00:00:00",
+      "cargo": "AUX PLATAFORMA OFFSH",
+      "salario": 1671.26
+      },{
+      "inicio": "01/11/2016 00:00:00",
+      "cargo": "TECNICO MANUTENCAO TIR",
+      "salario": 1871.1
+      },{
+      "inicio": "01/03/2018 00:00:00",
+      "cargo": "TECNICO MANUTENCAO TIR III",
+      "salario": 1872.97
+      },{
+      "inicio": "01/01/2019 00:00:00",
+      "cargo": "TECNICO MANUTENCAO TIR III",
+      "salario": 1872.97
+      }]
+      },{
+      "nome": "MARCO ANTONIO PEREIRA",
+      "adm":"17/10/2016 00:00:00",
+      "setor":"N/A",
+      "desligamento": "05/06/2020 00:00:00",
+      "historico":[{
+      "inicio": "17/10/2016 00:00:00",
+      "cargo": "TECNICO DE MANUTENCAO",
+      "salario": 1871.1
+      },{
+      "inicio": "01/11/2016 00:00:00",
+      "cargo": "TECNICO MANUTENCAO TIR",
+      "salario": 1871.1
+      },{
+      "inicio": "01/05/2017 00:00:00",
+      "cargo": "TECNICO DE MANUTENCAO",
+      "salario": 1871.1
+      },{
+      "inicio": "01/03/2018 00:00:00",
+      "cargo": "TECNICO DE MANUTENCAO III",
+      "salario": 1872.97
+      },{
+      "inicio": "01/07/2018 00:00:00",
+      "cargo": "TECNICO MANUTENCAO TIR III",
+      "salario": 1872.97
+      },{
+      "inicio": "01/01/2019 00:00:00",
+      "cargo": "TECNICO MANUTENCAO TIR III",
+      "salario": 1872.97
+      },{
+      "inicio": "01/10/2019 00:00:00",
+      "cargo": "TECNICO MANUTENCAO TIR III",
+      "salario": 1891.7
+      },{
+      "inicio": "01/01/2020 00:00:00",
+      "cargo": "TECNICO MANUTENCAO TIR III",
+      "salario": 1891.7
+      },{
+      "inicio": "01/05/2020 00:00:00",
+      "cargo": "TECNICO DE MANUTENCAO III",
+      "salario": 1891.7
+      }]
+      },{
+      "nome": "MARCOS FERREIRA PACHECO",
+      "adm":"17/10/2016 00:00:00",
+      "setor":"N/A",
+      "desligamento": "02/04/2020 00:00:00",
+      "historico":[{
+      "inicio": "17/10/2016 00:00:00",
+      "cargo": "TECNICO DE MANUTENCAO",
+      "salario": 1871.1
+      },{
+      "inicio": "01/11/2016 00:00:00",
+      "cargo": "TECNICO MANUTENCAO TIR",
+      "salario": 1871.1
+      },{
+      "inicio": "01/03/2017 00:00:00",
+      "cargo": "TECNICO DE MANUTENCAO",
+      "salario": 1871.1
+      },{
+      "inicio": "01/03/2018 00:00:00",
+      "cargo": "TECNICO DE MANUTENCAO III",
+      "salario": 1872.97
+      },{
+      "inicio": "01/09/2018 00:00:00",
+      "cargo": "TECNICO MANUTENCAO TIR III",
+      "salario": 1872.97
+      },{
+      "inicio": "01/01/2019 00:00:00",
+      "cargo": "TECNICO MANUTENCAO TIR III",
+      "salario": 1872.97
+      },{
+      "inicio": "01/04/2019 00:00:00",
+      "cargo": "ANALISTA TECNICO I",
+      "salario": 2501.99
+      },{
+      "inicio": "01/10/2019 00:00:00",
+      "cargo": "ANALISTA TECNICO I",
+      "salario": 2527.01
+      },{
+      "inicio": "01/01/2020 00:00:00",
+      "cargo": "ANALISTA TECNICO I",
+      "salario": 2527.01
+      }]
+      },{
+      "nome": "MARCOS VINICIUS NASCIMENTO GOMES",
+      "adm":"01/08/2016 00:00:00",
+      "setor":"TRIAGEM",
+      "desligamento": "",
+      "historico":[{
+      "inicio": "01/08/2016 00:00:00",
+      "cargo": "TECNICO ADM LOGISTICA",
+      "salario": 1699.04
+      },{
+      "inicio": "01/11/2016 00:00:00",
+      "cargo": "TECNICO ADM LOGISTICA TIR",
+      "salario": 1699.04
+      },{
+      "inicio": "01/03/2018 00:00:00",
+      "cargo": "TECNICO ADM LOGISTICA TIR III",
+      "salario": 1700.74
+      },{
+      "inicio": "01/01/2019 00:00:00",
+      "cargo": "TECNICO ADM LOGISTICA TIR III",
+      "salario": 1700.74
+      },{
+      "inicio": "01/10/2019 00:00:00",
+      "cargo": "TECNICO ADM LOGISTICA TIR III",
+      "salario": 1717.75
+      },{
+      "inicio": "01/01/2020 00:00:00",
+      "cargo": "TECNICO ADM LOGISTICA TIR III",
+      "salario": 1717.75
+      },{
+      "inicio": "01/05/2020 00:00:00",
+      "cargo": "TECNICO ADM LOGISTICA III",
+      "salario": 1717.75
+      }]
+      },{
+      "nome": "MATHEUS OSORIO CARVALHO DE CERQUEIRA",
+      "adm":"04/11/2019 00:00:00",
+      "setor":"OFICINA",
+      "desligamento": "",
+      "historico":[{
+      "inicio": "04/11/2019 00:00:00",
+      "cargo": "ESTAGIARIO",
+      "salario": 1000
+      }]
+      },{
+      "nome": "MAXWELL PEREIRA DA SILVA",
+      "adm":"05/10/2016 00:00:00",
+      "setor":"TRIAGEM",
+      "desligamento": "",
+      "historico":[{
+      "inicio": "05/10/2016 00:00:00",
+      "cargo": "TECNICO DE MANUTENCAO",
+      "salario": 1871.1
+      },{
+      "inicio": "01/03/2018 00:00:00",
+      "cargo": "TECNICO DE MANUTENCAO III",
+      "salario": 1872.97
+      },{
+      "inicio": "01/01/2019 00:00:00",
+      "cargo": "TECNICO DE MANUTENCAO III",
+      "salario": 1872.97
+      },{
+      "inicio": "01/10/2019 00:00:00",
+      "cargo": "TECNICO DE MANUTENCAO III",
+      "salario": 1891.7
+      },{
+      "inicio": "01/01/2020 00:00:00",
+      "cargo": "TECNICO DE MANUTENCAO III",
+      "salario": 1891.7
+      }]
+      },{
+      "nome": "MICHELLE TEIXEIRA DE MELLO",
+      "adm":"01/06/2015 00:00:00",
+      "setor":"TRIAGEM",
+      "desligamento": "",
+      "historico":[{
+      "inicio": "01/06/2015 00:00:00",
+      "cargo": "TECNICO EM LOGISTICA",
+      "salario": 1587.89
+      },{
+      "inicio": "01/10/2015 00:00:00",
+      "cargo": "TECNICO EM LOGISTICA",
+      "salario": 1746.67
+      },{
+      "inicio": "01/05/2016 00:00:00",
+      "cargo": "TECNICO EM LOGISTICA",
+      "salario": 1834.01
+      },{
+      "inicio": "01/05/2016 00:00:00",
+      "cargo": "TECNICO EM LOGISTICA",
+      "salario": 1667.28
+      },{
+      "inicio": "01/06/2016 00:00:00",
+      "cargo": "TECNICO EM LOGISTICA",
+      "salario": 1868.94
+      },{
+      "inicio": "01/02/2017 00:00:00",
+      "cargo": "TECNICO EM LOGISTICA",
+      "salario": 1981.07
+      },{
+      "inicio": "01/12/2017 00:00:00",
+      "cargo": "TECNICO EM LOGISTICA",
+      "salario": 2014.95
+      },{
+      "inicio": "01/01/2019 00:00:00",
+      "cargo": "TECNICO EM LOGISTICA",
+      "salario": 2014.95
+      },{
+      "inicio": "01/10/2019 00:00:00",
+      "cargo": "TECNICO EM LOGISTICA",
+      "salario": 2035.1
+      },{
+      "inicio": "01/01/2020 00:00:00",
+      "cargo": "TECNICO EM LOGISTICA",
+      "salario": 2035.1
+      }]
+      },{
+      "nome": "MIRIAN AZEVEDO DE SOUZA",
+      "adm":"01/08/2016 00:00:00",
+      "setor":"N/A",
+      "desligamento": "02/03/2020 00:00:00",
+      "historico":[{
+      "inicio": "01/08/2016 00:00:00",
+      "cargo": "TECNICO ADM LOGISTICA",
+      "salario": 1699.04
+      },{
+      "inicio": "01/03/2018 00:00:00",
+      "cargo": "TECNICO ADM LOGISTICA III",
+      "salario": 1700.74
+      },{
+      "inicio": "01/09/2018 00:00:00",
+      "cargo": "TECNICO ADM LOGISTICA TIR III",
+      "salario": 1700.74
+      },{
+      "inicio": "01/01/2019 00:00:00",
+      "cargo": "TECNICO ADM LOGISTICA TIR III",
+      "salario": 1700.74
+      },{
+      "inicio": "01/10/2019 00:00:00",
+      "cargo": "TECNICO ADM LOGISTICA TIR III",
+      "salario": 1717.75
+      },{
+      "inicio": "01/01/2020 00:00:00",
+      "cargo": "TECNICO ADM LOGISTICA TIR III",
+      "salario": 1717.75
+      }]
+      },{
+      "nome": "MOISES DA SILVA JUNIOR",
+      "adm":"25/07/2016 00:00:00",
+      "setor":"TRIAGEM",
+      "desligamento": "",
+      "historico":[{
+      "inicio": "25/07/2016 00:00:00",
+      "cargo": "ANALISTA TECNICO",
+      "salario": 3127.49
+      },{
+      "inicio": "25/07/2016 00:00:00",
+      "cargo": "AUX PLATAFORMA OFFSH",
+      "salario": 1671.26
+      },{
+      "inicio": "01/03/2018 00:00:00",
+      "cargo": "ANALISTA TECNICO III",
+      "salario": 3130.62
+      },{
+      "inicio": "01/01/2019 00:00:00",
+      "cargo": "ANALISTA TECNICO III",
+      "salario": 3130.62
+      },{
+      "inicio": "01/10/2019 00:00:00",
+      "cargo": "ANALISTA TECNICO III",
+      "salario": 3161.92
+      },{
+      "inicio": "01/01/2020 00:00:00",
+      "cargo": "ANALISTA TECNICO III",
+      "salario": 3161.92
+      }]
+      },{
+      "nome": "PABLO DO NASCIMENTO MACHADO",
+      "adm":"04/09/2017 00:00:00",
+      "setor":"TRIAGEM",
+      "desligamento": "",
+      "historico":[{
+      "inicio": "04/09/2017 00:00:00",
+      "cargo": "AUXILIAR DE MOVIMENT CARGA",
+      "salario": 1052.34
+      },{
+      "inicio": "01/01/2018 00:00:00",
+      "cargo": "AUXILIAR DE MOVIMENT CARGA",
+      "salario": 1136.53
+      },{
+      "inicio": "01/03/2018 00:00:00",
+      "cargo": "AUXILIAR DE MOVIMENT CARGA II",
+      "salario": 1137.67
+      },{
+      "inicio": "01/01/2019 00:00:00",
+      "cargo": "AUXILIAR DE MOVIMENT CARGA II",
+      "salario": 1137.67
+      },{
+      "inicio": "01/10/2019 00:00:00",
+      "cargo": "AUXILIAR DE MOVIMENT CARGA II",
+      "salario": 1239.12
+      },{
+      "inicio": "01/01/2020 00:00:00",
+      "cargo": "AUXILIAR DE MOVIMENT CARGA II",
+      "salario": 1239.12
+      }]
+      },{
+      "nome": "PABLO GOMES DOS SANTOS",
+      "adm":"16/09/2016 00:00:00",
+      "setor":"TRIAGEM",
+      "desligamento": "10/07/2019 00:00:00",
+      "historico":[{
+      "inicio": "16/09/2016 00:00:00",
+      "cargo": "ANALISTA TECNICO",
+      "salario": 3127.49
+      },{
+      "inicio": "01/10/2016 00:00:00",
+      "cargo": "TECNICO INSPESAO",
+      "salario": 3127.49
+      },{
+      "inicio": "01/03/2018 00:00:00",
+      "cargo": "TECNICO INSPESAO III",
+      "salario": 3130.62
+      },{
+      "inicio": "01/01/2019 00:00:00",
+      "cargo": "TECNICO INSPESAO III",
+      "salario": 3130.62
+      }]
+      },{
+      "nome": "PAULO HENRIQUE TAVARES DE BARROS",
+      "adm":"01/11/2016 00:00:00",
+      "setor":"N/A",
+      "desligamento": "",
+      "historico":[{
+      "inicio": "01/11/2016 00:00:00",
+      "cargo": "TECNICO MANUTENCAO TIR",
+      "salario": 1871.1
+      },{
+      "inicio": "01/11/2016 00:00:00",
+      "cargo": "TECNICO DE MANUTENCAO",
+      "salario": 1871.1
+      },{
+      "inicio": "01/05/2017 00:00:00",
+      "cargo": "TECNICO DE MANUTENCAO",
+      "salario": 1871.1
+      },{
+      "inicio": "01/03/2018 00:00:00",
+      "cargo": "TECNICO DE MANUTENCAO III",
+      "salario": 1872.97
+      },{
+      "inicio": "01/01/2019 00:00:00",
+      "cargo": "TECNICO DE MANUTENCAO III",
+      "salario": 1872.97
+      },{
+      "inicio": "01/10/2019 00:00:00",
+      "cargo": "TECNICO DE MANUTENCAO III",
+      "salario": 1891.7
+      },{
+      "inicio": "01/01/2020 00:00:00",
+      "cargo": "TECNICO DE MANUTENCAO III",
+      "salario": 1891.7
+      }]
+      },{
+      "nome": "PAULO ROBERTO DO NASCIMENTO",
+      "adm":"22/07/2016 00:00:00",
+      "setor":"TRIAGEM",
+      "desligamento": "08/10/2018 00:00:00",
+      "historico":[{
+      "inicio": "22/07/2016 00:00:00",
+      "cargo": "TECNICO DE SEGURANCA",
+      "salario": 1699.04
+      },{
+      "inicio": "22/07/2016 00:00:00",
+      "cargo": "AUX PLATAFORMA OFFSH",
+      "salario": 1671.26
+      },{
+      "inicio": "01/03/2018 00:00:00",
+      "cargo": "TEC SEGURANCA DO TRABALHO III",
+      "salario": 1700.74
+      }]
+      },{
+      "nome": "PAULO SERGIO LEMOS EZIQUIEL",
+      "adm":"01/11/2016 00:00:00",
+      "setor":"TRIAGEM",
+      "desligamento": "",
+      "historico":[{
+      "inicio": "01/11/2016 00:00:00",
+      "cargo": "AUXILIAR DE MOVIMENT CARGA",
+      "salario": 1052.34
+      },{
+      "inicio": "01/01/2018 00:00:00",
+      "cargo": "AUXILIAR DE MOVIMENT CARGA",
+      "salario": 1136.53
+      },{
+      "inicio": "01/03/2018 00:00:00",
+      "cargo": "AUXILIAR DE MOVIMENT CARGA II",
+      "salario": 1137.67
+      },{
+      "inicio": "01/01/2019 00:00:00",
+      "cargo": "AUXILIAR DE MOVIMENT CARGA II",
+      "salario": 1137.67
+      },{
+      "inicio": "01/10/2019 00:00:00",
+      "cargo": "AUXILIAR DE MOVIMENT CARGA II",
+      "salario": 1239.12
+      },{
+      "inicio": "01/01/2020 00:00:00",
+      "cargo": "AUXILIAR DE MOVIMENT CARGA II",
+      "salario": 1239.12
+      }]
+      },{
+      "nome": "PIERRE ROSA DOS SANTOS",
+      "adm":"25/07/2016 00:00:00",
+      "setor":"N/A",
+      "desligamento": "04/06/2019 00:00:00",
+      "historico":[{
+      "inicio": "25/07/2016 00:00:00",
+      "cargo": "TECNICO DE MANUTENCAO",
+      "salario": 1871.1
+      },{
+      "inicio": "25/07/2016 00:00:00",
+      "cargo": "AUX PLATAFORMA OFFSH",
+      "salario": 1671.26
+      },{
+      "inicio": "01/03/2018 00:00:00",
+      "cargo": "TECNICO DE MANUTENCAO III",
+      "salario": 1872.97
+      },{
+      "inicio": "01/01/2019 00:00:00",
+      "cargo": "TECNICO DE MANUTENCAO III",
+      "salario": 1872.97
+      }]
+      },{
+      "nome": "RAFAEL COIMBRA DE OLIVEIRA",
+      "adm":"17/10/2016 00:00:00",
+      "setor":"N/A",
+      "desligamento": "09/09/2020 00:00:00",
+      "historico":[{
+      "inicio": "17/10/2016 00:00:00",
+      "cargo": "TECNICO DE MANUTENCAO",
+      "salario": 1871.1
+      },{
+      "inicio": "01/11/2016 00:00:00",
+      "cargo": "TECNICO MANUTENCAO TIR",
+      "salario": 1871.1
+      },{
+      "inicio": "01/03/2018 00:00:00",
+      "cargo": "TECNICO MANUTENCAO TIR III",
+      "salario": 1872.97
+      },{
+      "inicio": "01/01/2019 00:00:00",
+      "cargo": "TECNICO MANUTENCAO TIR III",
+      "salario": 1872.97
+      },{
+      "inicio": "01/10/2019 00:00:00",
+      "cargo": "TECNICO MANUTENCAO TIR III",
+      "salario": 1891.7
+      },{
+      "inicio": "01/01/2020 00:00:00",
+      "cargo": "TECNICO MANUTENCAO TIR III",
+      "salario": 1891.7
+      },{
+      "inicio": "01/05/2020 00:00:00",
+      "cargo": "TECNICO DE MANUTENCAO III",
+      "salario": 1891.7
+      }]
+      },{
+      "nome": "RAFAEL DOS SANTOS GOMES",
+      "adm":"08/08/2017 00:00:00",
+      "setor":"N/A",
+      "desligamento": "02/03/2020 00:00:00",
+      "historico":[{
+      "inicio": "08/08/2017 00:00:00",
+      "cargo": "TECNICO DE MANUTENCAO",
+      "salario": 1871.1
+      },{
+      "inicio": "01/03/2018 00:00:00",
+      "cargo": "TECNICO DE MANUTENCAO III",
+      "salario": 1872.97
+      },{
+      "inicio": "01/05/2018 00:00:00",
+      "cargo": "TECNICO MANUTENCAO TIR III",
+      "salario": 1872.97
+      },{
+      "inicio": "01/01/2019 00:00:00",
+      "cargo": "TECNICO MANUTENCAO TIR III",
+      "salario": 1872.97
+      },{
+      "inicio": "01/10/2019 00:00:00",
+      "cargo": "TECNICO MANUTENCAO TIR III",
+      "salario": 1891.7
+      },{
+      "inicio": "01/01/2020 00:00:00",
+      "cargo": "TECNICO MANUTENCAO TIR III",
+      "salario": 1891.7
+      }]
+      },{
+      "nome": "RAMON SILVA DA CRUZ",
+      "adm":"03/04/2019 00:00:00",
+      "setor":"N/A",
+      "desligamento": "",
+      "historico":[{
+      "inicio": "03/04/2019 00:00:00",
+      "cargo": "AUXILIAR DE MOVIMENT CARGA I",
+      "salario": 1136.53
+      },{
+      "inicio": "01/10/2019 00:00:00",
+      "cargo": "AUXILIAR DE MOVIMENT CARGA I",
+      "salario": 1238.11
+      },{
+      "inicio": "01/01/2020 00:00:00",
+      "cargo": "AUXILIAR DE MOVIMENT CARGA I",
+      "salario": 1238.11
+      }]
+      },{
+      "nome": "RICARDO MARINHO SILVA",
+      "adm":"08/03/2018 00:00:00",
+      "setor":"TRIAGEM",
+      "desligamento": "",
+      "historico":[{
+      "inicio": "08/03/2018 00:00:00",
+      "cargo": "AUXILIAR DE MOVIMENT CARGA",
+      "salario": 1136.53
+      },{
+      "inicio": "08/03/2018 00:00:00",
+      "cargo": "AUXILIAR DE MOVIMENT CARGA I",
+      "salario": 1136.53
+      },{
+      "inicio": "01/01/2019 00:00:00",
+      "cargo": "AUXILIAR DE MOVIMENT CARGA I",
+      "salario": 1136.53
+      },{
+      "inicio": "01/10/2019 00:00:00",
+      "cargo": "AUXILIAR DE MOVIMENT CARGA I",
+      "salario": 1238.11
+      },{
+      "inicio": "01/01/2020 00:00:00",
+      "cargo": "AUXILIAR DE MOVIMENT CARGA I",
+      "salario": 1238.11
+      },{
+      "inicio": "01/09/2020 00:00:00",
+      "cargo": "TECNICO DE MANUTENCAO I",
+      "salario": 1511.85
+      }]
+      },{
+      "nome": "ROBERTO SILVA DOS SANTOS",
+      "adm":"04/09/2017 00:00:00",
+      "setor":"N/A",
+      "desligamento": "04/06/2019 00:00:00",
+      "historico":[{
+      "inicio": "04/09/2017 00:00:00",
+      "cargo": "AUXILIAR DE MOVIMENT CARGA",
+      "salario": 1052.34
+      },{
+      "inicio": "01/01/2018 00:00:00",
+      "cargo": "AUXILIAR DE MOVIMENT CARGA",
+      "salario": 1136.53
+      },{
+      "inicio": "01/03/2018 00:00:00",
+      "cargo": "AUXILIAR DE MOVIMENT CARGA II",
+      "salario": 1137.67
+      },{
+      "inicio": "01/01/2019 00:00:00",
+      "cargo": "AUXILIAR DE MOVIMENT CARGA II",
+      "salario": 1137.67
+      }]
+      },{
+      "nome": "RODOLPHO CARDOSO PRATA DE SOUZA",
+      "adm":"22/07/2016 00:00:00",
+      "setor":"N/A",
+      "desligamento": "05/08/2020 00:00:00",
+      "historico":[{
+      "inicio": "22/07/2016 00:00:00",
+      "cargo": "AUX PLATAFORMA OFFSH",
+      "salario": 1671.26
+      },{
+      "inicio": "22/07/2016 00:00:00",
+      "cargo": "TECNICO DE MANUTENCAO",
+      "salario": 1871.1
+      },{
+      "inicio": "01/11/2016 00:00:00",
+      "cargo": "TECNICO MANUTENCAO TIR",
+      "salario": 1871.1
+      },{
+      "inicio": "01/03/2018 00:00:00",
+      "cargo": "TECNICO MANUTENCAO TIR III",
+      "salario": 1872.97
+      },{
+      "inicio": "01/01/2019 00:00:00",
+      "cargo": "TECNICO MANUTENCAO TIR III",
+      "salario": 1872.97
+      },{
+      "inicio": "01/10/2019 00:00:00",
+      "cargo": "TECNICO MANUTENCAO TIR III",
+      "salario": 1891.7
+      },{
+      "inicio": "01/01/2020 00:00:00",
+      "cargo": "TECNICO MANUTENCAO TIR III",
+      "salario": 1891.7
+      },{
+      "inicio": "01/05/2020 00:00:00",
+      "cargo": "TECNICO DE MANUTENCAO III",
+      "salario": 1891.7
+      }]
+      },{
+      "nome": "RODRIGO ALEGRIA BARROCA",
+      "adm":"01/11/2016 00:00:00",
+      "setor":"TRIAGEM",
+      "desligamento": "",
+      "historico":[{
+      "inicio": "01/11/2016 00:00:00",
+      "cargo": "TECNICO DE MANUTENCAO",
+      "salario": 1871.1
+      },{
+      "inicio": "01/03/2018 00:00:00",
+      "cargo": "TECNICO DE MANUTENCAO III",
+      "salario": 1872.97
+      },{
+      "inicio": "01/01/2019 00:00:00",
+      "cargo": "TECNICO DE MANUTENCAO III",
+      "salario": 1872.97
+      },{
+      "inicio": "01/10/2019 00:00:00",
+      "cargo": "TECNICO DE MANUTENCAO III",
+      "salario": 1891.7
+      },{
+      "inicio": "01/01/2020 00:00:00",
+      "cargo": "TECNICO DE MANUTENCAO III",
+      "salario": 1891.7
+      }]
+      },{
+      "nome": "RODRIGO VENANCIO",
+      "adm":"05/10/2016 00:00:00",
+      "setor":"N/A",
+      "desligamento": "21/05/2019 00:00:00",
+      "historico":[{
+      "inicio": "05/10/2016 00:00:00",
+      "cargo": "TECNICO ADM LOGISTICA",
+      "salario": 1699.04
+      },{
+      "inicio": "01/11/2016 00:00:00",
+      "cargo": "TECNICO ADM LOGISTICA TIR",
+      "salario": 1699.04
+      },{
+      "inicio": "01/03/2018 00:00:00",
+      "cargo": "TECNICO ADM LOGISTICA TIR III",
+      "salario": 1700.74
+      },{
+      "inicio": "01/01/2019 00:00:00",
+      "cargo": "TECNICO ADM LOGISTICA TIR III",
+      "salario": 1700.74
+      }]
+      },{
+      "nome": "ROGER WILLEN OLIVEIRA VIANA",
+      "adm":"21/08/2018 00:00:00",
+      "setor":"TRIAGEM",
+      "desligamento": "",
+      "historico":[{
+      "inicio": "21/08/2018 00:00:00",
+      "cargo": "TEC SEGURANCA DO TRABALHO I",
+      "salario": 1359.23
+      },{
+      "inicio": "01/01/2019 00:00:00",
+      "cargo": "TEC SEGURANCA DO TRABALHO I",
+      "salario": 1359.23
+      },{
+      "inicio": "01/10/2019 00:00:00",
+      "cargo": "TEC SEGURANCA DO TRABALHO I",
+      "salario": 1359.23
+      },{
+      "inicio": "01/01/2020 00:00:00",
+      "cargo": "TEC SEGURANCA DO TRABALHO I",
+      "salario": 1359.23
+      },{
+      "inicio": "01/02/2020 00:00:00",
+      "cargo": "TEC SEGURANCA DO TRABALHO II",
+      "salario": 1544.43
+      }]
+      },{
+      "nome": "RUBENS FELLIPE RODRIGUES GOMES",
+      "adm":"03/10/2016 00:00:00",
+      "setor":"N/A",
+      "desligamento": "24/03/2019 00:00:00",
+      "historico":[{
+      "inicio": "03/10/2016 00:00:00",
+      "cargo": "ANALISTA TECNICO",
+      "salario": 3127.49
+      },{
+      "inicio": "01/03/2018 00:00:00",
+      "cargo": "ANALISTA TECNICO III",
+      "salario": 3130.62
+      },{
+      "inicio": "01/01/2019 00:00:00",
+      "cargo": "ANALISTA TECNICO III",
+      "salario": 3130.62
+      }]
+      },{
+      "nome": "SAMARA DE FATIMA MANHAES NOGUEIRA",
+      "adm":"17/02/2020 00:00:00",
+      "setor":"TRIAGEM",
+      "desligamento": "",
+      "historico":[{
+      "inicio": "17/02/2020 00:00:00",
+      "cargo": "TEC SEGURANCA DO TRABALHO I",
+      "salario": 1359.23
+      }]
+      },{
+      "nome": "SIDICLEI DA SILVA GUSTAVO",
+      "adm":"01/11/2016 00:00:00",
+      "setor":"N/A",
+      "desligamento": "",
+      "historico":[{
+      "inicio": "01/11/2016 00:00:00",
+      "cargo": "AUXILIAR DE MOVIMENT CARGA",
+      "salario": 1052.34
+      },{
+      "inicio": "01/11/2016 00:00:00",
+      "cargo": "AUXILIAR MOVIMENT CARGA TIR",
+      "salario": 1052.34
+      },{
+      "inicio": "01/01/2018 00:00:00",
+      "cargo": "AUXILIAR MOVIMENT CARGA TIR",
+      "salario": 1136.53
+      },{
+      "inicio": "01/03/2018 00:00:00",
+      "cargo": "AUXILIAR MOVIMENT CARGA TIR II",
+      "salario": 1137.67
+      },{
+      "inicio": "01/03/2018 00:00:00",
+      "cargo": "AUXILIAR MOVIMENT CARGA TIR III",
+      "salario": 1137.67
+      },{
+      "inicio": "01/01/2019 00:00:00",
+      "cargo": "AUXILIAR MOVIMENT CARGA TIR II",
+      "salario": 1137.67
+      },{
+      "inicio": "01/06/2019 00:00:00",
+      "cargo": "AUXILIAR JATISTA TIR II",
+      "salario": 1145.99
+      },{
+      "inicio": "01/10/2019 00:00:00",
+      "cargo": "AUXILIAR JATISTA TIR II",
+      "salario": 1239.12
+      },{
+      "inicio": "01/01/2020 00:00:00",
+      "cargo": "AUXILIAR JATISTA TIR II",
+      "salario": 1239.12
+      },{
+      "inicio": "01/05/2020 00:00:00",
+      "cargo": "AUXILIAR JATISTA II",
+      "salario": 1239.12
+      }]
+      },{
+      "nome": "SILVANIA SILVA DE FREITAS",
+      "adm":"22/07/2016 00:00:00",
+      "setor":"N/A",
+      "desligamento": "",
+      "historico":[{
+      "inicio": "22/07/2016 00:00:00",
+      "cargo": "AUX PLATAFORMA OFFSH",
+      "salario": 1671.26
+      },{
+      "inicio": "22/07/2016 00:00:00",
+      "cargo": "TECNICO ADM LOGISTICA",
+      "salario": 1699.04
+      },{
+      "inicio": "01/03/2018 00:00:00",
+      "cargo": "TECNICO ADM LOGISTICA III",
+      "salario": 1700.74
+      },{
+      "inicio": "01/09/2018 00:00:00",
+      "cargo": "TECNICO ADM LOGISTICA TIR III",
+      "salario": 1700.74
+      },{
+      "inicio": "01/01/2019 00:00:00",
+      "cargo": "TECNICO ADM LOGISTICA TIR III",
+      "salario": 1700.74
+      },{
+      "inicio": "01/10/2019 00:00:00",
+      "cargo": "TECNICO ADM LOGISTICA TIR III",
+      "salario": 1717.75
+      },{
+      "inicio": "01/01/2020 00:00:00",
+      "cargo": "TECNICO ADM LOGISTICA TIR III",
+      "salario": 1717.75
+      },{
+      "inicio": "01/05/2020 00:00:00",
+      "cargo": "TECNICO ADM LOGISTICA III",
+      "salario": 1717.75
+      }]
+      },{
+      "nome": "SILVIO RICARDO DA SILVA COSTA",
+      "adm":"05/03/2020 00:00:00",
+      "setor":"N/A",
+      "desligamento": "20/04/2020 00:00:00",
+      "historico":[{
+      "inicio": "05/03/2020 00:00:00",
+      "cargo": "TECNICO DE MANUTENCAO I",
+      "salario": 1511.85
+      }]
+      },{
+      "nome": "THAIS COELHO PIRES SOBRINHO",
+      "adm":"19/06/2017 00:00:00",
+      "setor":"N/A",
+      "desligamento": "18/11/2018 00:00:00",
+      "historico":[{
+      "inicio": "19/06/2017 00:00:00",
+      "cargo": "JOVEM APRENDIZ",
+      "salario": 553.49
+      },{
+      "inicio": "01/06/2018 00:00:00",
+      "cargo": "JOVEM APRENDIZ",
+      "salario": 581.16
+      }]
+      },{
+      "nome": "THIAGO CARVALHAES EMMERICK",
+      "adm":"14/03/2018 00:00:00",
+      "setor":"N/A",
+      "desligamento": "",
+      "historico":[{
+      "inicio": "14/03/2018 00:00:00",
+      "cargo": "AUXILIAR DE MOVIMENT CARGA",
+      "salario": 1136.53
+      },{
+      "inicio": "14/03/2018 00:00:00",
+      "cargo": "AUXILIAR DE MOVIMENT CARGA I",
+      "salario": 1136.53
+      },{
+      "inicio": "01/01/2019 00:00:00",
+      "cargo": "AUXILIAR DE MOVIMENT CARGA I",
+      "salario": 1136.53
+      },{
+      "inicio": "01/06/2019 00:00:00",
+      "cargo": "AUXILIAR JATISTA TIR I",
+      "salario": 1136.53
+      },{
+      "inicio": "01/10/2019 00:00:00",
+      "cargo": "AUXILIAR JATISTA TIR I",
+      "salario": 1238.11
+      },{
+      "inicio": "01/01/2020 00:00:00",
+      "cargo": "AUXILIAR JATISTA TIR I",
+      "salario": 1238.11
+      },{
+      "inicio": "01/05/2020 00:00:00",
+      "cargo": "AUXILIAR JATISTA I",
+      "salario": 1238.11
+      }]
+      },{
+      "nome": "THIAGO FERNANDES BERNARDO",
+      "adm":"16/04/2018 00:00:00",
+      "setor":"N/A",
+      "desligamento": "02/06/2020 00:00:00",
+      "historico":[{
+      "inicio": "16/04/2018 00:00:00",
+      "cargo": "AUXILIAR JATISTA TIR II",
+      "salario": 1053.39
+      },{
+      "inicio": "16/04/2018 00:00:00",
+      "cargo": "AUXILIAR JATISTA TIR I",
+      "salario": 1136.53
+      },{
+      "inicio": "01/01/2019 00:00:00",
+      "cargo": "AUXILIAR JATISTA TIR I",
+      "salario": 1136.53
+      },{
+      "inicio": "01/10/2019 00:00:00",
+      "cargo": "AUXILIAR JATISTA TIR I",
+      "salario": 1238.11
+      },{
+      "inicio": "01/01/2020 00:00:00",
+      "cargo": "AUXILIAR JATISTA TIR I",
+      "salario": 1238.11
+      },{
+      "inicio": "01/05/2020 00:00:00",
+      "cargo": "AUXILIAR JATISTA I",
+      "salario": 1238.11
+      }]
+      },{
+      "nome": "TIAGO DE ARAUJO FERREIRA",
+      "adm":"22/07/2016 00:00:00",
+      "setor":"N/A",
+      "desligamento": "",
+      "historico":[{
+      "inicio": "22/07/2016 00:00:00",
+      "cargo": "TECNICO ADM LOGISTICA",
+      "salario": 1699.04
+      },{
+      "inicio": "22/07/2016 00:00:00",
+      "cargo": "AUX PLATAFORMA OFFSH",
+      "salario": 1671.26
+      },{
+      "inicio": "01/03/2018 00:00:00",
+      "cargo": "TECNICO ADM LOGISTICA III",
+      "salario": 1700.74
+      },{
+      "inicio": "01/01/2019 00:00:00",
+      "cargo": "TECNICO ADM LOGISTICA III",
+      "salario": 1700.74
+      },{
+      "inicio": "01/10/2019 00:00:00",
+      "cargo": "TECNICO ADM LOGISTICA III",
+      "salario": 1717.75
+      },{
+      "inicio": "01/01/2020 00:00:00",
+      "cargo": "TECNICO ADM LOGISTICA III",
+      "salario": 1717.75
+      }]
+      },{
+      "nome": "UIRA DE SOUZA SALES",
+      "adm":"25/07/2016 00:00:00",
+      "setor":"TRIAGEM",
+      "desligamento": "",
+      "historico":[{
+      "inicio": "25/07/2016 00:00:00",
+      "cargo": "AUX PLATAFORMA OFFSH",
+      "salario": 1671.26
+      },{
+      "inicio": "25/07/2016 00:00:00",
+      "cargo": "TECNICO ADM LOGISTICA",
+      "salario": 1699.04
+      },{
+      "inicio": "01/03/2018 00:00:00",
+      "cargo": "TECNICO ADM LOGISTICA III",
+      "salario": 1700.74
+      },{
+      "inicio": "01/09/2018 00:00:00",
+      "cargo": "TECNICO ADM LOGISTICA TIR III",
+      "salario": 1700.74
+      },{
+      "inicio": "01/01/2019 00:00:00",
+      "cargo": "TECNICO ADM LOGISTICA TIR III",
+      "salario": 1700.74
+      },{
+      "inicio": "01/10/2019 00:00:00",
+      "cargo": "TECNICO ADM LOGISTICA TIR III",
+      "salario": 1717.75
+      },{
+      "inicio": "01/01/2020 00:00:00",
+      "cargo": "TECNICO ADM LOGISTICA TIR III",
+      "salario": 1717.75
+      },{
+      "inicio": "01/05/2020 00:00:00",
+      "cargo": "TECNICO ADM LOGISTICA III",
+      "salario": 1717.75
+      }]
+      },{
+      "nome": "VANESSA GONCALVES DE PADOA",
+      "adm":"20/06/2017 00:00:00",
+      "setor":"N/A",
+      "desligamento": "10/07/2019 00:00:00",
+      "historico":[{
+      "inicio": "20/06/2017 00:00:00",
+      "cargo": "TECNICO ADM LOGISTICA",
+      "salario": 1699.04
+      },{
+      "inicio": "01/03/2018 00:00:00",
+      "cargo": "TECNICO ADM LOGISTICA III",
+      "salario": 1700.74
+      },{
+      "inicio": "01/01/2019 00:00:00",
+      "cargo": "TECNICO ADM LOGISTICA III",
+      "salario": 1700.74
+      }]
+      },{
+      "nome": "VANESSA RIBEIRO PESSANHA",
+      "adm":"02/10/2018 00:00:00",
+      "setor":"N/A",
+      "desligamento": "17/06/2020 00:00:00",
+      "historico":[{
+      "inicio": "02/10/2018 00:00:00",
+      "cargo": "TEC SEGURANCA DO TRABALHO I",
+      "salario": 1359.23
+      },{
+      "inicio": "01/01/2019 00:00:00",
+      "cargo": "TEC SEGURANCA DO TRABALHO I",
+      "salario": 1359.23
+      },{
+      "inicio": "01/10/2019 00:00:00",
+      "cargo": "TEC SEGURANCA DO TRABALHO I",
+      "salario": 1359.23
+      },{
+      "inicio": "01/01/2020 00:00:00",
+      "cargo": "TEC SEGURANCA DO TRABALHO I",
+      "salario": 1359.23
+      },{
+      "inicio": "01/02/2020 00:00:00",
+      "cargo": "TEC SEGURANCA DO TRABALHO II",
+      "salario": 1544.43
+      }]
+      },{
+      "nome": "VINICIUS GUIMARAES FAROLFI",
+      "adm":"06/12/2019 00:00:00",
+      "setor":"N/A",
+      "desligamento": "07/02/2020 00:00:00",
+      "historico":[{
+      "inicio": "06/12/2019 00:00:00",
+      "cargo": "TEC SEGURANCA DO TRABALHO I",
+      "salario": 1359.23
+      },{
+      "inicio": "01/01/2020 00:00:00",
+      "cargo": "TEC SEGURANCA DO TRABALHO I",
+      "salario": 1359.23
+      }]
+      },{
+      "nome": "VINICIUS NERY DA SILVA SCARPINI",
+      "adm":"13/08/2018 00:00:00",
+      "setor":"N/A",
+      "desligamento": "23/07/2019 00:00:00",
+      "historico":[{
+      "inicio": "13/08/2018 00:00:00",
+      "cargo": "TEC SEGURANCA DO TRABALHO I",
+      "salario": 1359.23
+      },{
+      "inicio": "01/01/2019 00:00:00",
+      "cargo": "TEC SEGURANCA DO TRABALHO I",
+      "salario": 1359.23
+      }]
+      },{
+      "nome": "WELLINGTON BONIFACIO RANGEL",
+      "adm":"25/07/2016 00:00:00",
+      "setor":"TRIAGEM",
+      "desligamento": "",
+      "historico":[{
+      "inicio": "25/07/2016 00:00:00",
+      "cargo": "TECNICO DE MANUTENCAO",
+      "salario": 1871.1
+      },{
+      "inicio": "25/07/2016 00:00:00",
+      "cargo": "AUX PLATAFORMA OFFSH",
+      "salario": 1671.26
+      },{
+      "inicio": "01/03/2018 00:00:00",
+      "cargo": "TECNICO DE MANUTENCAO III",
+      "salario": 1872.97
+      },{
+      "inicio": "01/01/2019 00:00:00",
+      "cargo": "TECNICO DE MANUTENCAO III",
+      "salario": 1872.97
+      },{
+      "inicio": "01/10/2019 00:00:00",
+      "cargo": "TECNICO DE MANUTENCAO III",
+      "salario": 1891.7
+      },{
+      "inicio": "01/01/2020 00:00:00",
+      "cargo": "TECNICO DE MANUTENCAO III",
+      "salario": 1891.7
+      }]
+      },{
+      "nome": "WILLIAM ROGER SOARES",
+      "adm":"03/07/2018 00:00:00",
+      "setor":"N/A",
+      "desligamento": "",
+      "historico":[{
+      "inicio": "03/07/2018 00:00:00",
+      "cargo": "TECNICO DE MANUTENCAO I",
+      "salario": 1496.88
+      },{
+      "inicio": "01/01/2019 00:00:00",
+      "cargo": "TECNICO DE MANUTENCAO I",
+      "salario": 1496.88
+      },{
+      "inicio": "01/10/2019 00:00:00",
+      "cargo": "TECNICO DE MANUTENCAO I",
+      "salario": 1511.85
+      },{
+      "inicio": "01/01/2020 00:00:00",
+      "cargo": "TECNICO DE MANUTENCAO I",
+      "salario": 1511.85
+      }]
+      },{
+      "nome": "WILLIAN TEREZA DE ALMEIDA",
+      "adm":"01/11/2016 00:00:00",
+      "setor":"N/A",
+      "desligamento": "02/10/2019 00:00:00",
+      "historico":[{
+      "inicio": "01/11/2016 00:00:00",
+      "cargo": "AUXILIAR DE MOVIMENT CARGA",
+      "salario": 1052.34
+      },{
+      "inicio": "01/01/2018 00:00:00",
+      "cargo": "AUXILIAR DE MOVIMENT CARGA",
+      "salario": 1136.53
+      },{
+      "inicio": "01/03/2018 00:00:00",
+      "cargo": "AUXILIAR DE MOVIMENT CARGA II",
+      "salario": 1137.67
+      },{
+      "inicio": "01/01/2019 00:00:00",
+      "cargo": "AUXILIAR DE MOVIMENT CARGA II",
+      "salario": 1137.67
+      }]
+      },{
+      "nome": "YUSMEL RODRIGUEZ AGUILAR",
+      "adm":"01/07/2019 00:00:00",
+      "setor":"TRIAGEM",
+      "desligamento": "",
+      "historico":[{
+      "inicio": "01/07/2019 00:00:00",
+      "cargo": "AUXILIAR DE MOVIMENT CARGA I",
+      "salario": 1136.53
+      },{
+      "inicio": "01/10/2019 00:00:00",
+      "cargo": "AUXILIAR DE MOVIMENT CARGA I",
+      "salario": 1238.11
+      },{
+      "inicio": "01/01/2020 00:00:00",
+      "cargo": "AUXILIAR DE MOVIMENT CARGA I",
+      "salario": 1238.11
+      }]
+      }]
+      ,
+    "grafico_medicao":
+    {
+      "nomeMes": "Fevereiro",
+      "liquido": 522000,
+      "orcado": 600000,
+      "reajuste": 1.0881,
+      "custo": 400000,
+      "data": [
+        [
+          8662.5,
+          7497.34,
+          20070.680000000004,
+          12198.64,
+          6729.820000000001,
+          3280.2799999999997,
+          9191.39,
+          6507.71,
+          6240.54,
+          7700.860000000001,
+          1790.88,
+          7242.660000000001,
+          6026.27,
+          11695.350000000002,
+          6317.639999999999,
+          16208.69,
+          13421.67,
+          7241.34,
+          3374.92,
+          8084.46,
+          0,
+          3807.54,
+          0,
+          18308.879999999997,
+          13288.519999999999,
+          1541.91,
+          895.44,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          76.41,
+          0,
+          0,
+          371.5,
+          0,
+          0,
+          0,
+          2116.48,
+          1482.8899999999999,
+          0,
+          1783.1999999999998,
+          0,
+          0,
+          0,
+          0,
+          0,
+          602.8399999999999,
+          4201.26,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          44772.2,
+          658.1599999999999,
+          10773.04,
+          23711.079999999994,
+          3013.68,
+          12037.4,
+          900.64,
+          6321.799999999999,
+          4330,
+          36631.79999999999,
+          6736.200000000001,
+          6650.88,
+          917.9599999999999,
+          5040.120000000001,
+          26690.12,
+          5715.6,
+          3862.3599999999997,
+          5040.12,
+          1091.1599999999999,
+          3897,
+          12972.68,
+          9214.24,
+          450.32,
+          796.7199999999999,
+          10394.439999999999,
+          519.5999999999999,
+          4572.48,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
         ]
+      ]
     },
     "periodo":{
         "periodo":"Jul/2019",

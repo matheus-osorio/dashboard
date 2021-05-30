@@ -9,8 +9,8 @@
 <template>
   <div class="background">
     <div class="area-definida">
-      <div class="title">Média Sinistralidade</div>
-      <div class="number">R${{valor}}</div>
+      <div class="title">Média Salário</div>
+      <div class="number">R${{valor.toFixed(2)}}</div>
     </div>
   </div>
 </template>
@@ -18,7 +18,7 @@
 
 <script>
 export default {
-    props:['cargos','media','tipo'],
+    props:['cargos','media','tipo','tooltip'],
     data(){
         return {
             titulo: 'Gráfico Salário',
@@ -124,7 +124,6 @@ export default {
 
                 inicioArr++
             }
-            console.log(admDATA)
             const finalDATA = funcionario[0].desligamento == '' ? new Date() : new Date(this.dataParaAmericano(funcionario[0].desligamento))
             let casaAtual = 0
             
@@ -164,7 +163,7 @@ export default {
         },
 
         criarDados(raw){
-
+            
             const funcTratado = this.tratarFunc(raw) //funciona
 
             const diferencaDeDias = this.diferencaDeDias(funcTratado[0][0].adm)
@@ -174,8 +173,8 @@ export default {
             })
 
         },
+        
         pegaMedia(dados){
-            
             const media = []
             const mediaArr = []
             for(let f of dados){
@@ -186,14 +185,13 @@ export default {
                 let total = 0
                 let validos = 0
                 for(let valor of media){
-                    total += valor[i]
+                    total += valor[i] > 0? valor[i]:0
                     validos += valor[i] > 0? 1:0
                 }
 
                 mediaArr.push(total/validos)
             }
 
-            console.log('media: ',mediaArr)
             return mediaArr[mediaArr.length-1]
         }
     },

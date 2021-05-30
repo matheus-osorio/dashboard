@@ -1,11 +1,13 @@
 <template>
-  <div id="app">
+  <div id="app" :class="{'print-page':print}">
     <nav class="vertical-bar">
       <img src="./img/logo.svg" class="logo" alt="">
       <hr class="line">
       <router-link :to="{name:'medicao',params:$route.params}" :class="{'selected':$route.name == 'medicao'}" @click="selected = 'MED'" class="waves-effect waves-teal btn-flat btn-custom"><i class="fas fa-pencil-ruler centered"></i></router-link>
       <router-link :to="{name:'escala',params:$route.params}" :class="{'selected':$route.name == 'escala'}" @click="selected = 'ESC'" class="waves-effect waves-teal btn-flat btn-custom"><i class="fas fa-table centered"></i></router-link>
       <router-link :to="{name:'funcionarios',params:$route.params}" :class="{'selected':$route.name == 'funcionarios'}" @click="selected = 'FUN'" class="waves-effect waves-teal btn-flat btn-custom"><i class="fas fa-user-friends centered"></i></router-link>
+      <a @click="printPage"  class="waves-effect waves-teal btn-flat btn-custom btn-option"><i class="fas fa-print centered"></i></a>
+
     </nav>
     <router-view/>
   </div>
@@ -18,7 +20,17 @@ export default {
   components: {},
   data(){
     return {
-      selected:"MED"
+      selected:"MED",
+      print:false
+    }
+  },
+  methods:{
+    printPage(){
+      this.print = true
+      setTimeout(() => {
+        window.print()
+        this.print = false
+      },300)
     }
   }
 };
@@ -75,6 +87,10 @@ body{
 }
 
 .selected{
+  background: rgba(128, 128, 128, 0.5);
+}
+
+.btn-option:active{
   background: rgba(128, 128, 128, 0.5);
 }
 
@@ -220,6 +236,25 @@ thead th {
  }
 }
 
+
+
+  #app.print-page{
+    width: 1000px;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "data";
+  }
+  .print-page .vertical-bar{
+    display: none;
+  }
+
+
+@media print{
+  #app.print-page{
+    width: 100%;
+  }
+}
 </style>
 
 

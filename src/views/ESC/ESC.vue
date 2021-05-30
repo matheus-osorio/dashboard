@@ -201,6 +201,7 @@ export default {
 
 #grafico-funcao{
   grid-area: graficoFuncao;
+  page-break-after: always;
 }
 
 #tabela-medias{
@@ -209,6 +210,7 @@ export default {
 
 #tabela-porcentagem{
   grid-area: tabelaPorcentagem;
+  page-break-after: always;
 }
 
 #grafico-sinistro{
@@ -270,4 +272,20 @@ export default {
 }
 
 
+.print-page #ESC{
+  display: grid;
+  height: 100%;
+  /* overflow: auto; */
+  grid-template-rows: 10px 320px 10px 320px 100px 320px 400px; /*6 itens*/
+  grid-template-columns: 10px 1fr 10px 1fr 10px; /*5 itens*/
+  grid-template-areas: 
+  "nada nada nada nada nada"
+  "nada2 tabelaMedias nada3 graficoSinistro nada4"
+  "espaco espaco espaco espaco espaco"
+  "nada5 graficoFuncao nada6 tabelaPorcentagem nada7"
+  "espaco2 espaco2 espaco2 espaco2 espaco2"
+  "nada8 graficoSetores nada9 subdivisao nada10"
+  "nada8 nada11 nada11 subdivisao nada10"
+  ;
+}
 </style>

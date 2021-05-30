@@ -32,7 +32,7 @@
 import btn from './botao.vue'
 
 export default {
-    props:['cargos','media','tipo'],
+    props:['cargos','media','tipo','smooth','tooltip','loading'],
     data(){
         return {
             titulo: 'Evolução de Carreira',
@@ -46,15 +46,17 @@ export default {
     methods:{
         onZoom(){
           this.zoomBtn = false
+          this.graph.grid.containLabel = true
         },
         onUnzoom(){
           this.zoomBtn = true
+          
+          this.graph.grid.containLabel = false
         },
         zoom(){
           this.$emit('zoom',this.onZoom,this.onUnzoom)
         },
         tratarFunc(raw){
-            console.log('entrou tratar func')
             raw = raw.map(f => {
                 const valores = f.historico.reduce((dados,prof) => {
                     if(dados[prof.cargo] == undefined){
@@ -75,7 +77,6 @@ export default {
 
                 return f
             })
-            console.log('raw: ',raw)
             raw = raw.map(func => { //coloca um valor pra representar o dia da cotnratação
                 func.nadm = func.adm.replace(/(\d\d)\/(\d\d)\/(\d\d\d\d)/,'$3$2$1')
                 func.nadm = parseInt(func.nadm)
@@ -133,7 +134,7 @@ export default {
             const arr = []
 
             for(let i=0;i<valor;i++){
-                arr.push(-1)
+                arr.push(undefined)
             }
 
             return arr
@@ -161,12 +162,10 @@ export default {
 
                 inicioArr++
             }
-            console.log(admDATA)
             const finalDATA = funcionario[0].desligamento == '' ? new Date() : new Date(this.dataParaAmericano(funcionario[0].desligamento))
             let casaAtual = 0
             
             while(admDATA - finalDATA < 0){
-                console.log((finalDATA-admDATA)/(1*1000*60*60*24))
                 if(casaAtual + 1 < funcionario.length){
                     const fimTrab = new Date(this.dataParaAmericano(funcionario[casaAtual + 1].inicio))
                     while(admDATA - fimTrab < 0){
@@ -205,27 +204,100 @@ export default {
 
             const funcTratado = this.tratarFunc(raw) //funciona
 
-            console.log('funcTratatado: ', funcTratado)
 
             const diferencaDeDias = this.diferencaDeDias(funcTratado[0][0].adm)
             const primeiraData = funcTratado[0][0].adm
             return funcTratado.map(f => {
-                return {nome: f.nome,dados: this.criarDadosFuncionario(f,diferencaDeDias,primeiraData)}
+                return {nome: f[0].nome,dados: this.criarDadosFuncionario(f,diferencaDeDias,primeiraData)}
             })
 
         },
-        montarGrafico(dados){
-            const option = {}
-            option.xAxis = {
-                type:'category'
+        criaAxisX(raw){
+            const funcTratado = this.tratarFunc(raw) //funciona
+
+
+            const diferencaDeDias = this.diferencaDeDias(funcTratado[0][0].adm)
+            const data = new Date(this.dataParaAmericano(funcTratado[0][0].adm))
+
+            const arr = []
+
+            for(let i=0;i<diferencaDeDias;i++){
+                arr.push((data.getDate() < 10? '0':'') + data.getDate() + '/' + (data.getMonth()+1 < 10? '0':'') + (data.getMonth()+1) + '/' + (1900 + data.getYear()))
+                if(this.tipo == 'DIA'){
+                    data.setTime(data.getTime() + 1*1000*60*60*24)
+                }
+                if(this.tipo == 'MES'){
+                    data.setMonth(data.getMonth + 1)
+                }
+                if(this.tipo == 'ANO'){
+                    data.setFullYear(data.getYear() + 1)
+                }
             }
-            option.yAxis = {
+            
+            return arr
+        },
+
+        criaAxisY(raw){
+            const func = raw[0].historico.map(h => h.cargo)
+            const set = Array.from(new Set(func))
+            set.unshift('')
+            return set
+        },
+
+        montarGrafico(dados,raw){
+            
+            const option = {}
+            option.grid = { containLabel: false }
+            option.xAxis = {
+                type:'category',
+                data: this.criaAxisX(raw)
+            }
+            if(raw.length > 1){
+                option.yAxis = {
                 type: 'value',
                 min: 0
+                }
             }
+            else{
+               const axisY = this.criaAxisY(raw)
+               option.yAxis = {
+                    type: 'value',
+                    textStyle:{
+                        fontSize: 6,
+                        color: 'red'
+                    },
+                    axisLabel: {
+                        formatter: (c) => {
+                            
+                            return axisY[c]
+                        }
+                    },
+                    splitNumber: axisY.length,
+                    data:  axisY.map((item,index) => index)
+                } 
+            }
+
+            if(this.tooltip){
+                const axisY = this.criaAxisY(raw)
+                option.tooltip = {
+                    trigger: 'axis',
+                    formatter: (c) => {
+                        console.log('entrou aqui')
+                        return axisY[c]
+                    }
+                }
+            }
+            
             option.series = []
             option.legend = {
+                type:'scroll',
                 data: []
+            }
+
+            if(this.tooltip){
+                option.tooltip = {
+                    trigger: 'axis'
+                }
             }
             
             for(let f of dados){
@@ -233,7 +305,8 @@ export default {
                 option.series.push({
                     name: f.nome,
                     type:'line',
-                    data: f.dados
+                    data: f.dados,
+                    smooth: this.smooth
                 })
 
             }
@@ -245,8 +318,7 @@ export default {
     
     mounted(){
         const graph = this.criarDados(this.cargos)
-        console.log('graficos nome: ',graph)
-        this.graph = this.montarGrafico(graph)
+        this.graph = this.montarGrafico(graph,this.cargos)
     }
 
 }
